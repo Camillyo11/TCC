@@ -1,0 +1,42 @@
+*{
+    margin : 0;
+    padding: 0;
+    box-sizing: content-box;
+    
+
+}
+body{
+    background-color:rgb(0, 0, 0);
+    font-family: sans-serif ;
+    color:antiquewhite;
+}
+
+/* HEADER */
+header {
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+
+}
+
+.login-pedido li{
+    list-style: none;
+    padding: left 5px;
+    display: inline-block;
+
+}
+
+.menu li{ 
+    list-style: none;
+    padding: 20px;
+    display: inline-block;
+    margin-right:10px;
+    margin-top: 20px;
+    
+
+}
+ ul li a{ 
+    text-decoration: none;
+    color: #ffffff;
+    
+ }

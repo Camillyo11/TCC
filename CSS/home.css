@@ -18,7 +18,14 @@ header {
     padding: 10px;
 
 }
+header img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
 .login-pedido li{
     list-style: none;
     padding: left 5px;
@@ -40,3 +47,41 @@ header {
     color: #ffffff;
     
  }
+
+
+.text-imagem{
+    position: absolute; /* Posiciona o texto sobre a imagem */
+    color: white;
+    display: flex;
+    top: 30%;
+      
+}
+
+.text-imagem button{
+    background-color: #ff983e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    width:100px ;
+    height: 20px;
+    padding: 10px 20px;
+    cursor: pointer; 
+    display: flex;
+    
+}
+
+
+
+
+.img-fundoinicial{
+    width: 100%;
+    height: auto;
+    background-image: url(fundopizza.png) ;
+    background-size: cover;
+    background-position: center;
+    margin-left: 0px;
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover;
+}

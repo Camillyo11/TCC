@@ -1,57 +1,92 @@
 *{
     margin : 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     
 
 }
 body{
     background-color:rgb(0, 0, 0);
-    font-family: sans-serif ;
     
 }
 
 /* HEADER */
-header {
-    justify-content: center;
+.header {
+    justify-content: space-between;
     display: flex;
-    padding: 10px;
-    background-color:rgb(0, 0, 0);
+    padding: 10px 10px;
+    align-items: center;
+  
+
 
 }
-header img {
-    width: 100px;
-    height: 100px;
+
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-.login-pedido li{
-    list-style: none;
-    padding: left 5px;
-    display: inline-block;
-
-}
-
-.menu li{ 
-    list-style: none;
-    padding: 20px;
-    display: inline-block;
-    margin-right:10px;
-    margin-top: 20px;
-    
-
-}
- ul li a{ 
-    text-decoration: none;
+    background-color: #000000;
     color: #ffffff;
+    gap: 70px ;
+   
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
- }
+}
+.menu li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.logo-grande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-grande img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-pedido{
+    display: flex;;
+    gap: 10px;
+
+}
+
+.login-pedido a {
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-self:auto;
+    
+
+}
+.login-pedido img {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: 10px;
+    
+}
+
+/* IMAGEM */
 
 
 .text-imagem{
-    position: absolute; /* Posiciona o texto sobre a imagem */
+    position: absolute;  /* Posiciona o texto sobre a imagem  */
     color: white;
     display: flex;
     top: 30%;
@@ -62,16 +97,17 @@ header img {
     background-color: #ff983e;
     color: #ffffff;
     text-decoration: none;
-    border-radius: 10px;
-    border: none;
-    width:100px ;
-    height: 20px;
-    padding: 10px 20px;
+    border-radius: 40px;
+    width:120px ;
+    height: 30px;
+    padding: 10px 10px;
     cursor: pointer; 
     display: flex;
-    
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
 }
-
 
 
 

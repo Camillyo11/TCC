@@ -6,7 +6,9 @@
     flex-direction: row
  */
 
-
+body{
+    background-color: black !important;
+}
 .navbar-brand{
     font-size:24px;
     font-weight: 500;
@@ -22,7 +24,7 @@
 }
 
  .login-button{
-    background-color: rgb(171, 61, 34);
+    background-color: rgb(144, 33, 6);
     color:white;
     font-size: 14px;
     padding: 5px 5px ;
@@ -103,49 +105,152 @@
 }
 
 /* SOBRE NÓS */
+.sobre-nos {
+    background-color: rgb(142, 8, 8);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 20px;
+   
+}
 
+.sobre-nos .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+
+
+}
+
+.sobre-nos img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+/* CARDÁPIO  */
+.cardapio-intro{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    
+}
+
+.cardapio-intro .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+   
+}
+.col-8{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.cardapio-intro img {
+    width: 70px;
+    height: 70px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.pizza-oculos img{
+    width: 50%;
+    height: 50%;
+}
+/* cads */
+.button-cardapio{
+    background-color: rgb(142, 8, 8);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 28, 28, 0.5);
+    transition: 0.3s;
+    
+}
 
  /* FOOTER/RODAPÉ */
-footer{
-    margin: 5px;
-}
- 
-
- .footer-conteiner {
+ html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .footer-conteiner {
     background-color: rgb(50, 48, 48);
     color: rgb(255, 255, 255);
     padding: 20px 0px;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-    position: absolute;
-    bottom: 0;
+    display: flex; /* Para garantir que o conteúdo fique organizado */
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    flex-direction: row;
-    
-
- }
-
-
- .logo-grande {
+    position: relative; /* Melhor do que absolute para manter o footer no fluxo da página */
+    bottom: 0; /* Garantir que fique na parte inferior */
+  }
+  
+  
+  .logo-grande {
     width: 200px;
     height: 200px;
  }
 
  .col{
+    
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+ 
  }
 
- .redes-sociais{
+
+.redes-sociais {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     flex-direction: row;
- }
-
- .midia{
-    margin-left: 60px;
- }
+    margin-top: 20px;
+    padding: 10px;
+    
+  }
+  
+  .redes-sociais .midia {
+    margin: 0 10px; /* Adiciona espaçamento entre os ícones */
+  }
+  
+  .redes-sociais .midia img {
+    height: 30px;
+    width: 30px;
+  }
 

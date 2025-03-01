@@ -6,82 +6,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
     <title>Bootstrap demo</title>
-    
-    <link href="css/bootstrap.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
- 
+    <link href="css/bootstrap.css" rel="stylesheet">
+
 </head>
-  
-<body>
+<!-- class="d-flex justify-content-between align-items-center" -->
+<body >
   <header>
-    <nav class="navbar bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <div class="logo-grande" >
-          <img src="../img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo">
-          <div class="login-pedido">
-              <a href=""><img src="#" alt="Login">Login</a>
-              <a href=""><img src="#" alt="Pedido">Pedido</a>
-          </div>
-      </div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-      <div class="logo-grande" >
-        <img src="../img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo">
-        <div class="login-pedido">
-            <a href=""><img src="#" alt="Login">Login</a>
-            <a href=""><img src="#" alt="Pedido">Pedido</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
+    <div class="container-fluid ">
+      <a class="navbar-brand me-auto " href="index.html">
+        <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png "alt="Logo da Bella Massa" width="100" height="100"> 
+        
+      </a>
+      <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header ">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BELLA MASSA</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </div>
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" aria-label="Toggle navigation">
+        <div class="offcanvas-body  ">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3  text-white">
+            <li class="nav-item ">
+              <a class="nav-link  mx-lg-2 active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2 " href="#">sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2 " href="#">Promoções</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2 " href="#">Cardápio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  mx-lg-2 " href="#">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="login-button"><img src="../src/img/do-utilizador (3).png" height="30" width="30">Conta</a>
+      <a  href="#" class="login-button"><img src="../src/img/carrinho-de-compras.png" height="30" width="30">Pedidos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-
-          
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href=""></a>Sobre Nós</li>
-                <li><a href=""></a>Promoções</li>
-                <li><a href=""></a>Cardápio</li>
-                <li><a href=""></a>Contato</li>
-                
-            </ul>  
-    
-
-      </div>
       
+    </div>
+  </nav>
+</header>
 
-    </nav>
-    <!-- 
-    <div class="logo-grande" >
-      <img src="../img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo">
-      <div class="login-pedido">
-          <a href=""><img src="#" alt="Login">Login</a>
-          <a href=""><img src="#" alt="Pedido">Pedido</a>
+<mian>
+<!-- área de introdução  img-fluid, rouede-->
+<section class="hero container-fluid text-white">
+  <div class="container">
+      <h1 class="fw-bold">A melhor pizza do Jardim Ângela</h1>
+      <p>A melhor de São Paulo</p>
+      <div class="d-flex gap-3">
+          <a href="#" class="btn btn-custom px-4 py-2"><strong>Cardápio</strong></a>
+          <a href="#" class="btn btn-custom px-4 py-2"><strong>Faça seu pedido</strong></a>
       </div>
   </div>
+</section>
+
+<!-- SOBRE NÓS -->
+<section class="sobre-nos container">
+  <div class="row d-flex justify-content-center align-items-center text-center">
+    
+    <div class="col ">
+      <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Pizza" class="img-fluid">
+    </div>
+
+    <div class="col ">
+      <h2>Sobre nós</h2>
+      <p>Desde 1999 a Bella Massa é referência em pizzas de qualidade, com ingredientes selecionados e um sabor inigualável. Venha conhecer nosso cardápio e se surpreender com a qualidade de nossos produtos.</p>
+    </div>
+
+    
+
+  </div>
+</section>
+
+<!-- CARDÁPIO -->
+<section class="cardapio container">
+  <div class="cardapio-intro conteiner text-center">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-2">
+        <img src="../src/img/pizza.png" alt="Pizza" class="img-fluid">
+      </div>
+
+      <div class="row">
+        <div class="col-8">
+          <h2>EXPLORE NOSSO CARDÁPIO!</h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aperiam? Possimus officiis perferendis iure deleniti fugit! Aut rem voluptatibus consequatur consequuntur, minima atque deserunt, porro adipisci accusantium ratione, aliquam eveniet!</p>
+        </div>
+        <div class="col-4">
+          <div class="pizza-oculos">
+            <img src="../src/img/image.png" alt="Pizza" class="img-fluid">
+          </div>
+        </div>
+      </div> 
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4"> 
+    <!-- Primeira coluna -->
+    <div class="col">
+      <button class="button-cardapio">
+        <a herf="#" alt="pizza"><img src="../src/img/ai-generated-a-slice-of-pizza-is-shown-with-melted-cheese-free-png.png"  alt="Pizza salgada"></a>
+          <h5 class="button-cardapio-title">Pizza Salgada</h5>
+      </button>
+    </div>
   
-  <nav class="menu">
-    <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href=""></a>Sobre Nós</li>
-        <li><a href=""></a>Promoções</li>
-        <li><a href=""></a>Cardápio</li>
-        <li><a href=""></a>Contato</li>
+    <!-- Segunda coluna -->
+    <div class="col">
+      <button class="button-cardapio">
+        <img src="../src/img/ai-generated-a-slice-of-pizza-is-shown-with-melted-cheese-free-png.png"  alt="Pizza doce">
         
-    </ul>  
-</nav> -->
-  </header>
+          <h5 class="button-cardapio-title">Pizza Doce</h5>
+      
+      </button>
+    </div>
+  
+    <!-- Terceira coluna -->
+    <div class="col">
+      <button class="button-cardapio">
+        <img src="../src/img/png-transparent-soft-drink-coca-cola-juice-milkshake-coke-clear-drinking-glass-filled-with-beverage-drink-illustration-food-drop-the-cocacola-company-thumbnail.png"  alt="refrigerante">
+       
+          <h5 class="button-cardapio-title">Refrigerante</h5>
+      
+      </button>
+    </div>
+  </div>
+  
+ 
 
-  <main>
 
-  </main>
+</section>
+
+<!-- PROMOÇÕES -->
+ <section>
+
+ </section>
+
+
+<!-- CONTATO -->
+ <section>
+
+ </section>
+
+
+
+
+</mian>
 
   
+<!--   FOOTER   -->
+  <footer class="footer-conteiner ">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+         <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
+        </div>
+        <div class="col">
+          <h5>Endereço</h5>
+          <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
+        <p>São Paulo-SP</p>
+        </div>
+        <div class="col">
+        <h5>Telefone</h5>
+        <p>(11)9002-0922</p>
+        <p>(11)9002-0922</p>
+        </div>
+        <div class="col">
+          <h5>Horário de funcionamento</h5>
+          <h6>Terça a Quinta</h6>
+          <p> Das 17:00 ás 00:00</p>
+          <h6>Sexta á Sábado</h6>
+          <p> Das 17:00 ás 01:00</p>  
+        </div>
+      </div>
+    </div>
+    <div class="redes-sociais"> 
+      <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
+      <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
+      <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
+    </div>
+  </footer>
+
+  <!-- BOOTSTARP JS -->
     <script src="JAVASCRIPT/jquery.js"></script>
     <script src="JAVASCRIPT/popper.js"></script>
     <script src="JAVASCRIPT/bootstrap.js"></script>

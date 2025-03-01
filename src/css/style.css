@@ -242,7 +242,7 @@ body{
     flex-direction: row;
     margin-top: 20px;
     padding: 10px;
-    
+
   }
   
   .redes-sociais .midia {
@@ -250,7 +250,7 @@ body{
   }
   
   .redes-sociais .midia img {
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
   }
 

@@ -1,0 +1,93 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+.nav-adm{
+  
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    flex-direction: row;
+  
+   
+}
+
+.backgrond-black{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.img-logo{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  
+
+}
+
+.img-logo img{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.on-off{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: white;
+   
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px solid white; /* Cor da linha */
+    margin: 10px;
+   
+}
+
+.menu-btn {
+    background-color: #6c6765;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px auto;
+    width: 80%;
+    border: none;
+}
+.menu-btn:hover {
+    background-color: #5a5553;
+}
+.menu-icon {
+    width: 24px;
+}

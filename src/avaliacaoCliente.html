@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../src/css/style.css">
     <link href="css/bootstrap.css" rel="stylesheet">
     <title>área de contato</title>
 </head>
@@ -56,34 +56,41 @@
     
 
     <!--  AVALIAÇÃO DAS ESTRELAS  -->
-    <div class="avalicao-estrelas">
-        <h1>Deixe seu avaliação</h1>
-    <div class="stars">
-        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
-        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
-        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
-        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
-        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+  <div class="avalicao-estrelas">
+          <h1>Deixe seu avaliação</h1>
+      <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+      </div>
+
+      <script>
+          const stars = document.querySelectorAll('.stars input');
+          
+          stars.forEach(star => {
+              star.addEventListener('change', () => {
+                  alert(`Você avaliou com ${star.value} estrelas!`);
+              });
+          });
+      </script>
+
+  </div>
+
+  <div class="preencher-comentario">
+    <h5>Comentário:</h5>
+    <div class="row">
+      <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"></label>
+      <div class="col-sm-10">
+        <input type="text" class="caixa-comentario form-control form-control-lg" id="colFormLabelLg" placeholder="Comentário">
+      </div>
     </div>
+  </div>
 
-    <script>
-        const stars = document.querySelectorAll('.stars input');
-        
-        stars.forEach(star => {
-            star.addEventListener('change', () => {
-                alert(`Você avaliou com ${star.value} estrelas!`);
-            });
-        });
-    </script>
-
-</div>
-
-
-</body>
-</html>
-
-
-<!-- 
+  <div class="center-button">
+    <button  type="submit" class="button-black btn-submit">Enviar</button>
+  </div>
    
     <footer class="footer-conteiner">
         <div class="container text-center">
@@ -120,10 +127,10 @@
             </div>
         </div>
       </footer>
--->
+
     <!-- BOOTSTARP JS -->
       <script src="JAVASCRIPT/jquery.js"></script>
       <script src="JAVASCRIPT/popper.js"></script>
       <script src="JAVASCRIPT/bootstrap.js"></script>
-  </body>
-  </html>
+</body>
+</html>

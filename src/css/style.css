@@ -12,8 +12,10 @@
 @media (max-width: 768px) { /* Para telas menores que 768px */
 
     html, body {
-        margin: 5px;
-        padding: 10px;  /* Remove qualquer padding padrão do body */
+        margin: 0;
+        padding: 10px; 
+        height: 100%;
+        flex-direction: row;
         
   
     }
@@ -21,8 +23,11 @@
 
 @media (max-width: 480px) { /* Para telas menores que 480px (celulares bem pequenos) */
     html, body {
-        margin: 5px;
-        padding: 5px;  /* Remove qualquer padding padrão do body */
+        margin: 0;
+        padding: 0px; 
+        height: 100%;
+        
+        flex-direction: row;
     }
 
 }
@@ -254,14 +259,16 @@
     padding: 20px 0px;
     text-align: center;
     font-size: 14px;
-    font-weight: 500;
     display: flex;
-    flex-direction: column; /* Garante que o conteúdo fique em coluna */
+    flex-direction: row; 
     align-items: center;
     width: 100%;
-    position: relative;
+    height: auto;
+    margin-top: auto;
+    position: fixed;
     bottom: 0;
-}
+
+ }
 
 .logo-grande {
     width: 200px;
@@ -287,8 +294,10 @@
 }
 
 .redes-sociais .midia {
-    gap: 10px;
-    margin-left: 80px;
+    gap: 40px;
+    
+   
+    
 }
 
 .redes-sociais .midia img {
@@ -442,6 +451,7 @@
 /* AVALIAÇÃO CLIENTE */
 .backgrond-vermelho{
     background-color: rgb(135, 35, 35);
+   
 
 }
 
@@ -449,7 +459,8 @@
     display: flex;
     flex-direction: row-reverse;
     justify-self:left;
-    margin-left: 50px;
+    margin-left: 20px;
+    
 }
 
 .stars input {
@@ -458,7 +469,7 @@
 
 .stars label {
     font-size: 40px;
-    color: gray;
+    color: rgb(184, 179, 179);
     cursor: pointer;
 }
 
@@ -469,12 +480,16 @@
 }
 
 .avalicao-estrelas{
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: 0;
 }
 
 .avalicao-estrelas h1{
- color: #2c2c2c;
+    color: #2c2c2c;
     text-align: center;
+    margin-top: 30%;
+   
 
 }
+
+

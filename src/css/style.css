@@ -248,57 +248,54 @@
  /* FOOTER/RODAPÉ */
  
   
-  .footer-conteiner {
+ .footer-conteiner {
     background-color: rgb(50, 48, 48);
     color: rgb(255, 255, 255);
     padding: 20px 0px;
     text-align: center;
     font-size: 14px;
     font-weight: 500;
-    display: flex; /* Para garantir que o conteúdo fique organizado */
-    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Garante que o conteúdo fique em coluna */
     align-items: center;
     width: 100%;
-    position: relative; /* Melhor do que absolute para manter o footer no fluxo da página */
-    bottom: 0; /* Garantir que fique na parte inferior */
+    position: relative;
+    bottom: 0;
+}
 
-  }
-  
-  
-  .logo-grande {
+.logo-grande {
     width: 200px;
     height: 200px;
- }
+}
 
- .col{
-    
+.col {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
- 
- }
-
+}
 
 .redes-sociais {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     flex-direction: row;
     margin-top: 20px;
     padding: 10px;
     width: 100%;
     gap: 15px;
-    
+}
 
-  }
-  
-  .redes-sociais .midia {
-   gap: 10px; /* Adiciona espaçamento entre os ícones */
-  }
-  
-  .redes-sociais .midia img {
+.redes-sociais .midia {
+    gap: 10px;
+    margin-left: 80px;
+}
+
+.redes-sociais .midia img {
     height: 40px;
     width: 40px;
-  }
+}
+
 
 
   /* PÁGINA CONTATO */
@@ -439,4 +436,45 @@
     flex: 1;
     border-bottom: 2px solid white; /* Cor da linha */
     margin: 10px;
+}
+
+
+/* AVALIAÇÃO CLIENTE */
+.backgrond-vermelho{
+    background-color: rgb(135, 35, 35);
+
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-self:left;
+    margin-left: 50px;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 40px;
+    color: gray;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: gold;
+}
+
+.avalicao-estrelas{
+    margin-top: 10%;
+    margin-left: 0;
+}
+
+.avalicao-estrelas h1{
+ color: #2c2c2c;
+    text-align: center;
+
 }

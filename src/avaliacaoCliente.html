@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <title>área de contato</title>
+</head>
+
+<body class="backgrond-vermelho">
+    <header >
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
+          <div class="container-fluid ">
+            <a class="navbar-brand me-auto " href="index.html">
+              <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png "alt="Logo da Bella Massa" width="100" height="100"> 
+              
+            </a>
+            <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header ">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BELLA MASSA</h5>
+                <button type="button" class="btn-close btn-close-white btn-primary btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body  ">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3  text-white">
+                  <li class="nav-item ">
+                    <a class="nav-link  mx-lg-2 active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  mx-lg-2 " href="#">sobre nós</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  mx-lg-2 " href="#">Promoções</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-lg-2 " href="#">Cardápio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link  mx-lg-2 " href="#">Contato</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="login-button"><img src="../src/img/do-utilizador (3).png" height="30" width="30">Conta</a>
+            <a  href="#" class="login-button"><img src="../src/img/carrinho-de-compras.png" height="30" width="30">Pedidos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+          </div>
+        </nav>
+    </header>
+
+    
+
+    <!--  AVALIAÇÃO DAS ESTRELAS  -->
+    <div class="avalicao-estrelas">
+        <h1>Deixe seu avaliação</h1>
+    <div class="stars">
+        <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.stars input');
+        
+        stars.forEach(star => {
+            star.addEventListener('change', () => {
+                alert(`Você avaliou com ${star.value} estrelas!`);
+            });
+        });
+    </script>
+
+</div>
+
+
+</body>
+</html>
+
+
+<!-- 
+   
+    <footer class="footer-conteiner">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
+                </div>
+                <div class="col">
+                    <h5>Endereço</h5>
+                    <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
+                    <p>São Paulo-SP</p>
+                </div>
+                <div class="col">
+                    <h5>Telefone</h5>
+                    <p>(11)9002-0922</p>
+                    <p>(11)9002-0922</p>
+                </div>
+                <div class="col">
+                    <h5>Horário de funcionamento</h5>
+                    <h6>Terça a Quinta</h6>
+                    <p> Das 17:00 ás 00:00</p>
+                    <h6>Sexta á Sábado</h6>
+                    <p> Das 17:00 ás 01:00</p>  
+                </div>
+            </div>
+      
+           
+            <div class="row">
+                <div class="col redes-sociais">
+                    <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
+                    <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
+                    <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
+                </div>
+            </div>
+        </div>
+      </footer>
+-->
+    <!-- BOOTSTARP JS -->
+      <script src="JAVASCRIPT/jquery.js"></script>
+      <script src="JAVASCRIPT/popper.js"></script>
+      <script src="JAVASCRIPT/bootstrap.js"></script>
+  </body>
+  </html>

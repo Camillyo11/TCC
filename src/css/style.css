@@ -8,6 +8,7 @@
 
  .backgrond-black {
     background-color: black !important;
+    
 }
 @media (max-width: 768px) { /* Para telas menores que 768px */
 
@@ -38,7 +39,9 @@
     font-weight: 500;
     color: rgb(255, 255, 255);
     margin-left: 20px;
-      
+    height: 100px;
+    z-index: 1000;
+  
    
 }
 
@@ -46,27 +49,81 @@
     width: 80px;
     height: 80px;
 }
+.button-navbar{
+    display: flex;
+    margin-left: auto;
+    gap: 10px; /* Espaçamento entre os botões */
+    padding: 10px;
+    
+}
 
- .login-button{
-    background-color: rgb(144, 33, 6);
+ button.login-button{
+    background-color: rgb(144, 33, 6) !important ;
     color:white;
     font-size: 14px;
     padding: 5px 5px ;
     border-radius: 50px;
     text-decoration: none;
-    transition:0.3s background-color; 
+    transition:0.3s background-color !important; 
     margin-right: 20px;
+    border:none;
+    
+    
 }
  
-.login-button:hover{
-    background-color: rgb(211, 35, 11);
+button.login-button:hover{
+    background-color: rgb(211, 35, 11) !important ;
 }
 
+@media (max-width: 991.98px) {
+    .button-navbar {
+        flex-direction: row; 
+        gap: 5px; 
+        margin-left: 0; 
+        width: 80%; 
+        
+        justify-content: flex-end;
+    }
+
+    .login-button {
+     background-color: rgb(144, 33, 6) !important ;
+    color:white;
+    font-size: 14px;
+    padding: 5px 5px ;
+    border-radius: 50px;
+    text-decoration: none;
+    transition:0.3s background-color !important; 
+    border:none;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    .button-navbar {
+        flex-direction: row; 
+        gap: 10px; 
+        justify-content: flex-end;
+        width: 75%;
+    }
+
+    .login-button {
+        background-color: rgb(144, 33, 6) !important ;
+        color:white;
+        font-size: 14px;
+        padding: 5px 5px ;
+        border-radius: 50px;
+        text-decoration: none;
+        transition:0.3s background-color !important; 
+        border:none;
+        
+    }
+}
 
 .navbar-toggler{
     border: none;
     font-size: 1.25rem;
     color:#ffffff;
+    
    
 
 }
@@ -106,15 +163,90 @@
     visibility: visible;
 }
 
+/* MODAL */
+.modal-header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 16px;
+
+}
+.modal-body{
+    background-color: rgb(144, 33, 6);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+   
+   
+    
+   
+   
+   
+}
+.modal-footer{
+    background-color: rgb(0, 0, 0) !important;
+    justify-content: center;
+    align-items: center;
+    color: white !important;
+    font-size: 16px;
+}
+
+
+
+/* LOGIN */
+.form-container {
+    text-align: center;
+    margin-top: 20px;
+}
+.form-container p {
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.form-vermelho  input{
+    border-radius: 100px;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    background-color: white;
+
+}
+
+.link-recuperar-senha a {
+    color: white;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px solid white; /* Cor da linha */
+    margin: 10px;
+}
+
+
+
 /* INTRODUÇÃO -> IMAGEM DE FUNDO */
 
-.hero {
+.conteiner-intro{
     background: url('../img/fundopizza.png') center/cover no-repeat;
     color: white;
     text-align: left;
     padding: 80px 20px;
     margin-top: 100px;
-
     justify-content: center !important;
     align-items: center !important;
    width: 100vh ;
@@ -251,6 +383,8 @@
 
 
  /* FOOTER/RODAPÉ */
+
+
  
   
  .footer-conteiner {
@@ -264,9 +398,9 @@
     align-items: center;
     width: 100%;
     height: auto;
-    margin-top: auto;
-    position: fixed;
+    margin-top: 100%;
     bottom: 0;
+ 
 
  }
 
@@ -290,7 +424,7 @@
     margin-top: 20px;
     padding: 10px;
     width: 100%;
-    gap: 15px;
+    gap: 50px;
 }
 
 .redes-sociais .midia {
@@ -309,17 +443,24 @@
 
   /* PÁGINA CONTATO */
 
-  .contato-banner{
-    background: url('../img/fundo\ contato.png') center/cover no-repeat;
-    color: rgb(255, 255, 255);
+  .contato-banner {
+    background: url('../img/fundo contato.png') center center / cover no-repeat;
+    color: white;
     text-align: center;
-    width: 100% ;
-    height: 100% ;
-    margin-top: 80px;
+    padding: 80px 20px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 10px !important;
 
-  }
+   
+}
+
+
+
   .form-contato{
-    margin-top: 20%;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
     background-color: rgb(144, 33, 6);
@@ -327,12 +468,11 @@
     color: white;
     font-size: 16px;
     border-radius: 15px;
-    margin: 10px;
-   
-    
     
     
   }
+
+
 
   .button-black{
     background-color: #000000 ;
@@ -349,33 +489,31 @@
    
 }
   
-.center-button{
+.center-button {
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
+.center-button a {
+    text-decoration: none;
+    color: #eeeeee;
+    
+}
+
 /* PÁGINA CADASTRO */
+
 .title h1{
     color: white;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     margin-top: 10px;
     justify-items: center;
     text-align: center;
+    
 
 }
 
-.container-cadastro {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    height: 100vh; 
-    margin-top: 50%;
-    width: 100%;
-
-}
-.form-vermelho{
+.form-vermelho-cadastro{
     margin-top: 20%;
     justify-content: center;
     align-items: center;
@@ -388,10 +526,10 @@
     margin-right: 10px;
     width: 100%;
     height: auto;
-
+    box-shadow: 0 4px 8px rgb(191,0, 0);
 }
 
-.form-vermelho label{
+.form-vermelho-cadastro label{
 
     font-size: 20px;
     font-weight: 500;
@@ -402,55 +540,10 @@
 
 
 
-/* PÁGINA LOGIN */
-.form-container {
-    text-align: center;
-    margin-top: 20px;
-}
-.form-container p {
-
-    text-align: center;
-    font-weight: 500;
-
-}
-
-.form-vermelho input{
-    border-radius: 100px;
-    padding: 12px;
-    font-size: 16px;
-    width: 100%;
-    background-color: white;
-
-}
-
-.link-recuperar-senha a {
-    color: white;
-    font-size: 15px;
-    margin-top: 2%;
-    text-decoration: underline;
-}
-
-.divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 20px 0;
-    font-weight: bold;
-    color: white;
-}
-
-.divider::before,
-.divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 2px solid white; /* Cor da linha */
-    margin: 10px;
-}
-
-
 /* AVALIAÇÃO CLIENTE */
 .backgrond-vermelho{
     background-color: rgb(135, 35, 35);
+
    
 
 }
@@ -487,9 +580,24 @@
 .avalicao-estrelas h1{
     color: #2c2c2c;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 120px;
    
 
 }
 
+.form-group-avaliacao{
+    flex-direction: column;
+    display: flex;
+    margin: 20px;
+
+}
+
+.label-comentario{
+    margin-top: 5px;
+    flex-direction: column;
+    color: #eeeeee;
+
+
+
+}
 

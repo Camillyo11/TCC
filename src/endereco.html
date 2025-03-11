@@ -22,24 +22,24 @@
     <div class=" container-cadastro container p-5">
         <form class="form-vermelho-cadastro" >
             <div class="title">
-                <h1>CADASTRO</h1>
+                <h1>ENDEREÇO</h1>
             </div>
 
             <div class="mb-3">
-                <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email_cadastro" placeholder="Digite seu e-mail:"
+                <label for="cep" class="form-label">CEP:</label>
+                <input type="number" id="cep" name="cep" placeholder="Digite seu CEP:"
                     class="form-control form-control-lg" required>
             </div>
 
             <div class="mb-3">
-                <label for="name" class="form-label">Nome:</label>
-                <input type="text" id="nome" name="nome_usuario" placeholder="Digite seu nome"
+                <label for="name" class="form-label">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço:"
                     class=" form-control form-control-lg" required>
             </div>
 
             <div class="mb-3">
-                <label for="text" class="form-label">CPF:</label>
-                <input type="text" id="cpf" name="cpf" placeholder="Digite seu cpf"
+                <label for="number" class="form-label">N°:</label>
+                <input type="number" id="numero" name="numero" placeholder="Digite seu numero:"
                     class=" form-control form-control-lg" required>
             </div>
 
@@ -55,17 +55,35 @@
             </div>
 
             <div class="mb-3">
-                <label for="password" class="form-label">Senha:</label>
-                <input type="password" id="senha" name="senha_usuario" placeholder="digite sua senha:"
-                    class=" form-control" required>
+                <label for="text" class="form-label">Complemneto:</label>
+                <input type="text" id="complemento" name="complemneto-residencia" placeholder="Complemento:"
+                    class=" form-control control-lg" required>
             </div>
 
             <div class="mb-3">
-                <label for="repetir_senha">Repita a senha:</label>
-                <input type="password" id="senha" name="senha_usario" placeholder="repita sua senha:"
-                    class="form-control" required>
+                <label for="text" class="form-label">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Bairro:"
+                    class=" form-control control-lg" required>
             </div>
-            
+
+            <div class="mb-3">
+                <label for="text" class="form-label">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="Cidade:"
+                    class=" form-control control-lg" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="text" class="form-label">Estado:</label>
+                <input type="text" id="estado" name="estado" placeholder="Estado:"
+                    class=" form-control control-lg" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="text" class="form-label">Referência para o entregador:</label>
+                <input type="text" id="referencia" name="referencia" placeholder="Refrencia:"
+                    class=" form-control control-lg" required>
+            </div>
+          
             <div class="center-button">
                 <button  type="submit" class="button-black btn-submit">Cadastrar</button>
             </div>

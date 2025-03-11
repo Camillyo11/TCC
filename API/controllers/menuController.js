@@ -27,3 +27,5 @@ const addPizza = (req, res) =>
     }
     );
 };
+
+module.exports = {getMenu,addPizza};

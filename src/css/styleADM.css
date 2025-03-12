@@ -1,4 +1,5 @@
 
+/* HOME ADM */
 body{
     background-color: rgb(255, 255, 255);
     font-family: 'Roboto', sans-serif;
@@ -90,4 +91,179 @@ body{
 }
 .menu-icon {
     width: 24px;
+}
+
+
+/* ÚLTIMOS PEDIDOS */
+.body-pedidos h3{
+    margin-top: 40px;
+}
+.body-pedidos{
+    background-color: #c0c0c0;
+    border-radius: 10px;
+    color: black;
+    margin: 20px;
+
+}
+
+h3{
+    font-weight: bold;  
+}
+.pedido-list{
+    display: flex;
+    gap:8px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;  /* Faz com que as divs ocupem o espaço disponível igualmente */
+    margin: 5px;
+    list-style: none;
+    width: 100%;
+}
+
+.pedido-direita {
+    display: flex;  /* Coloca os itens da seção em linha */
+    gap: 8px;  /* Espaço entre os itens */
+    margin-left: auto;  /* Empurra a seção para a direita */
+
+}
+#order-pedido {
+  display: flex;
+    justify-content: space-between;  /* Coloca os elementos nas extremidades */
+    align-items: center;  /* Centraliza verticalmente */
+   
+}
+
+.pedido  {
+    text-decoration: none;
+    list-style: none;
+}
+
+.status-img{
+    text-decoration: none;
+    list-style: none;
+}
+
+.status-img img{
+    width:25px;
+    height:25px;
+
+}
+
+/* DETALHES DO PEDIDO */
+
+.Body-detalhes-pedido {
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #555;
+    margin-top: 20px;
+}
+.pedido-info p {
+    margin: 5px 0;
+}
+.itens-pedido ul {
+    list-style: none;
+    padding: 0;
+}
+.itens-pedido li {
+    background-color: #959494;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+h1{
+  text-align: right;
+}
+.status-pedido {
+    margin-top: 20px;
+}
+.button-status{
+    list-style: none;
+    padding: 0;
+}
+.button-atualiza{
+    background-color: #dd5d0e;
+    padding: 10px;
+    color:#ddd;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  
+}
+.button-atualiza:hover{
+    background-color: rgb(152, 2, 2);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+ }
+
+
+.entregue-button{
+    background-color: #dd0e0e ;
+    padding: 10px;
+    color:#ddd;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+.entregue-button:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+ }
+
+
+ /* AVALIAÇÃO ADM */
+
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    color:black
+}
+
+h1 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 100px;
+}
+.avaliacao {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ff7b00;
+}
+.avaliacao h3 {
+    margin-top: 0;
+    color: #000000;
+}
+.resposta-admin {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #a61616;
+    border-radius: 4px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+.btn-responder {
+    margin-top: 10px;
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Pedido</title>
+    <link rel="stylesheet" href="../css/styleADM.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../JAVASCRIPT/javascrip.js">
+
+
+</head>
+    <body class="backgrond-black">
+        <!-- NAVBAR -->
+        <header class="header-adm">
+          <nav class="nav-adm navbar navbar-lg bg-body-tertiary-dark navbar-dark">
+            <div class="container-fluid d-flex align-items-center ">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+          </nav>
+        </header>
+
+
+    <div class="Body-detalhes-pedido">
+        <div class="pedido-info">
+            <p><strong>Código:</strong></p>
+            <p><strong>Nome:</strong></p>
+            <p><strong>Email:</strong></p>
+            <p><strong>Telefone:</strong></p>
+        </div>
+
+        <hr>
+
+
+        <div class="pedido-info">
+            <p><strong>Forma de Entrega do Pedido:</strong></p>
+            <p><strong>Forma de Pagamento:</strong></p>
+            <p><strong>Status do Pagamento:</strong></p>
+        
+        </div>
+
+        <hr>
+
+        <!-- Endereço de Entrega -->
+        <div class="pedido-info">
+            <h2>Endereço de Entrega</h2>
+            <p><strong>CEP:</strong></p>
+            <p><strong>Rua:</strong></p>
+            <p><strong>Bairro:</strong></p>
+        </div>
+
+        <hr>
+
+        <!-- Itens do Pedido -->
+        <div class="itens-pedido">
+            <h2>PEDIDO</h2>
+            <ul>
+                <li><strong>Pizza de 4 Queijos + Borda Catupiry (1 UND)</strong> - R$ 56,50</li>
+                <li><strong>Pizza de 4 Queijos + Borda Catupiry (1 UND)</strong> - R$ 56,50</li>
+                <li><strong>Refrigerante - 2 Litros - Coca-Cola</strong> - R$ 12,00</li>
+                <li><strong>Valor do Frete</strong> - R$ 5,00</li>
+            </ul>
+        </div>
+
+        <h1>VALOR TOTAL:</h1>
+
+        <!-- Status do Pedido -->
+        <div class="status-pedido">
+            <h2>STATUS DO PEDIDO</h2>
+
+            <div class="button-status">
+                <button class="button-atualiza">Preparando</button>
+                <button class="button-atualiza">Pronto para envio</button>
+                <button  class="button-atualiza">Saiu para entrega</button>
+                <button class="entregue-button">Entregue</button>
+            </div>
+        </div>
+
+     
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

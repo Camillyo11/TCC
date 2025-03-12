@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <title>área de contato</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../src/css/style.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <title>área de contato</title>
 </head>
 
 <body class="backgrond-vermelho">
@@ -15,12 +16,15 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand me-auto" href="index.html">
-          <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa" width="100" height="100">
+          <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa" width="100"
+            height="100">
         </a>
-        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BELLA MASSA</h5>
-            <button type="button" class="btn-close btn-close-white btn-primary btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white btn-primary btn-sm" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white">
@@ -42,22 +46,24 @@
             </ul>
           </div>
         </div>
-  
+
         <!-- Botões do Navbar -->
         <div class="button-navbar ms-auto">
-          <button type="button" class="login-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="login-button btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
             <img src="../src/img/do-utilizador (3).png" height="30" width="30"> Conta
           </button>
           <button class="login-button">
             <img src="../src/img/carrinho-de-compras.png" height="30" width="30"> Pedidos
           </button>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
       </div>
     </nav>
-  
+
     <!-- Modal (movido para fora do navbar) -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
@@ -75,11 +81,13 @@
                     <h1>Acesse sua conta</h1>
                   </div>
                   <label for="email" class="form-label">Digite seu email:</label>
-                  <input type="email" name="email_usuario" placeholder="Digite seu email" id="email" class="form-control" required>
+                  <input type="email" name="email_usuario" placeholder="Digite seu email" id="email"
+                    class="form-control" required>
                 </div>
                 <div class="mb-3">
                   <label for="password" class="">Digite sua senha:</label>
-                  <input type="password" name="senha_usuario" placeholder="Digite sua senha" id="senha" class="form-control" required>
+                  <input type="password" name="senha_usuario" placeholder="Digite sua senha" id="senha"
+                    class="form-control" required>
                 </div>
                 <div class="link-recuperar-senha">
                   <a href="#">esqueci minha senha</a>
@@ -100,90 +108,92 @@
             </div>
           </div>
           <div class="modal-footer">
-           <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 -->
           </div>
         </div>
       </div>
     </div>
   </header>
-    
 
-    <!--  AVALIAÇÃO DAS ESTRELAS  -->
+
+  <!--  AVALIAÇÃO DAS ESTRELAS  -->
   <div class="avalicao-estrelas">
-          <h1>Deixe seu avaliação</h1>
-      <div class="stars">
-          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
-          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
-          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
-          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
-          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
-      </div>
+    <h1>Deixe seu avaliação</h1>
+    <div class="stars">
+      <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+      <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+      <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+      <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+      <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+    </div>
 
-      <script>
-          const stars = document.querySelectorAll('.stars input');
-          
-          stars.forEach(star => {
-              star.addEventListener('change', () => {
-                  alert(`Você avaliou com ${star.value} estrelas!`);
-              });
-          });
-      </script>
+    <script>
+      const stars = document.querySelectorAll('.stars input');
+
+      stars.forEach(star => {
+        star.addEventListener('change', () => {
+          alert(`Você avaliou com ${star.value} estrelas!`);
+        });
+      });
+    </script>
 
   </div>
 
- 
-    <div class="form-group-avaliacao">
-      <label  class="label-comentario"  for="mensagem"><h5>Comentário:</h5></label>
-      <textarea id="mensagem" name="mensagem"
-                rows="4" maxlength="500"]
-                             placeholder="Digite sua mensagem aqui"></textarea>
+
+  <div class="form-group-avaliacao">
+    <label class="label-comentario" for="mensagem">
+      <h5>Comentário:</h5>
+    </label>
+    <textarea id="mensagem" name="mensagem" rows="4" maxlength="500" ]
+      placeholder="Digite sua mensagem aqui"></textarea>
   </div>
-  
+
 
   <div class="center-button">
-    <button  type="submit" class="button-black btn-submit">Enviar</button>
+    <button type="submit" class="button-black btn-submit">Enviar</button>
   </div>
-   
-    <footer class="footer-conteiner">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
-                </div>
-                <div class="col">
-                    <h5>Endereço</h5>
-                    <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
-                    <p>São Paulo-SP</p>
-                </div>
-                <div class="col">
-                    <h5>Telefone</h5>
-                    <p>(11)9002-0922</p>
-                    <p>(11)9002-0922</p>
-                </div>
-                <div class="col">
-                    <h5>Horário de funcionamento</h5>
-                    <h6>Terça a Quinta</h6>
-                    <p> Das 17:00 ás 00:00</p>
-                    <h6>Sexta á Sábado</h6>
-                    <p> Das 17:00 ás 01:00</p>  
-                </div>
-            </div>
-      
-           
-            <div class="row">
-                <div class="col redes-sociais">
-                    <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
-                    <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
-                    <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
-                </div>
-            </div>
-        </div>
-      </footer>
 
-    <!-- BOOTSTARP JS -->
-      <script src="JAVASCRIPT/jquery.js"></script>
-      <script src="JAVASCRIPT/popper.js"></script>
-      <script src="JAVASCRIPT/bootstrap.js"></script>
+  <footer class="footer-conteiner">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
+        </div>
+        <div class="col">
+          <h5>Endereço</h5>
+          <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
+          <p>São Paulo-SP</p>
+        </div>
+        <div class="col">
+          <h5>Telefone</h5>
+          <p>(11)9002-0922</p>
+          <p>(11)9002-0922</p>
+        </div>
+        <div class="col">
+          <h5>Horário de funcionamento</h5>
+          <h6>Terça a Quinta</h6>
+          <p> Das 17:00 ás 00:00</p>
+          <h6>Sexta á Sábado</h6>
+          <p> Das 17:00 ás 01:00</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col redes-sociais">
+          <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
+          <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
+          <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOOTSTARP JS -->
+  <script src="JAVASCRIPT/jquery.js"></script>
+  <script src="JAVASCRIPT/popper.js"></script>
+  <script src="JAVASCRIPT/bootstrap.js"></script>
 </body>
+
 </html>

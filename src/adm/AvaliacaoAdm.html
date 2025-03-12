@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina ADM</title>
+
+    <link rel="stylesheet" href="../css/styleADM.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../JAVASCRIPT/javascrip.js">
+
+
+
+</head>
+
+</head>
+<body>
+
+     <body class="backgrond-black">
+   
+    <header class="header-adm">
+        <nav class="nav-adm navbar navbar-lg bg-body-tertiary-dark navbar-dark">
+            <div class="container-fluid d-flex align-items-center ">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+    <h1 class="title-avaliacao">AVALIAÇÃO</h1>
+
+
+<div class="container">
+    <div id="lista-avaliacoes">
+      
+    </div>
+</div>
+
+<!-- Bootstrap JS (opcional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript para carregar e responder avaliações -->
+<script>
+    // Dados simulados de avaliações (substitua por uma requisição à API)
+    const avaliacoes = [
+        {
+            id: 1,
+            usuario: "João Silva",
+            comentario: "Ótimo serviço! A pizza chegou quentinha.",
+            data: "2023-10-01T14:48:00.000Z",
+            resposta: null // Resposta do admin (inicialmente vazia)
+        },
+        {
+            id: 2,
+            usuario: "Maria Oliveira",
+            comentario: "Demorou muito para entregar, mas a comida estava boa.",
+            data: "2023-10-02T15:00:00.000Z",
+            resposta: "Olá Maria, pedimos desculpas pelo atraso. Estamos melhorando nosso serviço de entrega!"
+        }
+    ];
+
+    // Função para carregar as avaliações na página
+    function carregarAvaliacoes() {
+        const listaAvaliacoes = document.getElementById('lista-avaliacoes');
+        listaAvaliacoes.innerHTML = ''; // Limpa o conteúdo atual
+
+        avaliacoes.forEach(avaliacao => {
+            const avaliacaoDiv = document.createElement('div');
+            avaliacaoDiv.className = 'avaliacao';
+
+            // Exibe os dados da avaliação
+            avaliacaoDiv.innerHTML = `
+                <h3>${avaliacao.usuario}</h3>
+                <p><strong>Comentário:</strong> ${avaliacao.comentario}</p>
+                <p><strong>Data:</strong> ${new Date(avaliacao.data).toLocaleString()}</p>
+
+                <!-- Resposta do Admin (se existir) -->
+                ${avaliacao.resposta ? `
+                    <div class="resposta-admin">
+                        <strong>Resposta do Admin:</strong> ${avaliacao.resposta}
+                    </div>
+                ` : ''}
+
+                <!-- Campo para o Admin responder -->
+                <textarea id="resposta-${avaliacao.id}" placeholder="Digite sua resposta..."></textarea>
+                <button class="btn btn-primary btn-responder" onclick="responderAvaliacao(${avaliacao.id})">Responder</button>
+            `;
+
+            listaAvaliacoes.appendChild(avaliacaoDiv);
+        });
+    }
+
+    // Função para enviar a resposta do Admin
+    function responderAvaliacao(avaliacaoId) {
+        const resposta = document.getElementById(`resposta-${avaliacaoId}`).value;
+
+        if (!resposta) {
+            alert("Por favor, digite uma resposta.");
+            return;
+        }
+
+        // Simula o envio da resposta ao back-end (substitua por uma requisição à API)
+        const avaliacaoIndex = avaliacoes.findIndex(av => av.id === avaliacaoId);
+        if (avaliacaoIndex !== -1) {
+            avaliacoes[avaliacaoIndex].resposta = resposta;
+            alert("Resposta enviada com sucesso!");
+            carregarAvaliacoes(); // Atualiza a lista de avaliações
+        }
+    }
+
+    // Carrega as avaliações ao abrir a página
+    window.onload = carregarAvaliacoes;
+</script>
+</body>
+</html>
+
+    </body>
+</html>

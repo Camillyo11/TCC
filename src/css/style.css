@@ -601,3 +601,97 @@ button.login-button:hover{
 
 }
 
+/* PAGAMENTO */
+.pagamento-body{
+    background-color: #991C08 ;
+    }
+    
+    .pagamento-conteiner{
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px auto;
+    margin-top: 100px;
+    }
+    
+    .pagamento-conteiner h3{
+        text-decoration: underline black;
+        color: #000000;
+        font-size: 165%;
+        font-weight: 700;
+
+
+    }
+
+    .conteiner-valor {
+        background-color: #959595;
+        color: #000000;
+        font-weight: 600;
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+    
+    .corpreta{
+        color: black;
+    }
+    
+    /* FORMULARIOS */
+    .opções{
+        display: flex;
+        justify-content:space-around;
+        gap: 15px;
+    }
+    
+    /* BOTÃO DE COPIA E COLA */
+    .btn-info{
+        border-radius: 20px;
+        color:white;
+        text-decoration: none;
+        border:none;
+    }
+    
+ 
+
+    /* BOTÃO DE AVANÇAR */
+    .button-laranja{
+        background-color: #F77F00;
+        border: none;
+        font-weight: bolder;
+        padding: 20px;
+        border-radius:30px;
+        width: 200px;
+        margin-top: 20px;
+        right: 20px;
+        
+      
+    
+    }
+    .button-laranja:hover{
+        background-color:#000000;
+        color: white;
+    }
+    .qrcode img {
+        background: white;
+        padding: 10px;
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+
+       
+    }
+    
+    /* PARTE DOS CODIGO DO QRCODE */
+    .pix-chave{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    
+ 
+    
+    
+    
+    

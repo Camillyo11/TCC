@@ -1,17 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bootstrap demo</title>
-
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" a href="../css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+
+
+  <title>área de contato</title>
 </head>
-<!-- class="d-flex justify-content-between align-items-center" -->
 
 <body class="backgrond-black">
   <header>
@@ -56,7 +56,7 @@
             data-bs-target="#exampleModal">
             <img src="../src/img/do-utilizador (3).png" height="30" width="30"> Conta
           </button>
-          <button class="login-button"><a href=""></a>
+          <button class="login-button">
             <img src="../src/img/carrinho-de-compras.png" height="30" width="30"> Pedidos
           </button>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -104,8 +104,7 @@
                   </div>
                   <p>Ainda não tem cadastro?</p>
                   <div class="center-button">
-                    <button type="submit" class="button-black btn-submit"><a href="../src/formscadastro.html">Quero me
-                        cadastrar</a></button>
+                    <button type="submit" class="button-black btn-submit">Quero me cadastrar</button>
                   </div>
                 </div>
               </form>
@@ -113,125 +112,45 @@
           </div>
           <div class="modal-footer">
             <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
- -->
+-->
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <mian>
-    <!-- área de introdução  img-fluid, rouede-->
-    <section class=" conteiner-intro hero container-fluid text-white">
-      <div class="container">
-        <h1 class="fw-bold">A melhor pizza do Jardim Ângela</h1>
-        <p>A melhor de São Paulo</p>
-        <div class="d-flex gap-3">
-          <a href="#" class="btn btn-custom px-4 py-2"><strong>Cardápio</strong></a>
-          <a href="#" class="btn btn-custom px-4 py-2"><strong>Faça seu pedido</strong></a>
-        </div>
+  <!-- área de introdução  img-fluid, rouede-->
+  <section class="contato-banner hero container-fluid text-white">
+    <div class="container-titulo-contato">
+      <h1 class="contato-titulo fw-bold">CONTATO</h1>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <div class="container-contato container p-3">
+    <form class="form-contato">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
       </div>
-    </section>
-
-    <!-- SOBRE NÓS -->
-    <section class="sobre-nos container">
-      <div class="row d-flex justify-content-center align-items-center text-center">
-
-        <div class="col ">
-          <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Pizza" class="img-fluid">
-        </div>
-
-        <div class="col ">
-          <h2>Sobre nós</h2>
-          <p>Desde 1999 a Bella Massa é referência em pizzas de qualidade, com ingredientes selecionados e um sabor
-            inigualável. Venha conhecer nosso cardápio e se surpreender com a qualidade de nossos produtos.</p>
-        </div>
-
-
-
+      <div class="form-group">
+        <label for="email" class="form-label">E-mail:</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
       </div>
-    </section>
+      <div class="form-group">
+        <label for="assunto" class="form-label">Assunto:</label>
+        <input type="text" class="form-control" id="assunto" placeholder="Digite o assunto">
+      </div>
+      <div class="form-group">
+        <label for="mensagem" class="form-label">Mensagem:</label>
+        <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
+      </div>
+      <div class="center-button">
+        <button type="submit" class="button-black btn-submit">Enviar</button>
+      </div>
 
-    <!-- CARDÁPIO -->
-    <section class="cardapio container">
-      <div class="cardapio-intro conteiner text-center">
-        <div class="row justify-content-md-center">
-          <div class="col-lg-2">
-            <img src="../src/img/pizza.png" alt="Pizza" class="img-fluid">
-          </div>
-
-          <div class="row">
-            <div class="col-8">
-              <h2>EXPLORE NOSSO CARDÁPIO!</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, aperiam? Possimus officiis perferendis
-                iure deleniti fugit! Aut rem voluptatibus consequatur consequuntur, minima atque deserunt, porro
-                adipisci accusantium ratione, aliquam eveniet!</p>
-            </div>
-            <div class="col-4">
-              <div class="pizza-oculos">
-                <img src="../src/img/image.png" alt="Pizza" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class=" row row-cols-1 row-cols-md-3 g-4">
-          <!-- Primeira coluna -->
-          <div class="col">
-            <button class="button-cardapio">
-              <a herf="#" alt="pizza"><img
-                  src="../src/img/ai-generated-a-slice-of-pizza-is-shown-with-melted-cheese-free-png.png"
-                  alt="Pizza salgada"></a>
-              <h5 class="button-cardapio-title">Pizza Salgada</h5>
-            </button>
-          </div>
-
-          <!-- Segunda coluna -->
-          <div class="col">
-            <button class="button-cardapio">
-              <img src="../src/img/ai-generated-a-slice-of-pizza-is-shown-with-melted-cheese-free-png.png"
-                alt="Pizza doce">
-
-              <h5 class="button-cardapio-title">Pizza Doce</h5>
-
-            </button>
-          </div>
-
-          <!-- Terceira coluna -->
-          <div class="col">
-            <button class="button-cardapio">
-              <img
-                src="../src/img/png-transparent-soft-drink-coca-cola-juice-milkshake-coke-clear-drinking-glass-filled-with-beverage-drink-illustration-food-drop-the-cocacola-company-thumbnail.png"
-                alt="refrigerante">
-
-              <h5 class="button-cardapio-title">Refrigerante</h5>
-
-            </button>
-          </div>
-
-        </div>
-
-
-
-
-    </section>
-
-    <!-- PROMOÇÕES -->
-    <section>
-
-    </section>
-
-
-    <!-- CONTATO -->
-    <section>
-
-    </section>
-
-
-
-
-  </mian>
-
+    </form>
+  </div>
 
   <!--   FOOTER   -->
   <footer class="footer-conteiner">
@@ -269,10 +188,6 @@
       </div>
     </div>
   </footer>
-
-
-
-
 
   <!-- BOOTSTARP JS -->
   <script src="JAVASCRIPT/jquery.js"></script>

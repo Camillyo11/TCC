@@ -1,0 +1,157 @@
+body{
+    background-color: #991C08 ;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+   
+}
+.container{
+    background-color: white;
+    padding: 0px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.menu1{
+    
+    background-color: #F77F00;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.menu1 a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px;
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.img_banner{
+    height: auto;
+    width: 100%;
+   
+}
+.pizza-item{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+   border-radius: 15px;
+   border-bottom: 100px solid black;
+   color: white;
+}
+.pizza-item img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.pizza-info{
+    flex-grow: 1;
+}
+.preço{
+    color: red;
+    font-weight: bolder;
+}
+.btn_retirar{
+    display: flex;
+    align-items: center;
+
+}
+.btn_adicionar{
+    display: flex;
+    align-items: center;
+}
+.quantidade{
+    background-color: rgb(8, 8, 8);
+    border: none;
+    padding: 5px 50px;
+    margin: 0 auto;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.bordas{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+h3{
+    margin-top: 100px;
+    background-color: #f9a622;
+    color: white;
+    border-radius: auto;
+    padding: 15px;
+}
+.botão-container{
+   
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.btnfinal{
+    background-color: #F77F00;
+    color: black;
+    border-radius: 15px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+.btnfinal:active{
+    background-color: green;
+}
+
+/* FOOTER/RODAPÉ */
+.footer-conteiner1 {
+    background-color: rgb(50, 48, 48);
+    color: rgb(255, 255, 255);
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+ 
+
+ }
+
+.logo-grande {
+    width: 200px;
+    height: 200px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    gap: 50px;
+}
+
+.redes-sociais .midia {
+    gap: 40px;
+    
+   
+    
+}
+
+.redes-sociais .midia img {
+    height: 40px;
+    width: 40px;
+}
+
+
+

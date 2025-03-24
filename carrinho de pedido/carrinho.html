@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-
-
-  <title>área de contato</title>
+  <title>Confirmação de Pedido</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" a href="carrinho.css">
 </head>
 
-<body class="backgrond-black">
+<body>
+
   <header>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand me-auto" href="index.html">
-          <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa" width="100"
+          <img src="img/WhatsApp Image 2024-10-09 at 22.04.01 (1).png" alt="Logo da Bella Massa" width="100"
             height="100">
         </a>
         <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar"
@@ -54,10 +51,10 @@
         <div class="button-navbar ms-auto">
           <button type="button" class="login-button btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
-            <img src="../src/img/do-utilizador (3).png" height="30" width="30"> Conta
+            <img src="img/icone de login.png" height="30" width="30"> Conta
           </button>
-          <button class="login-button">
-            <img src="../src/img/carrinho-de-compras.png" height="30" width="30"> Pedidos
+          <button class="login-button"><a href=""></a>
+            <img src="img/carrinho.png" height="30" width="30"> Pedidos
           </button>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -104,7 +101,8 @@
                   </div>
                   <p>Ainda não tem cadastro?</p>
                   <div class="center-button">
-                    <button type="submit" class="button-black btn-submit">Quero me cadastrar</button>
+                    <button type="submit" class="button-black btn-submit"><a href="../src/formscadastro.html">Quero me
+                        cadastrar</a></button>
                   </div>
                 </div>
               </form>
@@ -112,87 +110,116 @@
           </div>
           <div class="modal-footer">
             <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
--->
+     -->
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- área de introdução  img-fluid, rouede-->
-  <section class="contato-banner hero container-fluid text-white">
-    <div class="container-titulo-contato">
-      <h1 class="contato-titulo fw-bold">CONTATO</h1>
+  <div class="container">
+    <div class="texto">
+      <h1>Confirmação de pedido</h1>
     </div>
-  </section>
 
-  <!-- FORMULARIO -->
-  <div class="container-contato container p-3">
-    <form class="form-contato">
-      <div class="mb-3">
-        <label for="nome" class="form-label">Nome:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+    <p class="p1 mt-2"><strong>Endereço:</strong> AV. Baronesa - Jardim Ângela - N 21</p>
+    <p class="p2"><a href="#" class="text-light">Desejar alterar seu pedido?</a></p>
+
+    <div class="box p-3">
+      <span class="tag badge bg-secodandary">Pizza salgada</span>
+      <span class="tag badge bg-secodandary">Inteira</span>
+      <h3 class="mt-2">Pizza de Frango com Catupiry</h3>
+      <p>Molho, Mussarela, Frango desfiado e catupiry</p>
+      <h3 class="preço">R$ 47,90</h3>
+      <span class="borda">Borda: Sem recheio na borda</span>
+    </div>
+
+    <div class="box p-3">
+      <span class="tag badge bg-secodandary">Pizza salgada</span>
+      <span class="tag badge bg-secodandary">Meio a Meio</span>
+      <h3 class="mt-2">Baiana</h3>
+      <p>Ervilha, cebola, mussarela, calabresa, salada, molho e pimenta</p>
+      <h3 class="preço">R$ 47,90</h3>
+      <span class="borda">Borda: Sem recheio na borda</span>
+    </div>
+
+    <div class="total text-center">
+      <h3>Valor do Frete: R$ 5,00</h3>
+    </div>
+
+    <textarea class="form-control my-2" placeholder="Adicionar comentário"></textarea>
+
+    <div class="addpedido">
+      <button><span>+</span>Adicionar mais ao pedido</button>
+    </div>
+
+    <div class="total text-center">
+      <h4>VALOR TOTAL: R$ 100,80</h4>
+    </div>
+
+    <div class="opcão-delivery">
+      <div class="opcoes form-check text-start mt-3">
+        <input class="form-check-input" type="radio" name="entrega" id="entregar">
+        <label class="form-check-label" for="entregar">
+          Quero que me entregue
+        </label>
       </div>
-      <div class="form-group">
-        <label for="email" class="form-label">E-mail:</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+      <div class="opcoes form-check text-start mt-3">
+        <input class="form-check-input" type="radio" name="entrega" id="retirar">
+        <label class="form-check-label" for="retirar">
+          Vou retirar no local
+        </label>
       </div>
-      <div class="form-group">
-        <label for="assunto" class="form-label">Assunto:</label>
-        <input type="text" class="form-control" id="assunto" placeholder="Digite o assunto">
+    </div>
+    <p class="tempo small">tempo estimado para entrega de 40 a 60 minutos</p>
+    <button class="btn1 btn-warning mt-3">Ir para pagamento</button>
+
+
+
+
+    <footer class="footer-conteiner ">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <img class="logo-grande" src="img/WhatsApp Image 2024-10-09 at 22.04.01 (1).png" alt="logo">
+          </div>
+          <div class="col">
+            <h5>Endereço</h5>
+            <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
+            <p>São Paulo-SP</p>
+          </div>
+          <div class="col">
+            <h5>Telefone</h5>
+            <p>(11)9002-0922</p>
+            <p>(11)9002-0922</p>
+          </div>
+          <div class="col">
+            <h5>Horário de funcionamento</h5>
+            <h6>Terça a Quinta</h6>
+            <p> Das 17:00 ás 00:00</p>
+            <h6>Sexta á Sábado</h6>
+            <p> Das 17:00 ás 01:00</p>
+          </div>
+
+        </div>
       </div>
-      <div class="form-group">
-        <label for="mensagem" class="form-label">Mensagem:</label>
-        <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
-      </div>
-      <div class="center-button">
-        <button type="submit" class="button-black btn-submit">Enviar</button>
+      <div class="row">
+        <div class=" col">
+          <div class="redes-sociais">
+            <a href="#" class="midia"><img src="img/whatsapp.png" height="30" width="30"></a>
+            <a href="#" class="midia"><img src="img/instagram.png" height="30" width="30"></a>
+            <a href="#" class="midia"><img src="img/tik-tok (1).png" height="30" width="30"></a>
+
+          </div>
+        </div>
       </div>
 
-    </form>
+    </footer>
+
+
   </div>
 
-  <!--   FOOTER   -->
-  <footer class="footer-conteiner">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
-        </div>
-        <div class="col">
-          <h5>Endereço</h5>
-          <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
-          <p>São Paulo-SP</p>
-        </div>
-        <div class="col">
-          <h5>Telefone</h5>
-          <p>(11)9002-0922</p>
-          <p>(11)9002-0922</p>
-        </div>
-        <div class="col">
-          <h5>Horário de funcionamento</h5>
-          <h6>Terça a Quinta</h6>
-          <p> Das 17:00 ás 00:00</p>
-          <h6>Sexta á Sábado</h6>
-          <p> Das 17:00 ás 01:00</p>
-        </div>
-      </div>
-
-      <!-- Redes Sociais abaixo das colunas -->
-      <div class="row">
-        <div class="col redes-sociais">
-          <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- BOOTSTARP JS -->
-  <script src="JAVASCRIPT/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

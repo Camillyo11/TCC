@@ -10,412 +10,165 @@
   <title>Cardapio/selecionar pizza</title>
 </head>
 
-<body>
-  <header>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="index.html">
-          <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa" width="100"
-            height="100">
-        </a>
-        <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BELLA MASSA</h5>
-            <button type="button" class="btn-close btn-close-white btn-primary btn-sm" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 text-white">
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2 active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Sobre nós</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Promoções</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Cardápio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="#">Contato</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <body class="body-vermelho">
+      <!-- Seu NAV já pronto viria aqui -->
 
-        <!-- Botões do Navbar -->
-        <div class="button-navbar ms-auto">
-          <button type="button" class="login-button btn btn-primary" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
-            <img src="../src/img/do-utilizador (3).png" height="30" width="30"> Conta
-          </button>
-          <button class="login-button">
-            <img src="../src/img/carrinho-de-compras.png" height="30" width="30"> Pedidos
-          </button>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
+      <div class="container cardapio-container">
+          <div class="row">
+              <div class="col-md-12">
+                  <!-- <h2 class="text-center mb-4">Nossas Pizzas</h2> -->
+                  
+                  <!-- Abas de navegação entre categorias -->
+                  <ul class="nav-categorias nav nav-tabs justify-content-center mb-4 " id="pizzaTabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                          <button class=" nav-link-categoria nav-link active text-dark " id="salgadas-tab" data-bs-toggle="tab" data-bs-target="#salgadas" type="button" role="tab">Pizzas Salgadas</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                          <button class=" nav-link-categoria nav-link text-dark " id="doces-tab" data-bs-toggle="tab" data-bs-target="#doces" type="button" role="tab">Pizzas Doces</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link-categoria nav-link  text-dark" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab">Bebidas</button>
+                      </li>
+                  </ul>
+                  
+                  <div class="barra_pesquisa">
+                    <input type="text" class="form-control" placeholder="🔍 Pesquisar">
+                </div>
 
-    <!-- Modal (movido para fora do navbar) -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">LOGIN</h1>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
+                  <!-- Conteúdo das abas -->
+                  <div class="tab-content" id="pizzaTabsContent">
+                      <!-- Tab Pizzas Salgadas -->
+                      <div class="tab-pane fade show active sabores-container" id="salgadas" role="tabpanel">
+                          <h3 class="categoria-titulo">Pizzas Salgadas</h3>
+                          
+                          <div class="row">
+                              <!-- Pizza 1 -->
+                              <div class="col-md-6 col-lg-4">
+                                  <div class="card pizza-card h-100">
+                                      <div class="card-body">
+                                        <img src="../img pizzas/images (4) (1).png" class="card-img-top" alt="...">
+                                          <h5 class="card-title pizza-nome">Frango com Catupiry</h5>
+                                          <p class="card-text">Molho, Mussarela, frango desfiado e catupiry</p>
+                                          <p class="pizza-preco">R$ 47,90</p>
 
-            <div class="container p-5">
-              <form class="form-vermelho">
-                <div class="mb-3">
-                  <div class="title">
-                    <h1>Acesse sua conta</h1>
+                                          <div class="quantidade">
+                                            <div class="quantidade-itens">
+                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                                                <span class="mx-2">0</span>
+                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- Pizza 2 -->
+                              <div class="col-md-6 col-lg-4">
+                                  <div class="card pizza-card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title pizza-nome">Baiana</h5>
+                                          <p class="card-text">Ervilha, cebola, mussarela, calabresa ralada, molho e pimenta</p>
+                                          <p class="pizza-preco">R$ 43,90</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- Pizza 3 -->
+                              <div class="col-md-6 col-lg-4">
+                                  <div class="card pizza-card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title pizza-nome">Calabresa</h5>
+                                          <p class="card-text">Calabresa fatiada e cebola</p>
+                                          <p class="pizza-preco">R$ 43,90</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- Pizza 4 -->
+                              <div class="col-md-6 col-lg-4">
+                                  <div class="card pizza-card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title pizza-nome">Mussarela</h5>
+                                          <p class="card-text">Mussarela, orégano e tomate</p>
+                                          <p class="pizza-preco">R$ 43,90</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- Pizza 5 -->
+                              <div class="col-md-6 col-lg-4">
+                                  <div class="card pizza-card h-100">
+                                      <div class="card-body">
+                                          <h5 class="card-title pizza-nome">Dois Queijos</h5>
+                                          <p class="card-text">Combinação especial de mussarela e catupiry</p>
+                                          <p class="pizza-preco">R$ 47,90</p>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- Adicione mais pizzas conforme necessário -->
+                          </div>
+                          
+                          <!-- Seção de Bordas -->
+                          <h3 class="categoria-titulo mt-5">Opções de Borda</h3>
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <div class="borda-option">
+                                      <h5>Borda de Catupiry</h5>
+                                      <p>+R$ 10,00</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="borda-option">
+                                      <h5>Borda de Cheddar</h5>
+                                      <p>+R$ 10,00</p>
+                                  </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="borda-option">
+                                      <h5>Borda de Chocolate</h5>
+                                      <p>+R$ 15,00</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-- Tab Pizzas Doces (vazio por enquanto) -->
+                      <div class="tab-pane fade sabores-container" id="doces" role="tabpanel">
+                          <h3 class="categoria-titulo">Pizzas Doces</h3>
+                          <p class="text-center">Em breve mais opções!</p>
+                      </div>
+                      
+                      <!-- Tab Bebidas (vazio por enquanto) -->
+                      <div class="tab-pane fade sabores-container" id="bebidas" role="tabpanel">
+                          <h3 class="categoria-titulo">Bebidas</h3>
+                          <p class="text-center">Em breve mais opções!</p>
+                      </div>
                   </div>
-                  <label for="email" class="form-label">Digite seu email:</label>
-                  <input type="email" name="email_usuario" placeholder="Digite seu email" id="email"
-                    class="form-control" required>
-                </div>
-                <div class="mb-3">
-                  <label for="password" class="">Digite sua senha:</label>
-                  <input type="password" name="senha_usuario" placeholder="Digite sua senha" id="senha"
-                    class="form-control" required>
-                </div>
-                <div class="link-recuperar-senha">
-                  <a href="#">esqueci minha senha</a>
-                </div>
-                <div class="center-button">
-                  <button type="submit" class="button-black btn-submit">Conectar</button>
-                </div>
-                <div class="form-container">
-                  <div class="divider">
-                    <span>ou</span>
+                  
+                  <!-- Botões de ação -->
+                  <div class="d-flex justify-content-between mt-4">
+                      <button class="btn btn-outline-primary">Adicionar outro item</button>
+                      <button class="btn btn-danger">Avançar</button>
                   </div>
-                  <p>Ainda não tem cadastro?</p>
-                  <div class="center-button">
-                    <button type="submit" class="button-black btn-submit">Quero me cadastrar</button>
-                  </div>
-                </div>
-              </form>
-            </div>
+              </div>
           </div>
-          <div class="modal-footer">
-            <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
- -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-  <nav>
-    <ul class="menu">
-      <li>
-        <a class="nav-link active" href="#">Pizzas Salgadas</a>
-      </li>
-
-      <li>
-        <a class="nav-link" href="#">Pizzas Doces</a>
-      </li>
-
-      <li>
-        <a class="nav-link" href="#">Bebidas</a>
-      </li>
-    </ul>
-
-  </nav>
-
-  <div class="container mt-4">
-    <div class="menu-container">
-      <h3 class="text-center text-dark">Pizzas Salgadas</h3>
-
-      <!-- Barra de pesquisa -->
-      <div class="barra_pesquisa">
-        <input type="text" class="form-control" placeholder="🔍 Pesquisar">
       </div>
 
-      <!-- Item 1 -->
-      <article class="pizza-item">
-        <img src="" alt="Pizza de Frango">
-        <div class="pizza-info">
-          <strong>Pizza de Frango com Catupiry</strong><br>
-          <span class="price">R$ 47,90</span>
-          <p>Molho, Mussarela e queijo</p>
-        </div>
-        <button class="btn btn-outline-secondary btn-sm">-</button>
-        <span class="mx-2">0</span>
-        <button class="btn btn-outline-secondary btn-sm">+</button>
-      </article>
-
-      <!-- Item 2 -->
-      <article class="pizza-item">
-        <img src="pizza2.jpg" alt=" pizza Baiana">
-        <div class="pizza-info">
-          <strong>Baiana</strong><br>
-          <span class="preço">R$ 43,90</span>
-        </div>
-        <button class="btn btn-outline-secondary btn-sm">-</button>
-        <span class="mx-2">0</span>
-        <button class="btn btn-outline-secondary btn-sm">+</button>
-      </article>
 
 
 
-      <!-- Item 3 -->
-      <article class="pizza-item">
-        <img src="pizza3.jpg" alt="Calabresa">
-        <div class="pizza-info">
-          <strong>Calabresa</strong><br>
-          <span class="price">R$ 43,90</span>
-        </div>
-        <button class="btn btn-outline-secondary btn-sm">-</button>
-        <span class="mx-2">0</span>
-        <button class="btn btn-outline-secondary btn-sm">+</button>
-      </article>
-
-      <!-- Item 4 -->
-      <article class="pizza-item">
-        <img src="pizza4.jpg" alt="Mussarela">
-        <div class="pizza-info">
-          <strong>Mussarela</strong><br>
-          <span class="price">R$ 43,90</span>
-        </div>
-        <button class="btn btn-outline-secondary btn-sm">-</button>
-        <span class="mx-2">0</span>
-        <button class="btn btn-outline-secondary btn-sm">+</button>
-      </article>
-
-      <!-- Item 5 -->
-      <article class="pizza-item">
-        <img src="pizza5.jpg" alt="Dois queijos">
-        <div class="pizza-info">
-          <strong>Dois queijos</strong><br>
-          <span class="price">R$ 47,90</span>
-        </div>
-        <button class="btn btn-outline-secondary btn-sm">-</button>
-        <span class="mx-2">0</span>
-        <button class="btn btn-outline-secondary btn-sm">+</button>
-      </article>
-      <!--
-            Item 6
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-          Item 7
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-           Item 8 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-             Item 9 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-           Item 10 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-          Item 11
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-             Item 12
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-            Item 13 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-             Item 14 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-            Item 15 
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <P></P>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-          Item 16-
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            </article>
-
-            < Item 17
-            <article class="pizza-item">
-                <img src="pizza5.jpg" alt="Dois queijos">
-                <div class="pizza-info">
-                    <strong>Dois queijos</strong><br>
-                    <span class="price">R$ 47,90</span>
-                </div>
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-            -->
-      </article>
-
-      <section class="bordas">
-        <h3 class="text-center text-dark">Bordas</h3>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" name="borda_catupiry" id="borda1">
-          <label class="form-check-label text-dark" for="borda1">Borda Catupiry + R$ 10,00</label>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" name="borda_cheddar" id="borda2">
-            <label class="form-check-label text-dark" for="borda1">Borda Cheddar + R$ 10,00</label>
-
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="borda_chocolate" id="borda3">
-              <label class="form-check-label text-dark" for="borda1">Borda Chocolate + R$ 15,00</label>
-            </div>
-      </section>
-
-      <button class="btn btn-outline-danger" type="button">Adicionar outro item</button>
-      <button class="btn btn-outline-warning" type="button">Avançar</button>
-
-    </div>
-
-  </div>
 
 
-  <!--   FOOTER   -->
-  <footer class="footer-conteiner">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col">
-          <img class="logo-grande" src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
-        </div>
-        <div class="col">
-          <h5>Endereço</h5>
-          <p>Av João Gonçalves dos Reis, 350, Medeiros(Esquina com a Av Francisco Nobre)</p>
-          <p>São Paulo-SP</p>
-        </div>
-        <div class="col">
-          <h5>Telefone</h5>
-          <p>(11)9002-0922</p>
-          <p>(11)9002-0922</p>
-        </div>
-        <div class="col">
-          <h5>Horário de funcionamento</h5>
-          <h6>Terça a Quinta</h6>
-          <p> Das 17:00 ás 00:00</p>
-          <h6>Sexta á Sábado</h6>
-          <p> Das 17:00 ás 01:00</p>
-        </div>
-      </div>
 
-      <!-- Redes Sociais abaixo das colunas -->
-      <div class="row">
-        <div class="col redes-sociais">
-          <a href="#" class="midia"><img src="../src/img/whatsapp.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="../src/img/instagram.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="../src/img/tik-tok (1).png" height="30" width="30"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
 
-  <!-- BOOTSTARP JS -->
-  <script src="JAVASCRIPT/jquery.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+      
+      
+      <!-- Seu FOOTER já pronto viria aqui -->
+      
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
 
 </body>
 

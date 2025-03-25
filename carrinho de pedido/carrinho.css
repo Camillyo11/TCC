@@ -187,8 +187,6 @@ button.login-button:hover {
 
 
 
-
-
 }
 
 .modal-footer {
@@ -244,6 +242,7 @@ button.login-button:hover {
     /* Cor da linha */
     margin: 10px;
 }
+
 
 .container {
     padding: 20px;

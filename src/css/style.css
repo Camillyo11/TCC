@@ -13,9 +13,9 @@
 @media (max-width: 768px) { /* Para telas menores que 768px */
 
     html, body {
-        margin: 0;
+        /* margin: 0;
         padding: 10px; 
-        height: 100%;
+        height: 100%; */
         flex-direction: row;
         
   
@@ -194,7 +194,6 @@ button.login-button:hover{
 }
 
 
-
 /* LOGIN */
 .form-container {
     text-align: center;
@@ -237,8 +236,6 @@ button.login-button:hover{
     margin: 10px;
 }
 
-
-
 /* INTRODUÇÃO -> IMAGEM DE FUNDO */
 
 .conteiner-intro{
@@ -252,8 +249,7 @@ button.login-button:hover{
    width: 100vh ;
     height: 100% !important;
 }
-    
-    
+       
 
 .btn-custom  {
     background-color: #f47a00 !important ;
@@ -279,8 +275,6 @@ button.login-button:hover{
   border-radius: 20px;
 }
    
-
-
 .sobre-nos .row {
     display: flex;
     justify-content: center;
@@ -380,13 +374,7 @@ button.login-button:hover{
     transition: 0.3s;
  }
 
-
-
  /* FOOTER/RODAPÉ */
-
-
- 
-  
  .footer-conteiner {
     background-color: rgb(50, 48, 48);
     color: rgb(255, 255, 255);
@@ -457,8 +445,6 @@ button.login-button:hover{
    
 }
 
-
-
   .form-contato{
     margin-top: 20px;
     justify-content: center;
@@ -471,7 +457,6 @@ button.login-button:hover{
     
     
   }
-
 
 
   .button-black{
@@ -488,7 +473,9 @@ button.login-button:hover{
     
    
 }
-  
+.button-black:hover{
+    background-color:#f47a00;
+}
 .center-button {
     justify-content: center;
     align-items: center;
@@ -538,15 +525,7 @@ button.login-button:hover{
 }
 
 
-
-
 /* AVALIAÇÃO CLIENTE */
-.backgrond-vermelho{
-    background-color: rgb(135, 35, 35);
-
-   
-
-}
 
 .stars {
     display: flex;
@@ -582,7 +561,6 @@ button.login-button:hover{
     text-align: center;
     margin-top: 120px;
    
-
 }
 
 .form-group-avaliacao{
@@ -602,29 +580,25 @@ button.login-button:hover{
 }
 
 /* PAGAMENTO */
-.pagamento-body{
-    background-color: #991C08 ;
-    }
+
     
-    .pagamento-conteiner{
+.pagamento-conteiner{
     color: white;
     padding: 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
     margin: 20px auto;
     margin-top: 100px;
     }
     
-    .pagamento-conteiner h3{
+.pagamento-conteiner h3{
         text-decoration: underline black;
         color: #000000;
         font-size: 165%;
         font-weight: 700;
-
-
     }
 
-    .conteiner-valor {
+.conteiner-valor {
         background-color: #959595;
         color: #000000;
         font-weight: 600;
@@ -635,29 +609,28 @@ button.login-button:hover{
         border-radius: 20px;
     }
     
-    .corpreta{
+.corpreta{
         color: black;
     }
     
     /* FORMULARIOS */
-    .opções{
+.opções{
         display: flex;
         justify-content:space-around;
         gap: 15px;
     }
     
     /* BOTÃO DE COPIA E COLA */
-    .btn-info{
+.btn-info{
         border-radius: 20px;
         color:white;
         text-decoration: none;
         border:none;
     }
     
- 
 
     /* BOTÃO DE AVANÇAR */
-    .button-laranja{
+.button-laranja{
         background-color: #F77F00;
         border: none;
         font-weight: bolder;
@@ -670,11 +643,11 @@ button.login-button:hover{
       
     
     }
-    .button-laranja:hover{
+ .button-laranja:hover{
         background-color:#000000;
         color: white;
     }
-    .qrcode img {
+.qrcode img {
         background: white;
         padding: 10px;
         display: inline-block;
@@ -685,13 +658,281 @@ button.login-button:hover{
     }
     
     /* PARTE DOS CODIGO DO QRCODE */
-    .pix-chave{
+.pix-chave{
         font-size: 20px;
         margin-top: 10px;
     }
+
+   /* PAGINA DE CONFIRMAÇÃO DO PEDIDO */ 
+.body-vermelho{
+    background-color:#991C08;
+}
+
+.conteiner-confirmacao{
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.texto-confirmacao {
+    background-color: #090909;
+    color: #ffffff;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 140px
+}
+
+.endereco-confirmacao {
+    border-radius: 20px;
+    background-color: white;
+    color: #000000;
+    padding: 5px;
+    text-align: center;
+}
+
+.link-alteraca-confirmacao {
+    text-align: center;
+}
+
+.box-confirmacao {
+    background-color: #F77F00;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.escolha-confirmacao  {
+    background-color: #991C08;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.borda-confirmacao {
+    background-color: #991C08;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.preço-confirmacao {
+    text-align: right;
+    font-weight: bold;
+}
+
+.total-confirmacao{
+    background-color: #F77F00;
+    border: 10px solid #F77F00;
+    border-radius: 30px;
+    padding: 10px;
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+    margin: 0 auto;
+
+
+}
+
+
+textarea {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.add-pedido span {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.add-pedido button {
+
+    margin: 10px auto;
+    background-color: #F77F00;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.opcoes {
+    justify-content: space-between;
+    display: block;
+    gap: 10px;
+}
+
+.opcão-delivery{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.button-black-centralizar{
+    text-align: center;
+}
+
+.tempo-estimado {
+    color: white;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.comentario-confirmacao {
+    height: 100px ;
+}
     
+
+ /* CARDAPIO PARA SELECIONAR PIZZA */
+
+.selecao-cardapio{
+    background-color: white;
+    padding: 0px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 150px;
  
+}
+.menu1{
     
+    background-color: #F77F00;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu1 a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px;
+    font-weight: 700;
     
+}
+.menu a:hover{
+    text-decoration: underline;
+}
+.img_banner{
+    height: auto;
+    width: 100%;
+   
+}
+
+.text-menu{
+    margin-top: 0px;
+  
     
+}
+
+.pizza-item{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+   border-radius: 15px #0000;
+ /*   background-color: #959595;  */
+   
+   
+}
+
+.text-sabor-pizza{
+
+
     
+
+}
+
+@media (max-width: 768px) { /* Para telas menores que 768px */
+
+    .text-sabor-pizza{
+        width: 300px;
+    }
+}
+
+.pizza-item img{
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.pizza-info{
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+   
+}
+.preço-selecao-cardapio{
+    color: red;
+    font-weight: bolder;
+}
+.btn_retirar{
+    display: flex;
+    align-items: center;
+
+}
+.btn_adicionar{
+  
+    align-items: center;
+}
+
+.quantidade{
+    background-color: rgb(8, 8, 8);
+    border: none;
+    padding: 5px 50px;
+    margin: 0 auto;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 130px;
+    margin-right: 10px;
+    
+}
+.quantidade-itens{
+color: #ffffff;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  
+}
+
+.bordas{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+h3{
+    margin-top: 100px;
+    background-color: #f9a622;
+    color: white;
+    border-radius: auto;
+    padding: 15px;
+}
+.botão-container{
+   
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.btnfinal{
+    background-color: #F77F00;
+    color: black;
+    border-radius: 15px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+.btnfinal:active{
+    background-color: green;
+}

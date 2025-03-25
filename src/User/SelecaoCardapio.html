@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" a href="stylecadrapio.css">
+    <link rel="stylesheet" a href="../css/style.css">
     <title>Cardapio/selecionar pizza</title>
 </head>
 
-<body>
-
-
-
-    <header class="cabeçalho">
-
-
+<body class="body-vermelho">
+    <header>
+        <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg fixed-top bg-black navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand me-auto" href="index.html">
-                    <img src="../src/img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa"
+                    <img src="../img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="Logo da Bella Massa"
                         width="100" height="100">
                 </a>
                 <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasNavbar"
@@ -50,15 +46,15 @@
                         </ul>
                     </div>
                 </div>
-
+    
                 <!-- Botões do Navbar -->
                 <div class="button-navbar ms-auto">
                     <button type="button" class="login-button btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">
-                        <img src="../src/img/do-utilizador (3).png" height="30" width="30"> Conta
+                        <img src="../img/do-utilizador (3).png" height="30" width="30"> Conta
                     </button>
                     <button class="login-button"><a href=""></a>
-                        <img src="../src/img/carrinho-de-compras.png" height="30" width="30"> Pedidos
+                        <img src="../img/carrinho-de-compras.png" height="30" width="30"> Pedidos
                     </button>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
@@ -68,7 +64,7 @@
                 </div>
             </div>
         </nav>
-
+    
         <!-- Modal (movido para fora do navbar) -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -79,7 +75,7 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-
+    
                         <div class="container p-5">
                             <form class="form-vermelho">
                                 <div class="mb-3">
@@ -117,55 +113,58 @@
                     </div>
                     <div class="modal-footer">
                         <!--  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-           -->
+     -->
                     </div>
                 </div>
             </div>
         </div>
-
-
     </header>
 
-    <main class="container">
+
+    <main class="selecao-cardapio container">
         <nav>
 
             <div class="menu1">
-
                 <a class="nav-link active" href="#">Pizzas Salgadas</a>
                 <a class="nav-link" href="#">Pizzas Doces</a>
                 <a class="nav-link" href="#">Bebidas</a>
             </div>
 
         </nav>
-        <img src="img pizzas/10-de-julho-dia-da-pizza-cursos-cpt.png" alt="imagem de uma pizza" class="img_banner">
+        <img src="../img pizzas/10-de-julho-dia-da-pizza-cursos-cpt.png" alt="imagem de uma pizza" class="img_banner">
 
-        <h3 class="text-center text-dark">Pizzas Salgadas</h3>
+        <h3 class="text-menu text-center text-dark">Pizzas Salgadas</h3>
         <!-- Barra de pesquisa -->
         <div class="barra_pesquisa">
             <input type="text" class="form-control" placeholder="🔍 Pesquisar">
         </div>
 
+
         <!-- Item 1 -->
         <article class="pizza-item">
-            <img src="img pizzas/pizza-frango-com-catupiry-1565140749.png" alt="Pizza de Frango">
+            <img src="../img pizzas/pizza-frango-com-catupiry-1565140749.png" alt="Pizza de Frango">
             <div class="pizza-info">
-                <strong>Pizza de Frango com Catupiry</strong><br>
-                <span class="preço">R$ 47,90</span>
-                <p>Molho, Mussarela e queijo</p>
+               <p class="text-sabor-pizza"><strong>Pizza de Frango com Catupiry</strong></p>
+               <p class="text-ingrediente">Molho, Mussarela e queijo</p> 
+            <span class="preço-selecao-cardapio">R$ 47,90</span>
+               
             </div>
-            <div class="quantidade">
-                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">0</span>
-                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-            </div>
+                <div class="quantidade">
+                    <div class="quantidade-itens">
+                        <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                        <span class="mx-2">0</span>
+                        <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                    </div>
+                </div>
+                
         </article>
 
         <!-- Item 2 -->
         <article class="pizza-item">
-            <img src="img pizzas/pizza-frango-com-catupiry-1565140749 (8).png" alt=" pizza Baiana">
+            <img src="../img pizzas/pizza-frango-com-catupiry-1565140749 (8).png" alt=" pizza Baiana">
             <div class="pizza-info">
                 <strong>Baiana</strong><br>
-                <span class="preço">R$ 43,90</span>
+                <span class="preço-selecao-cardapio">R$ 43,90</span>
                 <p>mussarela, peperone e quiejo</p>
             </div>
 
@@ -180,10 +179,10 @@
 
         <!-- Item 3 -->
         <article class="pizza-item">
-            <img src="img pizzas/pizza-frango-com-catupiry-1565140749 (7).png" alt="Calabresa">
+            <img src="../img pizzas/pizza-frango-com-catupiry-1565140749 (7).png" alt="Calabresa">
             <div class="pizza-info">
                 <strong>Calabresa</strong><br>
-                <span class="preço">R$ 43,90</span>
+                <span class="preço-selecao-cardapio">R$ 43,90</span>
             </div>
 
             <div class="quantidade">
@@ -195,10 +194,10 @@
 
         <!-- Item 4 -->
         <article class="pizza-item">
-            <img src="img pizzas/pizza-frango-com-catupiry-1565140749 (6).png" alt="Mussarela">
+            <img src="../img pizzas/pizza-frango-com-catupiry-1565140749 (6).png" alt="Mussarela">
             <div class="pizza-info">
                 <strong>Mussarela</strong><br>
-                <span class="preço">R$ 43,90</span>
+                <span class="preço-selecao-cardapio">R$ 43,90</span>
             </div>
 
             <div class="quantidade">
@@ -210,17 +209,17 @@
 
         <!-- Item 5 -->
         <article class="pizza-item">
-            <img src="img pizzas/pizza-frango-com-catupiry-1565140749 (5).png" alt="Dois queijos">
+            <img src="../img pizzas/pizza-frango-com-catupiry-1565140749 (5).png" alt="Dois queijos">
             <div class="pizza-info">
                 <strong>Dois queijos</strong><br>
-                <span class="preço">R$ 47,90</span>
+                <span class="preço-selecao-cardapio">R$ 47,90</span>
             </div>
 
             <div class="quantidade">
                 <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
                 <span class="mx-2">0</span>
                 <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-            </div>
+          
         </article>
 
         <!--
@@ -368,6 +367,7 @@
                 <button class="btn btn-outline-secondary btn-sm">+</button>
             -->
         </article>
+     </div>
 
         <section class="bordas">
             <h3 class="text-center text-dark">Bordas</h3>
@@ -394,12 +394,12 @@
         </div>
     </main>
 
-    <!--   FOOTER   -->
-  <footer class="footer-conteiner">
-    <div class="container1 text-center">
+ <!--   FOOTER   -->
+ <footer class="footer-conteiner">
+    <div class="container text-center">
       <div class="row">
         <div class="col">
-          <img class="logo-grande" src="img/imagem da logo.png" alt="">
+          <img class="logo-grande" src="../img/WhatsApp Image 2024-10-09 at 22.04.01.png" alt="">
         </div>
         <div class="col">
           <h5>Endereço</h5>
@@ -419,13 +419,13 @@
           <p> Das 17:00 ás 01:00</p>
         </div>
       </div>
-
+  
       <!-- Redes Sociais abaixo das colunas -->
       <div class="row">
         <div class="col redes-sociais">
-          <a href="#" class="midia"><img src="img/whatsapp.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="img/instagram.png" height="30" width="30"></a>
-          <a href="#" class="midia"><img src="img/tik-tok (1).png" height="30" width="30"></a>
+          <a href="#" class="midia"><img src="../img/whatsapp.png" height="30" width="30"></a>
+          <a href="#" class="midia"><img src="../img/instagram.png" height="30" width="30"></a>
+          <a href="#" class="midia"><img src="../img/tik-tok (1).png" height="30" width="30"></a>
         </div>
       </div>
     </div>

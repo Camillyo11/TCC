@@ -30,6 +30,8 @@
                           <button class="nav-link-categoria nav-link  text-dark" id="bebidas-tab" data-bs-toggle="tab" data-bs-target="#bebidas" type="button" role="tab">Bebidas</button>
                       </li>
                   </ul>
+
+                  <h3 class="categoria-titulo">Pizzas Salgadas</h3>
                   
                   <div class="barra_pesquisa">
                     <input type="text" class="form-control" placeholder="🔍 Pesquisar">
@@ -39,14 +41,13 @@
                   <div class="tab-content" id="pizzaTabsContent">
                       <!-- Tab Pizzas Salgadas -->
                       <div class="tab-pane fade show active sabores-container" id="salgadas" role="tabpanel">
-                          <h3 class="categoria-titulo">Pizzas Salgadas</h3>
-                          
+                       
                           <div class="row">
                               <!-- Pizza 1 -->
                               <div class="col-md-6 col-lg-4">
                                   <div class="card pizza-card h-100">
                                       <div class="card-body">
-                                        <img src="../img pizzas/images (4) (1).png" class="card-img-top" alt="...">
+                                        <img src="../img pizzas/pizzaFrangoComCatupiry.png" class="card-img-top" alt="...">
                                           <h5 class="card-title pizza-nome">Frango com Catupiry</h5>
                                           <p class="card-text">Molho, Mussarela, frango desfiado e catupiry</p>
                                           <p class="pizza-preco">R$ 47,90</p>
@@ -57,6 +58,7 @@
                                                 <span class="mx-2">0</span>
                                                 <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
                                             </div>
+
                                         </div>
                                       </div>
                                   </div>
@@ -66,9 +68,18 @@
                               <div class="col-md-6 col-lg-4">
                                   <div class="card pizza-card h-100">
                                       <div class="card-body">
+                                        <img src="../img pizzas/pizzaBaiana.png" class="card-img-top" alt="...">
                                           <h5 class="card-title pizza-nome">Baiana</h5>
                                           <p class="card-text">Ervilha, cebola, mussarela, calabresa ralada, molho e pimenta</p>
                                           <p class="pizza-preco">R$ 43,90</p>
+
+                                          <div class="quantidade">
+                                            <div class="quantidade-itens">
+                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                                                <span class="mx-2">0</span>
+                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                                            </div>
+                                      </div>
                                       </div>
                                   </div>
                               </div>
@@ -77,9 +88,17 @@
                               <div class="col-md-6 col-lg-4">
                                   <div class="card pizza-card h-100">
                                       <div class="card-body">
+                                        <img src="../img pizzas/pizzaCalabreza.png" class="card-img-top" alt="...">
                                           <h5 class="card-title pizza-nome">Calabresa</h5>
                                           <p class="card-text">Calabresa fatiada e cebola</p>
                                           <p class="pizza-preco">R$ 43,90</p>
+                                          <div class="quantidade">
+                                            <div class="quantidade-itens">
+                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                                                <span class="mx-2">0</span>
+                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                                            </div>
+                                      </div>
                                       </div>
                                   </div>
                               </div>
@@ -88,9 +107,17 @@
                               <div class="col-md-6 col-lg-4">
                                   <div class="card pizza-card h-100">
                                       <div class="card-body">
-                                          <h5 class="card-title pizza-nome">Mussarela</h5>
+                                        <img src="../img pizzas/pizzaQuatroQueijo.png" class="card-img-top" alt="...">
+                                          <h5 class="card-title pizza-nome">Quatro Queijo</h5>
                                           <p class="card-text">Mussarela, orégano e tomate</p>
                                           <p class="pizza-preco">R$ 43,90</p>
+                                          <div class="quantidade">
+                                            <div class="quantidade-itens">
+                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                                                <span class="mx-2">0</span>
+                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                                            </div>
+                                      </div>
                                       </div>
                                   </div>
                               </div>
@@ -99,9 +126,17 @@
                               <div class="col-md-6 col-lg-4">
                                   <div class="card pizza-card h-100">
                                       <div class="card-body">
-                                          <h5 class="card-title pizza-nome">Dois Queijos</h5>
+                                        <img src="../img pizzas/pizzaPalmito.png" class="card-img-top" alt="...">
+                                          <h5 class="card-title pizza-nome">Palmito</h5>
                                           <p class="card-text">Combinação especial de mussarela e catupiry</p>
                                           <p class="pizza-preco">R$ 47,90</p>
+                                          <div class="quantidade">
+                                            <div class="quantidade-itens">
+                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
+                                                <span class="mx-2">0</span>
+                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
+                                            </div>
+                                      </div>
                                       </div>
                                   </div>
                               </div>
@@ -109,29 +144,43 @@
                               <!-- Adicione mais pizzas conforme necessário -->
                           </div>
                           
-                          <!-- Seção de Bordas -->
-                          <h3 class="categoria-titulo mt-5">Opções de Borda</h3>
-                          <div class="row">
-                              <div class="col-md-4">
-                                  <div class="borda-option">
-                                      <h5>Borda de Catupiry</h5>
-                                      <p>+R$ 10,00</p>
-                                  </div>
-                              </div>
-                              <div class="col-md-4">
-                                  <div class="borda-option">
-                                      <h5>Borda de Cheddar</h5>
-                                      <p>+R$ 10,00</p>
-                                  </div>
-                              </div>
-                              <div class="col-md-4">
-                                  <div class="borda-option">
-                                      <h5>Borda de Chocolate</h5>
-                                      <p>+R$ 15,00</p>
-                                  </div>
-                              </div>
+                    
                           </div>
+                         
+                         <h3 class="categoria-titulo mt-5">Opções de Borda</h3>
+                         <div class="row">
+                             <div class="col-md-4">
+                                 <div class="borda-option">
+                                     <h5>Borda de Catupiry</h5>
+                                     <p>+R$ 10,00</p>
+                                     <div class="opcoes-borda-radio text-start mt-3">
+                                     <input class="borda-radio form-check-input" type="radio" name="pagamento" id="agora"  checked style="width: 20px; height: 20px; accent-color: red;">
+                                  </div>
+
+                                 </div>
+                             </div>
+                             <div class="col-md-4">
+                                 <div class="borda-option">
+                                     <h5>Borda de Cheddar</h5>
+                                     <p>+R$ 10,00</p>
+                                     <div class="opcoes-borda-radio text-start mt-3">
+                                       <input class="borda-radio form-check-input " type="radio" name="pagamento" id="agora"  checked style="width: 20px; height: 20px; accent-color: red;">
+                                    </div>
+                                 </div>
+                                 
+                             </div>
+                             <div class="col-md-4">
+                                 <div class="borda-option">
+                                     <h5>Borda de Chocolate</h5>
+                                     <p>+R$ 15,00</p>
+                                     <div class="opcoes-borda-radio text-start mt-3">
+                                     <input class="borda-radio form-check-input " type="radio" name="pagamento" id="agora"  checked style="width: 20px; height: 20px; accent-color: red;">
+                                  </div>
+                                 </div>
+                             </div>
+
                       </div>
+                         
                       
                       <!-- Tab Pizzas Doces (vazio por enquanto) -->
                       <div class="tab-pane fade sabores-container" id="doces" role="tabpanel">
@@ -147,9 +196,8 @@
                   </div>
                   
                   <!-- Botões de ação -->
-                  <div class="d-flex justify-content-between mt-4">
-                      <button class="btn btn-outline-primary">Adicionar outro item</button>
-                      <button class="btn btn-danger">Avançar</button>
+                  <div class=" button-vermelho-position ">
+                      <button class="button-vermelho">Avançar</button>
                   </div>
               </div>
           </div>

@@ -851,17 +851,7 @@ textarea {
    
 }
 
-.text-sabor-pizza{
 
-}
-
-@media (max-width: 768px) { /* Para telas menores que 768px */
-
-    .text-sabor-pizza{
-        width: 300px;
-        
-    }
-}
 
 .pizza-item img{
     width: 50%;
@@ -951,7 +941,7 @@ h3{
 
 
 .cardapio-container {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
@@ -965,6 +955,11 @@ h3{
    
 }
 
+.barra-pesquisa{
+    margin-bottom: 50px;
+   
+    
+}
 
 
 
@@ -977,15 +972,16 @@ h3{
 .categoria-titulo {
     color: #000000;
     font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 15px;
+    margin-top: 15px;
 border-radius: 10px;
     padding-bottom: 5px;
    text-align: center;
+  
 }
 
 .pizza-card {
     margin-bottom: 20px;
+    margin-top: 20px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -1014,6 +1010,36 @@ border-radius: 10px;
     padding: 8px;
     margin-bottom: 5px;
 }
+
+.opcoes-borda-radio{
+    
+    justify-content: right;
+    display: flex;
+    margin-right: 50px;
+}
+
+.button-vermelho{
+    background-color:#991C08;
+    border: none;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 20px;
+    border-radius:30px;
+    width: 200px;
+
+}
+.button-vermelho:hover{
+    background-color:#f47a00;
+    color: white;
+}
+.button-vermelho-position {
+    justify-content: right;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+
 
 /* Estilo para a barra de scroll */
 .sabores-container::-webkit-scrollbar {

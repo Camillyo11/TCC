@@ -267,3 +267,167 @@ textarea {
 .btn-responder {
     margin-top: 10px;
 }
+
+
+
+
+
+
+.cardapio-container {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+}
+.nav-categorias {
+    
+    background-color: #F77F00;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.barra-pesquisa{
+    margin-bottom: 50px;
+   
+    
+}
+
+
+
+.sabores-container {
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.categoria-titulo {
+    color: #000000;
+    font-weight: bold;
+    margin-top: 15px;
+border-radius: 10px;
+    padding-bottom: 5px;
+   text-align: center;
+   background-color: #ea4a2e;
+  
+}
+
+.pizza-card {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    
+}
+
+.pizza-card:hover {
+    transform: translateY(-5px);
+}
+
+.pizza-nome {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.pizza-preco {
+    font-weight: bold;
+    color: #388e3c;
+    font-size: 1.2rem;
+}
+
+.borda-option {
+    background-color: #d4d2d2;
+    color: #000000;
+    border-radius: 20px;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+
+.opcoes-borda-radio{
+    
+    justify-content: right;
+    display: flex;
+    margin-right: 50px;
+}
+
+.button-vermelho{
+    background-color:#000000;
+    color: #ffffff;
+    border: none;
+    font-weight: bolder;
+    font-size: 16px;
+    padding: 20px;
+    border-radius:30px;
+    width: 200px;
+  
+
+}
+.button-vermelho:hover{
+    background-color:#962c0c;
+    color: rgb(0, 0, 0);
+}
+.button-vermelho-position {
+    justify-content: right;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+
+/* Estilo para a barra de scroll */
+.sabores-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sabores-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.sabores-container::-webkit-scrollbar-thumb {
+    background: #d32f2f;
+    border-radius: 10px;
+}
+
+.btn_retirar{
+    background-color:#ef8a2c;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    border-radius:30px;
+    width: 95px;
+
+}
+
+.retirar-voltar-itens{
+    justify-content: right;
+    display: flex;
+    margin-right: 20px;
+    gap:20px
+}
+
+.btn_voltar{
+    background-color:#e94c34;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    font-size: 16px;
+    padding: 20px;
+    border-radius:30px;
+    width: 90px;
+    
+}
+
+.btn_retirar:hover{
+    background-color:#000000;
+    color: white;
+}
+
+.btn_voltar:hover{
+    background-color:#000000;
+    color: white;
+}

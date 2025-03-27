@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = '58aba6bb59196d785f4aca3624950204403a2a2b35e40ac1e73c69d64488c8b0';
+SECRET_KEY:process.env.PRIVATE_KET; 
 
 const authMiddleware = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1]; // Bearer <token>

@@ -1054,3 +1054,22 @@ border-radius: 10px;
     background: #d32f2f;
     border-radius: 10px;
 }
+/* PÁGINA SOBRE NÓS */
+
+.sobre-nos-banner {
+    background: url('../img/SobreNosimg.png') center center / cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-top: 115px;
+    justify-content: center;
+    align-items: center;
+    width: 100vh;
+    height: 10px !important;
+
+   
+}
+
+.horario-funcionamento{
+    margin-top: 30%;
+}

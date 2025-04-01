@@ -49,6 +49,31 @@
     width: 80px;
     height: 80px;
 }
+
+a.login-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    cursor: pointer;
+
+    background-color: rgb(144, 33, 6) !important ;
+    color:white;
+    font-size: 14px;
+    padding: 5px 5px ;
+    border-radius: 50px;
+    text-decoration: none;
+    transition:0.3s background-color !important; 
+    border:none;
+    
+    
+}
+  
+  /* Remove o sublinhado no hover */
+  a.login-button:hover {
+    background-color: rgb(211, 35, 11) !important ;
+    text-decoration: none !important;
+}
+
 .button-navbar{
     display: flex;
     margin-left: auto;

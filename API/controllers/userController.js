@@ -1,14 +1,29 @@
-// controllers/userController.js
-const getUsers = (req, res) => {
-    res.send([
-        { id: 1, nome: 'João Silva', email: 'joao@pizza.com' },
-        { id: 2, nome: 'Maria Souza', email: 'maria@pizza.com' }
-    ]);
+const UserService = require('../services/UserService');
+const responseHandler = require('../utils/responseHandler');
+
+const UserController = {
+    async register(req, res) {
+        try {
+            const { nome, email, senha, telefone, data_nascimento, cep, rua, bairro, cidade, estado, tipo_endereco, numero, complemento } = req.body;
+            
+            const result = await UserService.createUser(nome, email, senha, telefone, data_nascimento, cep, rua, bairro, cidade, estado, tipo_endereco, numero, complemento);
+            
+            responseHandler.success(res, result, 'Usuário cadastrado com sucesso!', 201);
+        } catch (error) {
+            responseHandler.error(res, error);
+        }
+    },
+
+    async getUser(req, res) {
+        try {
+            const userId = req.params.id;
+            const user = await UserService.getUserById(userId);
+
+            responseHandler.success(res, user, 'Usuário encontrado com sucesso!');
+        } catch (error) {
+            responseHandler.error(res, error, 404);
+        }
+    }
 };
 
-const createUser = (req, res) => {
-    const { nome, email } = req.body;
-    res.status(201).send({ mensagem: 'Usuário criado com sucesso!', nome, email });
-};
-
-module.exports = { getUsers, createUser };
+module.exports = UserController;

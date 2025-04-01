@@ -1,31 +1,104 @@
-const db = require('../db');
+const OrderService = require('../services/OrderService');
 
-// Listar pedidos
-const getOrders = (req, res) => {
-  const sql = 'SELECT * FROM orders';
-  db.query(sql, (err, results) => {
-    if (err) return res.status(500).send('Erro ao buscar pedidos');
-    res.json(results);
-  });
+// Criar um pedido
+const createOrder = async (req, res) => {
+  const { id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas } = req.body;
+
+  try {
+    const response = await OrderService.createOrder(id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas);
+    res.status(201).json(response);
+  } catch (error) {
+    console.error('Erro ao criar pedido:', error);
+    res.status(500).json({ message: 'Erro ao criar pedido.' });
+  }
 };
 
-// Criar pedido
-const createOrder = (req, res) => {
-  const { user_id, valor_total, itens } = req.body;
-  const sqlOrder = 'INSERT INTO orders (user_id, valor_total) VALUES (?, ?)';
+const getOrdersByClient = async (req, res) => {
+  const { id_cliente } = req.params;
 
-  db.query(sqlOrder, [user_id, valor_total], (err, result) => {
-    if (err) return res.status(500).send('Erro ao criar pedido');
-    
-    const orderId = result.insertId;
-    const sqlItems = 'INSERT INTO order_items (order_id, pizza_id, quantidade, preco_unitario) VALUES ?';
-
-    const values = itens.map(item => [orderId, item.pizza_id, item.quantidade, item.preco_unitario]);
-    db.query(sqlItems, [values], err => {
-      if (err) return res.status(500).send('Erro ao adicionar itens do pedido');
-      res.status(201).send('Pedido criado com sucesso!');
-    });
-  });
+  try {
+    const orders = await OrderService.getOrdersByClient(id_cliente);
+    res.json(orders);
+  } catch (error) {
+    console.error('Erro ao obter pedidos:', error);
+    res.status(500).json({ message: 'Erro ao obter pedidos.' });
+  }
 };
 
-module.exports = { getOrders, createOrder };
+
+const updateOrderStatus = async (req, res) => {
+  const { id_pedido, status } = req.body;
+
+  try {
+    const response = await OrderService.updateOrderStatus(id_pedido, status);
+    res.json(response);
+  } catch (error) {
+    console.error('Erro ao atualizar status do pedido:', error);
+    res.status(500).json({ message: 'Erro ao atualizar status do pedido.' });
+  }
+};
+
+const getOrderDetails = async (req, res) => {
+  const { id_pedido } = req.params;
+  try {
+    const OrderDetails = await OrderService.getOrderDetails(id_pedido);
+    if (pedidoDetails.length === 0) {
+      return res.status(404).json({ message: 'Pedido não encontrado.' });
+    }
+    res.json(OrderDetails);
+  } catch (error) {
+    console.error('Erro ao obter detalhes do pedido:', error);
+    res.status(500).json({ message: 'Erro ao obter detalhes do pedido.' });
+  }
+};
+
+const updatePizza = async (req, res) => {
+  const { id_pizza, id_pedido } = req.params;
+  const { sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao } = req.body;
+  
+  try {
+    const response = await OrderService.updatePizza(id_pizza, id_pedido, sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao);
+    res.json(response);
+  } catch (error) {
+    console.error('Erro ao atualizar pizza:', error);
+    res.status(500).json({ message: 'Erro ao atualizar pizza.' });
+  }
+};
+
+// Editar bebida no pedido
+const updateBebida = async (req, res) => {
+  const { id_bebida, id_pedido } = req.params;
+  const { nome, tamanho, preco } = req.body;
+
+  try {
+    const response = await OrderService.updateBebida(id_bebida, id_pedido, nome, tamanho, preco);
+    res.json(response);
+  } catch (error) {
+    console.error('Erro ao atualizar bebida:', error);
+    res.status(500).json({ message: 'Erro ao atualizar bebida.' });
+  }
+};
+
+const removePizza = async (req, res) => {
+  const { id_pizza, id_pedido } = req.params;
+  try {
+    const response = await OrderService.removePizza(id_pizza, id_pedido);
+    res.json(response);
+  } catch (error) {
+    console.error('Erro ao remover pizza:', error);
+    res.status(500).json({ message: 'Erro ao remover pizza.' });
+  }
+};
+
+
+const removeBebida = async (req, res) => {
+  const { id_bebida, id_pedido } = req.params;
+  try {
+    const response = await OrderService.removeBebida(id_bebida, id_pedido);
+    res.json(response);
+  } catch (error) {
+    console.error('Erro ao remover bebida:', error);
+    res.status(500).json({ message: 'Erro ao remover bebida.' });
+  }
+};
+module.exports = { createOrder, getOrdersByClient, updateOrderStatus, getOrderDetails, updatePizza, updateBebida, removePizza, removeBebida };

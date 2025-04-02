@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../config/db');
 
 const createOrder = async (id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas) => {
   try {

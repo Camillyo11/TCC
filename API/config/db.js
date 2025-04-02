@@ -1,19 +1,15 @@
 const mysql = require('mysql2');
-require('dotenv').config();
 
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME
+// Criação do pool de conexões
+const pool = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'pizzaria',
+  waitForConnections: true, // Aguarda por conexões disponíveis no pool
+  connectionLimit: 10, // Limite de conexões no pool
+  queueLimit: 0 // Sem limite de requisições na fila
 });
 
-db.connect(err => {
-  if (err) {
-    console.error('Erro ao conectar no MySQL:', err);
-    return;
-  }
- 
-});
-
-module.exports = db;
+// Usando a função promise() para facilitar o uso com async/await
+module.exports = pool.promise();

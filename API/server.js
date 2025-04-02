@@ -13,5 +13,5 @@ app.use('/menu', menuRoutes);
 app.use('/orders', orderRoutes);
 app.use('/users', userRoutes);
 
-const port = process.env.PORT || 3000;
+const port =  3000;
 app.listen(port, () => console.log(`Servidor rodando na porta ${port}`));

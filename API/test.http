@@ -1,0 +1,18 @@
+POST http://localhost:3000/users/cadastro HTTP/1.1
+Content-Type: application/json
+
+{
+  "nome": "João",
+  "email": "joao@example.com",
+  "senha": "senha123",
+  "telefone": "1234567890",
+  "data_nascimento": "2000-01-01",
+  "cep": "12345-678",
+  "rua": "Rua Fictícia",
+  "bairro": "Centro",
+  "cidade": "Cidade Exemplo",
+  "estado": "SP",
+  "tipo_endereco": "Residencial",
+  "numero": "100",
+  "complemento": "Apto 101"
+}

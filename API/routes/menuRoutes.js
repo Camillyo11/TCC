@@ -1,44 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { getMenu, addPizza } = require('../controllers/menuController');
-const db = require('../db');
+const MenuController = require('../controllers/MenuController');
 
-
-router.get('/', getMenu);
-
-router.post('/', addPizza);
-
-
-router.put('/:id', (req, res) => {
-    const { id } = req.params;
-    const { nome, preco } = req.body;
-
-    const query = 'UPDATE menu SET nome = ?, preco = ? WHERE id = ?';
-    db.query(query, [nome, preco, id], (err, result) => {
-        if (err) return res.status(500).json({ error: err.message });
-
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ message: 'Item não encontrado.' });
-        }
-
-        res.status(200).json({ message: 'Item atualizado com sucesso.' });
-    });
-});
-
-// Rota para deletar um item do menu
-router.delete('/:id', (req, res) => {
-    const { id } = req.params;
-    const query = 'DELETE FROM menu WHERE id = ?';
-
-    db.query(query, [id], (err, result) => {
-        if (err) return res.status(500).json({ error: err.message });
-
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ message: 'Item não encontrado.' });
-        }
-
-        res.status(200).json({ message: 'Item removido com sucesso.' });
-    });
-});
+router.get('/pizzas', MenuController.getPizzas);
+router.get('/bebidas', MenuController.getBebidas);
+router.post('/pizzas', MenuController.addPizza);
+router.post('/bebidas', MenuController.addBebida);
+router.put('/pizzas', MenuController.updatePizza);
+router.put('/bebidas', MenuController.updateBebida);
+router.delete('/pizzas/:id_pizza', MenuController.removePizza);
+router.delete('/bebidas/:id_bebida', MenuController.removeBebida);
 
 module.exports = router;

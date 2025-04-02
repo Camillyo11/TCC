@@ -168,6 +168,71 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         alert('Por favor, preencha todos os campos!');
     }
 });
+
+// 1. Verifica se está logado ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        configureProfileButton();
+    }
+});
+
+// 2. Configura o botão do perfil para abrir offcanvas
+function configureProfileButton() {
+    const accountBtn = document.getElementById('accountButton');
+    
+    // Modifica APENAS o botão de perfil
+    accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="30" width="30"> Meu Perfil';
+    accountBtn.onclick = function(e) {
+        e.preventDefault();
+        
+        // Cria o offcanvas temporário (igual ao seu exemplo)
+        const offcanvasHTML = `
+        <div class="offcanvas-perfil offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title">MEU PERFIL</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="text-center">
+                    <img src="../img/do-utilizador (3).png" width="80" class="rounded-circle mb-3">
+                    <h6>Bem-vindo de volta!</h6>
+                </div>
+                <div class="mt-4">
+                    <button class="btn btn-outline-primary w-100 mb-2">Meus Pedidos</button>
+                    <button class="btn btn-outline-primary w-100 mb-2">Configurações</button>
+                    <button id="profileLogout" class="btn btn-danger w-100 mt-4">Sair</button>
+                </div>
+            </div>
+        </div>`;
+        
+        // Adiciona e mostra
+        document.body.insertAdjacentHTML('beforeend', offcanvasHTML);
+        const profileCanvas = new bootstrap.Offcanvas('#profileOffcanvas');
+        profileCanvas.show();
+        
+        // Configura logout
+        document.getElementById('profileLogout').onclick = function() {
+            localStorage.removeItem('isLoggedIn');
+            profileCanvas.hide();
+            location.reload(); // Restaura o botão original
+        };
+        
+        // Remove quando fechar
+        document.getElementById('profileOffcanvas').addEventListener('hidden.bs.offcanvas', function() {
+            this.remove();
+        });
+    };
+}
+
+// 3. Mantém seu login original (apenas adiciona a configuração do botão após login)
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (document.getElementById('email').value && document.getElementById('senha').value) {
+        localStorage.setItem('isLoggedIn', 'true');
+        bootstrap.Modal.getInstance(document.getElementById('exampleModal')).hide();
+        configureProfileButton(); // Aplica as mudanças no botão
+    }
+});
 </script>
 
  <mian>

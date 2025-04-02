@@ -260,6 +260,16 @@ button.login-button:hover{
     border-bottom: 2px solid white; /* Cor da linha */
     margin: 10px;
 }
+/* OFFCANVA DE PERFIL DO USUARIO */
+.offcanvas-perfil {
+    background-color: #991C08 !important;
+}
+
+.offcanvas-title{
+  
+    color: #eeeeee;
+}
+
 
 /* INTRODUÇÃO -> IMAGEM DE FUNDO */
 

@@ -299,10 +299,11 @@ button.login-button:hover{
     border-radius:40px;
     margin-top: 20px;
 
-   
 
   
 }
+
+
 .progress-fidelidade h6 {
     color: #000000;
     font-size: 16px;
@@ -318,10 +319,7 @@ button.login-button:hover{
     display: flex;
 }
 
-.divider {
-    margin: 20px 0;
-    
-}
+
 .card-fidelidade{
     background-color: #F77F00 !important;
     border-radius: 70px !important;
@@ -332,6 +330,101 @@ button.login-button:hover{
     text-align: center;
 }
 
+.button-sair{
+    background-color: #d31212 ;
+    color: white ;
+    font-weight: bold;  
+    border-radius: 10px ;
+    padding: 10px 20px;
+    font-size: 18px;
+    justify-content: left;
+    
+   
+}
+.button-sair:hover{
+    background-color:#f47a00;
+}
+.position-button-sair h6{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bolder;
+    flex-direction: column;
+  margin-top: 60px;
+}
+
+
+/* OFFCANVA -> PEDIDO  */
+
+        /* Estilos para o offcanvas de pedidos */
+        .pedido-item {
+           border-radius: 20px;
+          margin: 20px 5px;
+            background-color: #ffffff;
+            padding:20px;
+
+        }
+        
+        
+        .pedido-numero {
+            font-weight: bold;
+            color: #000000;
+            font-size: 1.1rem;
+        }
+
+        
+        .pedido-status {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        
+        .status-entregue {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-andamento {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-cancelado {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+
+        .pedido-detalhes {
+            flex: 1;
+        }
+        
+        .pedido-tamanho {
+            font-weight: bold;
+        }
+        
+        .pedido-data {
+            color: #6c757d;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        .offcanvas-pedidos {
+            width: 400px;
+        }
+        
+        .offcanvas-header-pedidos {
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 1rem;
+        }
+        
+        .offcanvas-title-pedidos {
+            color: #FF6B00;
+            font-weight: bold;
+        }
+        
 /* INTRODUÇÃO -> IMAGEM DE FUNDO */
 
 .conteiner-intro{

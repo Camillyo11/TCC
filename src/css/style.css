@@ -269,7 +269,68 @@ button.login-button:hover{
   
     color: #eeeeee;
 }
+.buttons-perfil{
+    display: flex;
+    gap: 10px;
+    margin: 30px;
+    flex-direction: column;
+}
+.button-laranja-perfil{
+    background-color: #f47a00;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius:10px;
+    right: 20px;
 
+}
+
+.button-branco-perfil{
+    background-color: #ffffff;
+    color: black;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius:10px;
+    right: 20px;
+}
+
+.progress-fidelidade {
+    background-color: #F77F00;
+    border-radius:40px;
+    margin-top: 20px;
+
+   
+
+  
+}
+.progress-fidelidade h6 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bolder;
+    flex-direction: column;
+
+}
+.progress-fidelidade p{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-top: 10px;
+    display: flex;
+}
+
+.divider {
+    margin: 20px 0;
+    
+}
+.card-fidelidade{
+    background-color: #F77F00 !important;
+    border-radius: 70px !important;
+    padding: 10px;
+    margin: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+}
 
 /* INTRODUÇÃO -> IMAGEM DE FUNDO */
 

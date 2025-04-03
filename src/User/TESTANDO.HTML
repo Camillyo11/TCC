@@ -117,6 +117,50 @@
     </div>
 </header>
 
+
+
+<div class="offcanvas-perfil offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
+  <div class="offcanvas-header">
+      <h5 class="offcanvas-title">MEU PERFIL</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+      <div class="text-center">
+          <img src="../img/do-utilizador (3).png" width="80" class="rounded-circle mb-3">
+          <h6>Bem-vindo de volta!</h6>
+      </div>
+      <div class="buttons-perfil mt-4">
+          <button class=" button-laranja-perfil mb-2"><img src="../img/rapido.png"  width="25"> Meus Pedidos</button>
+          <button class=" button-branco-perfil mb-2"><img src="../img/caneta-do-usuario.png"  width="25">Endereços Salvos</button>
+          <button class=" button-laranja-perfil mb-2"><img src="../img/caneta-do-usuario.png"  width="25">Minhas informações</button>
+          <button id="profileLogout" class="btn btn-danger w-100 mt-4">Sair</button>
+      </div>
+      <div class="divider"></div>
+            
+      <h5 class="section-title">Programa de Fidelidade</h5>
+      <div class="card card-fidelidade mb-3">
+          <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-award me-2"></i> Pontos acumulados: 150 pontos</h5>
+              <p class="card-text">Próxima recompensa: 50 pontos para desconto de R$10%</p>
+              <div class="progress mb-3">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="200"></div>
+              </div>
+              <small class="text-muted">Você está a 50 pontos da próxima recompensa!</small>
+          </div>
+      </div>
+      
+      
+      </div>
+  </div>
+</div>
+
+
+
+      </div>
+  </div>
+</div>`;
+
+
 <script>
  // Verifica o status de login ao carregar a página
 document.addEventListener('DOMContentLoaded', function() {
@@ -187,7 +231,7 @@ function configureProfileButton() {
         
         // Cria o offcanvas temporário (igual ao seu exemplo)
         const offcanvasHTML = `
-        <div class="offcanvas-perfil offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
+        <div class="offcanvas-perfil offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title">MEU PERFIL</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -198,8 +242,8 @@ function configureProfileButton() {
                     <h6>Bem-vindo de volta!</h6>
                 </div>
                 <div class="mt-4">
-                    <button class="btn btn-outline-primary w-100 mb-2">Meus Pedidos</button>
-                    <button class="btn btn-outline-primary w-100 mb-2">Configurações</button>
+                    <button class=" button-laranja-perfil mb-2"><img src="../" Meus Pedidos</button>
+                    <button class=" button-laranja-perfil w-100 mb-2">Configurações</button>
                     <button id="profileLogout" class="btn btn-danger w-100 mt-4">Sair</button>
                 </div>
             </div>

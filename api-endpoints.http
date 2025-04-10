@@ -1,0 +1,218 @@
+### INSTRUÇÕES:
+### 1. Primeiro, faça login para obter um token JWT
+### 2. Copie o token obtido e substitua na variável @authToken abaixo
+### 3. Use este token para todas as requisições que requerem autenticação
+
+### Variáveis de ambiente
+@baseUrl = http://localhost:3000/api
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4
+
+### ===== AUTENTICAÇÃO =====
+
+### Login (para obter o token)
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "teste@email.com",
+    "senha": "123456"
+}
+
+### Verificar Token
+GET {{baseUrl}}/auth/verify
+Authorization: Bearer {{authToken}}
+
+### Logout
+POST {{baseUrl}}/auth/logout
+Authorization: Bearer {{authToken}}
+
+### ===== PEDIDOS =====
+
+### Criar um novo pedido
+POST {{baseUrl}}/orders/create
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "id_cliente": 1,
+    "total": 150.00,
+    "metodo_pagamento": "cartao",
+    "tipo_entrega": "delivery",
+    "id_endereco": 1,
+    "observacoes": "Sem cebola na pizza",
+    "pizzas": [
+        {
+            "sabor": "Margherita",
+            "preco_sabor": 45.00,
+            "tipo_borda": "tradicional",
+            "preco_borda": 5.00,
+            "tamanho": "tradicional",
+            "observacao": "Borda recheada"
+        },
+        {
+            "sabor": "Calabresa",
+            "preco_sabor": 50.00,
+            "tipo_borda": "recheada",
+            "preco_borda": 8.00,
+            "tamanho": "meio-a-meio",
+            "observacao": "Sem cebola"
+        }
+    ],
+    "bebidas": [
+        {
+            "nome": "Coca-Cola",
+            "tamanho": "2L",
+            "preco": 12.00
+        },
+        {
+            "nome": "Guaraná",
+            "tamanho": "lata",
+            "preco": 6.00
+        }
+    ]
+}
+
+### Buscar pedidos de um cliente
+GET {{baseUrl}}/orders/client/1
+Authorization: Bearer {{authToken}}
+
+### Atualizar status de um pedido (valores válidos: 'pendente', 'em_preparo', 'entregue', 'cancelado')
+PUT {{baseUrl}}/orders/status
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "id_pedido": 1,
+    "status": "em_preparo"
+}
+
+### Buscar detalhes de um pedido
+GET {{baseUrl}}/orders/details/1
+Authorization: Bearer {{authToken}}
+
+### Atualizar uma pizza no pedido
+PUT {{baseUrl}}/orders/pizza/1/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "sabor": "Margherita",
+    "preco_sabor": 45.00,
+    "tipo_borda": "recheada",
+    "preco_borda": 8.00,
+    "tamanho": "tradicional",
+    "observacao": "Borda recheada com catupiry"
+}
+
+### Atualizar uma bebida no pedido
+PUT {{baseUrl}}/orders/bebida/1/1
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "nome": "Coca-Cola",
+    "tamanho": "1L",
+    "preco": 8.00
+}
+
+### Remover uma pizza do pedido
+DELETE {{baseUrl}}/orders/pizza/1/1
+Authorization: Bearer {{authToken}}
+
+### Remover uma bebida do pedido
+DELETE {{baseUrl}}/orders/bebida/1/1
+Authorization: Bearer {{authToken}}
+
+### ===== MENU =====
+
+### Buscar todas as pizzas
+GET {{baseUrl}}/menu/pizzas
+
+### Buscar todas as bebidas
+GET {{baseUrl}}/menu/bebidas
+
+### Adicionar uma nova pizza (requer autenticação de admin)
+POST {{baseUrl}}/menu/pizzas
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "sabor": "Frango com Catupiry",
+    "preco_sabor": 55.00,
+    "tipo_borda": "tradicional",
+    "preco_borda": 5.00,
+    "tamanho": "tradicional",
+    "observacao": "Pizza com frango desfiado e catupiry"
+}
+
+### Adicionar uma nova bebida (requer autenticação de admin)
+POST {{baseUrl}}/menu/bebidas
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "nome": "Fanta",
+    "tamanho": "lata",
+    "preco": 6.00
+}
+
+### Atualizar uma pizza (requer autenticação de admin)
+PUT {{baseUrl}}/menu/pizzas
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "id_pizza": 1,
+    "sabor": "Frango com Catupiry",
+    "preco_sabor": 60.00,
+    "tipo_borda": "tradicional",
+    "preco_borda": 5.00,
+    "tamanho": "tradicional",
+    "observacao": "Pizza com frango desfiado e catupiry"
+}
+
+### Atualizar uma bebida (requer autenticação de admin)
+PUT {{baseUrl}}/menu/bebidas
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+    "id_bebida": 1,
+    "nome": "Fanta",
+    "tamanho": "lata",
+    "preco": 7.00
+}
+
+### Remover uma pizza (requer autenticação de admin)
+DELETE {{baseUrl}}/menu/pizzas/1
+Authorization: Bearer {{authToken}}
+
+### Remover uma bebida (requer autenticação de admin)
+DELETE {{baseUrl}}/menu/bebidas/1
+Authorization: Bearer {{authToken}}
+
+### ===== USUÁRIOS =====
+
+### Cadastrar um novo usuário
+POST {{baseUrl}}/users/cadastro
+Content-Type: application/json
+
+{
+    "nome": "Novo Usuário",
+    "email": "novo@email.com",
+    "senha": "123456",
+    "telefone": "11988888888",
+    "data_nascimento": "1990-01-01",
+    "cep": "01234567",
+    "rua": "Rua Nova",
+    "bairro": "Centro",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "tipo_endereco": "residencial",
+    "numero": "456",
+    "complemento": "Apto 123"
+}
+
+### Buscar um usuário pelo ID
+GET {{baseUrl}}/users/cliente/1
+Authorization: Bearer {{authToken}} 

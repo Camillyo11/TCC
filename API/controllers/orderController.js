@@ -29,6 +29,14 @@ const getOrdersByClient = async (req, res) => {
 const updateOrderStatus = async (req, res) => {
   const { id_pedido, status } = req.body;
 
+  // Validar se o status é um dos valores permitidos
+  const statusPermitidos = ['pendente', 'em_preparo', 'entregue', 'cancelado'];
+  if (!statusPermitidos.includes(status)) {
+    return res.status(400).json({ 
+      message: 'Status inválido. Valores permitidos: pendente, em_preparo, entregue, cancelado' 
+    });
+  }
+
   try {
     const response = await OrderService.updateOrderStatus(id_pedido, status);
     res.json(response);
@@ -41,11 +49,11 @@ const updateOrderStatus = async (req, res) => {
 const getOrderDetails = async (req, res) => {
   const { id_pedido } = req.params;
   try {
-    const OrderDetails = await OrderService.getOrderDetails(id_pedido);
-    if (pedidoDetails.length === 0) {
+    const orderDetails = await OrderService.getOrderDetails(id_pedido);
+    if (orderDetails.length === 0) {
       return res.status(404).json({ message: 'Pedido não encontrado.' });
     }
-    res.json(OrderDetails);
+    res.json(orderDetails);
   } catch (error) {
     console.error('Erro ao obter detalhes do pedido:', error);
     res.status(500).json({ message: 'Erro ao obter detalhes do pedido.' });
@@ -101,4 +109,5 @@ const removeBebida = async (req, res) => {
     res.status(500).json({ message: 'Erro ao remover bebida.' });
   }
 };
+
 module.exports = { createOrder, getOrdersByClient, updateOrderStatus, getOrderDetails, updatePizza, updateBebida, removePizza, removeBebida };

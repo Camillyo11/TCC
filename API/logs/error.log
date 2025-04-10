@@ -1,0 +1,40 @@
+{
+  message: "Erro ao cadastrar usuário: Table 'pizzaria.users' doesn't exist",
+  level: 'error',
+  timestamp: '2025-04-10T00:26:18.695Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-04-10T00:30:28.653Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-10T00:32:08.932Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:32:34.029Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:33:40.646Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-04-10T00:36:15.669Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-04-10T00:36:32.775Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:37:55.630Z'
+}

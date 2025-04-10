@@ -1,0 +1,31 @@
+### Variáveis de ambiente
+@baseUrl = http://localhost:3000/api
+
+### Registro de usuário
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "nome": "João Silva",
+    "email": "joao@email.com",
+    "senha": "123456",
+    "telefone": "11999999999",
+    "endereco": "Rua das Flores",
+    "numero_casa": "123",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "cep": "01234567"
+}
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "joao@email.com",
+    "senha": "123456"
+}
+
+### Verificar Token (substitua o token abaixo pelo token obtido no login)
+GET {{baseUrl}}/auth/verify
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc0NDI0NTMwOCwiZXhwIjoxNzQ0MzMxNzA4fQ.ztyF1hR2eWaWwAA_gu64Eei0Yq9tdTG9qrwVFvIGoYc

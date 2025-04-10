@@ -1,0 +1,465 @@
+{
+  message: "Erro ao cadastrar usuário: Table 'pizzaria.users' doesn't exist",
+  level: 'error',
+  timestamp: '2025-04-10T00:26:18.695Z'
+}
+{
+  message: 'Novo usuário registrado: joao@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:30:10.321Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-04-10T00:30:28.653Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-10T00:32:08.932Z'
+}
+{
+  message: 'Login realizado com sucesso: joao@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:32:19.751Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:32:34.029Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:33:40.646Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:34:50.865Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 24h',
+  level: 'info',
+  timestamp: '2025-04-10T00:34:50.868Z'
+}
+{
+  message: 'Gerando token para cliente: 1',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:08.787Z'
+}
+{
+  message: 'Token gerado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc0NDI0NTMwOCwiZXhwIjoxNzQ0MzMxNzA4fQ.ztyF1hR2eWaWwAA_gu64Eei0Yq9tdTG9qrwVFvIGoYc',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:08.796Z'
+}
+{
+  message: 'Login realizado com sucesso: joao@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:08.797Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc0NDI0NTMwOCwiZXhwIjoxNzQ0MzMxNzA4fQ.ztyF1hR2eWaWwAA_gu64Eei0Yq9tdTG9qrwVFvIGoYc',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:28.740Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJqb2FvQGVtYWlsLmNvbSIsImlhdCI6MTc0NDI0NTMwOCwiZXhwIjoxNzQ0MzMxNzA4fQ.ztyF1hR2eWaWwAA_gu64Eei0Yq9tdTG9qrwVFvIGoYc',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:28.741Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:28.742Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"joao@email.com","iat":1744245308,"exp":1744331708}',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:28.745Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-04-10T00:35:28.756Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-04-10T00:36:15.669Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email inválido.',
+  level: 'error',
+  timestamp: '2025-04-10T00:36:32.775Z'
+}
+{
+  message: 'Novo usuário registrado: lucas@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:01.384Z'
+}
+{
+  message: 'Gerando token para cliente: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:16.800Z'
+}
+{
+  message: 'Token gerado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0MzYsImV4cCI6MTc0NDMzMTgzNn0.kvb2rLVZFnWKN7EgTLEvLvN6dakenShXS8WCFpuvXvs',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:16.801Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:16.802Z'
+}
+{
+  message: 'Auth header: Bearer ded2ee4aa4153735d21b8952cf707102a72a72487f2c6dd855f3b69d3ebe6ac8',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:55.624Z'
+}
+{
+  message: 'Token: ded2ee4aa4153735d21b8952cf707102a72a72487f2c6dd855f3b69d3ebe6ac8',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:55.625Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:37:55.628Z'
+}
+{
+  message: 'Erro de autenticação: jwt malformed',
+  level: 'error',
+  timestamp: '2025-04-10T00:37:55.630Z'
+}
+{
+  message: 'Gerando token para cliente: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:03.515Z'
+}
+{
+  message: 'Token gerado: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:03.517Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas@email.com',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:03.518Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:42.257Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:42.258Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:42.259Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:42.262Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:38:42.263Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:24.559Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:24.559Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:24.561Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:24.563Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:24.565Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:41.909Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:41.909Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:41.911Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:41.912Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:41.914Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:54.663Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:54.664Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:54.667Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:54.668Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:49:54.670Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:03.243Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:03.244Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:03.244Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:03.247Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:03.249Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:18.065Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 24h',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:18.068Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:32.100Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:32.101Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:32.102Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:32.106Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:32.146Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:36.830Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:36.830Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:36.831Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:36.833Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:36.834Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:54.644Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:54.645Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:54.645Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:54.647Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:54.649Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:58.538Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:58.539Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:58.540Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:58.543Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:53:58.545Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:14.263Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:14.264Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:14.267Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:14.269Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:14.271Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:27.135Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:27.135Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:27.137Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:27.139Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:54:27.141Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:55:02.091Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJsdWNhc0BlbWFpbC5jb20iLCJpYXQiOjE3NDQyNDU0ODMsImV4cCI6MTc0NDMzMTg4M30.c1pKOeV1Aioj9CjWgOsmU4bvXk_9r-Bn4e2szgtC-R4',
+  level: 'info',
+  timestamp: '2025-04-10T00:55:02.092Z'
+}
+{
+  message: 'JWT_SECRET: pizzaria_secret_key_2024',
+  level: 'info',
+  timestamp: '2025-04-10T00:55:02.095Z'
+}
+{
+  message: 'Decoded token: {"id":2,"email":"lucas@email.com","iat":1744245483,"exp":1744331883}',
+  level: 'info',
+  timestamp: '2025-04-10T00:55:02.098Z'
+}
+{
+  message: 'Cliente autenticado: 2',
+  level: 'info',
+  timestamp: '2025-04-10T00:55:02.100Z'
+}
+{
+  message: 'Tentativa de acesso não autorizado por cliente: 2',
+  level: 'warn',
+  timestamp: '2025-04-10T00:55:02.102Z'
+}

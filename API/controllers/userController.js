@@ -8,7 +8,7 @@ const UserController = {
             
             const result = await UserService.createUser(nome, email, senha, telefone, data_nascimento, cep, rua, bairro, cidade, estado, tipo_endereco, numero, complemento);
             
-            responseHandler.success(res, result, 'Usuário cadastrado com sucesso!', 201);
+            responseHandler.success(res, result, 'Cliente cadastrado com sucesso!', 201);
         } catch (error) {
             responseHandler.error(res, error);
         }
@@ -16,10 +16,10 @@ const UserController = {
 
     async getUser(req, res) {
         try {
-            const userId = req.params.id;
-            const user = await UserService.getUserById(userId);
+            const clienteId = req.params.id;
+            const cliente = await UserService.getUserById(clienteId);
 
-            responseHandler.success(res, user, 'Usuário encontrado com sucesso!');
+            responseHandler.success(res, cliente, 'Cliente encontrado com sucesso!');
         } catch (error) {
             responseHandler.error(res, error, 404);
         }

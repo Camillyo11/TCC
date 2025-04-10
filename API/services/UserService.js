@@ -11,35 +11,35 @@ const UserService = {
             // Hash da senha
             const hashedPassword = await bcrypt.hash(senha, 10);
 
-            // Query de inserção do usuário
-            const userQuery = `
-                INSERT INTO cliente (nome_cliente, email_cliente, senha_cliente, telefone_cliente, data_nascimento_cliente, data_registro) 
-                VALUES (?, ?, ?, ?, ?, CURRENT_TIMESTAMP())`;
-
-            const [userResult] = await connection.execute(userQuery, [nome, email, hashedPassword, telefone, data_nascimento]);
-
-            if (!userResult || !userResult.insertId) {
-                throw new Error('Erro ao criar usuário: não foi possível obter o ID do usuário');
-            }
-
-            const userId = userResult.insertId;
-
             // Query de inserção do endereço
             const addressQuery = `
-                INSERT INTO endereco (cliente_id, cep, rua_endereco, numero_endereco, bairro_endereco, cidade_endereco, estado_endereco, tipo_endereco, complemento) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+                INSERT INTO endereco (rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
 
-            await connection.execute(addressQuery, [userId, cep, rua, numero, bairro, cidade, estado, tipo_endereco, complemento]);
+            const [addressResult] = await connection.execute(addressQuery, [rua, numero, tipo_endereco, bairro, complemento, cidade, estado, cep]);
+
+            if (!addressResult || !addressResult.insertId) {
+                throw new Error('Erro ao criar endereço: não foi possível obter o ID do endereço');
+            }
+
+            const id_endereco = addressResult.insertId;
+
+            // Query de inserção do cliente
+            const clienteQuery = `
+                INSERT INTO cliente (nome, telefone, data_nascimento, email, data_registro, id_endereco) 
+                VALUES (?, ?, ?, ?, CURRENT_DATE(), ?)`;
+
+            await connection.execute(clienteQuery, [nome, telefone, data_nascimento, email, id_endereco]);
 
             // Se tudo ocorreu bem, faz commit da transação
             await connection.commit();
 
-            return { success: true, message: 'Usuário cadastrado com sucesso!' };
+            return { success: true, message: 'Cliente cadastrado com sucesso!' };
 
         } catch (error) {
             // Se ocorrer algum erro, desfaz a transação (rollback)
             await connection.rollback();
-            throw new Error('Erro ao criar usuário: ' + error.message);
+            throw new Error('Erro ao criar cliente: ' + error.message);
         } finally {
             // Libera a conexão, mesmo que ocorra erro ou sucesso
             connection.release();
@@ -49,21 +49,21 @@ const UserService = {
     async getUserById(userId) {
         try {
             const query = `
-                SELECT c.id_cliente, c.nome_cliente, c.email_cliente, c.telefone_cliente, c.data_nascimento_cliente, 
-                       e.cep, e.rua_endereco, e.numero_endereco, e.bairro_endereco, e.cidade_endereco, e.estado_endereco, e.tipo_endereco, e.complemento
+                SELECT c.id_cliente, c.nome, c.email, c.telefone, c.data_nascimento, c.data_registro, 
+                       e.id_endereco, e.rua, e.numero, e.tipo_endereco, e.bairro, e.complemento, e.cidade, e.estado, e.cep
                 FROM cliente c
-                LEFT JOIN endereco e ON c.id_cliente = e.cliente_id
+                LEFT JOIN endereco e ON c.id_endereco = e.id_endereco
                 WHERE c.id_cliente = ?`;
 
             const [rows] = await db.execute(query, [userId]);
 
             if (rows.length === 0) {
-                throw new Error('Usuário não encontrado');
+                throw new Error('Cliente não encontrado');
             }
 
             return rows[0];
         } catch (error) {
-            throw new Error('Erro ao buscar usuário: ' + error.message);
+            throw new Error('Erro ao buscar cliente: ' + error.message);
         }
     }
 };

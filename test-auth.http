@@ -1,0 +1,38 @@
+### INSTRUÇÕES:
+### 1. Execute a requisição de registro
+### 2. Execute a requisição de login
+### 3. Copie o token da resposta do login
+### 4. Cole o token na requisição de verificação
+### 5. Execute a requisição de verificação
+
+### Variáveis de ambiente
+@baseUrl = http://localhost:3000/api
+
+### 1. Registro de usuário
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+    "nome": "Teste Autenticacao",
+    "email": "teste@email.com",
+    "senha": "123456",
+    "telefone": "11999999999",
+    "endereco": "Rua Teste",
+    "numero_casa": "123",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "cep": "01234567"
+}
+
+### 2. Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "teste@email.com",
+    "senha": "123456"
+}
+
+### 3. Verificar Token (COLE AQUI O TOKEN OBTIDO NO LOGIN)
+GET {{baseUrl}}/auth/verify
+Authorization: Bearer COLE_AQUI_O_TOKEN_OBTIDO_NO_LOGIN 

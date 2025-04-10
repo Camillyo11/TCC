@@ -1,4 +1,4 @@
-const { validationResult } = require('express-validator');
+const { validationResult, body } = require('express-validator');
 
 // Middleware para validar os resultados da validação
 const validate = (req, res, next) => {

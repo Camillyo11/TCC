@@ -257,6 +257,39 @@ button.login-button img, a.login-button img {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
   }
+
+  /* EDIÇÃO DE ENDEREÇO */
+
+  /* PARTE TESTE  */
+
+  .btn-address-type {
+    width: 100%;
+    padding: 15px 5px;
+    background-color: transparent;
+    border: 2px solid #ff6b00;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+  
+  .btn-address-type:hover {
+    background-color: rgba(255, 107, 0, 0.1);
+  }
+  
+  .btn-address-type.active {
+    background-color: #ff6b00;
+    color: white;
+  }
+  
+  .btn-address-type img {
+    filter: brightness(0) invert(1);
+  }
+  
+  .btn-address-type.active img {
+    filter: none;
+  }
+
+  /*  */
   
   .offcanva-edicao-endereco{
     background-color: rgb(144, 33, 6) !important;

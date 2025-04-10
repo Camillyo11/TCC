@@ -156,7 +156,9 @@
           
           <div class="coluna">
                <h6>Deseja cadastrar um novo endereço?</h6>
-               <button class="button-black" data-bs-toggle="offcanvas" data-bs-target="#cadastroEnderecoOffcanvas">Cadastrar novo endereço</button>
+               <button class="button-black" data-bs-toggle="offcanvas"
+                data-bs-target="#cadastroEnderecoOffcanvas" >
+                Cadastrar novo endereço</button>
           </div>
           </div>
         </div>
@@ -165,75 +167,10 @@
   </div>
 </div>
 
-<!-- Offcanvas para edição de endereço -->
-<div class="offcanva-edicao-endereco offcanvas offcanvas-bottom" tabindex="-1" id="edicaoEnderecoOffcanvas" aria-labelledby="edicaoEnderecoOffcanvasLabel">
-  <div class="offcanvas-header ">
-    <h5 class="offcanvas-title" id="edicaoEnderecoOffcanvasLabel">Confirma endereço</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body  ">
-    <form>
-      <div class="mb-4">
-        <label class="form-label"><strong>CEP:</strong></label>
-        <input type="text" class="form-control" placeholder="Digite seu CEP">
-        <a href="#" class="small text-light">Não sei meu CEP</a>
-      </div>
-      
-      <div class="mb-4">
-        <label class="form-label"><strong>Endereço:</strong></label>
-        <input type="text" class="form-control" placeholder="Endereço">
-      </div>
-      
-      <div class="mb-4 row">
-          <div class="col-4">
-            <label class="form-label"><strong>Número:</strong></label>
-            <input type="number" class="form-control" placeholder="Número">
-          </div>
-          <div class="col-8">
-            <label class="form-label"><strong>Complemento:</strong></label>
-            <input type="text" class="form-control" placeholder="Complemento">
-          </div>
-      </div>
 
-      <div class="mb-4">
-        <label class="form-label"><strong>Bairro:</strong></label>
-        <input type="text" class="form-control" placeholder="Bairro">
-      </div>
-      
-      <div class="mb-4">
-        <label class="form-label"><strong>Tem algum ponto de referência?</strong></label>
-        <textarea class="form-control" rows="1" placeholder="Se sim, pode facilitar a entrega!"></textarea>
-      </div>
-      
-      <div class="buttons-opcao-endereco row">
-        <h8 class="text-light text-center"><strong>Como deseja favoritar esse endereço?</strong></h8>
-        <div class="form-check check-laranja col-sm ">
-          <img src="../img/fixar-mapa (1).png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="casa" checked>
-          <label class="form-check-label" for="casa">Casa</label>
-        </div>
-        <div class="form-check check-laranja col-sm">
-          <img src="../img/fixar-mapa (1).png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="empresa">
-          <label class="form-check-label" for="empresa">Empresa</label>
-        </div>
-        <div class="form-check check-laranja col-sm">
-          <img src="../img/fixar-mapa (1).png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="outros">
-          <label class="form-check-label" for="outros">Outros</label>
-        </div>
-      </div>
-      
-      <div class="buttons-opcao-endereco">
-        <button class="button-branco" type="button" data-bs-dismiss="offcanvas">Cancelar</button>
-        <button class="button-black" type="button">Usar endereço</button>
-      </div>
-    </form>
-  </div>
-</div>
 
 <!-- Offcanvas para cadastro de novo endereço -->
-<div class="offcanvas offcanvas-bottom" tabindex="-1" id="cadastroEnderecoOffcanvas" aria-labelledby="cadastroEnderecoOffcanvasLabel">
+<div class=" offcanva-edicao-endereco offcanvas offcanvas-bottom" tabindex="-1" id="cadastroEnderecoOffcanvas" aria-labelledby="cadastroEnderecoOffcanvasLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="cadastroEnderecoOffcanvasLabel">Cadastrar novo endereço</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -537,26 +474,57 @@
 </footer>
 
 <script>
-  // Gerenciamento de estado de login
-  document.addEventListener('DOMContentLoaded', function() {
-    updateAccountButton();
+
+  
+  // Quando abrir o offcanvas
+document.querySelectorAll('[data-bs-toggle="offcanvas"]').forEach(element => {
+  element.addEventListener('click', function() {
+    // Fecha o modal primeiro
+    var modal = bootstrap.Modal.getInstance(document.getElementById('exampleModalSegundo'));
+    modal.hide();
     
-    // Configura o formulário de login
-    document.getElementById('loginForm')?.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = document.getElementById('email').value;
-      const senha = document.getElementById('senha').value;
-      
-      if (email && senha) {
+    // Depois abre o offcanvas
+    var offcanvasEl = document.getElementById('edicaoEnderecoOffcanvas');
+    var offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+    offcanvas.show();
+  });
+}); 
+ // Verifica o status de login ao carregar a página
+document.addEventListener('DOMContentLoaded', function() {
+    updateAccountButton();
+});
+// Manipula o formulário de login
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validação simples (substitua pela sua lógica real)
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    
+    if (email && senha) {
         localStorage.setItem('isLoggedIn', 'true');
+        
+        // Fecha o modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
         modal.hide();
+        
+        // Atualiza o botão
         updateAccountButton();
-      } else {
+        
+        // Redireciona para o perfil (opcional)
+        // window.location.href = "perfil.html";
+    } else {
         alert('Por favor, preencha todos os campos!');
-      }
-    });
-  });
+    }
+});
+
+// 1. Verifica se está logado ao carregar
+document.addEventListener('DOMContentLoaded', function() {
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+        configureProfileButton();
+    }
+});
+
 
   // Atualiza o botão de conta baseado no status de login
   function updateAccountButton() {
@@ -579,11 +547,17 @@
       accountBtn.setAttribute('data-bs-toggle', 'modal');
       accountBtn.setAttribute('data-bs-target', '#exampleModal');
       accountBtn.onclick = null;
-    }
-  }
+    }};
+  
 
   // Mostra o offcanvas do perfil
-  function showProfileOffcanvas() {
+  function configureProfileButton() {
+    const accountBtn = document.getElementById('accountButton');
+    
+    // Modifica APENAS o botão de perfil
+    accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="28" width="28">Meu Perfil';
+    accountBtn.onclick = function(e) {
+        e.preventDefault();
     const offcanvasHTML = `
     <div class="offcanvas-perfil offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
       <div class="offcanvas-header">
@@ -660,9 +634,8 @@
       }
     });
     
-
     // Adicione este código ao seu JavaScript existente
-document.querySelector('#cadastroEnderecoOffcanvas button.button-black').addEventListener('click', function() {
+    document.querySelector('#cadastroEnderecoOffcanvas button.button-black').addEventListener('click', function() {
   // Fecha o modal de endereços
   const enderecosModal = bootstrap.Modal.getInstance(document.getElementById('exampleModalSegundo'));
   enderecosModal.hide();
@@ -670,11 +643,12 @@ document.querySelector('#cadastroEnderecoOffcanvas button.button-black').addEven
   // Abre o offcanvas de cadastro
   const cadastroOffcanvas = new bootstrap.Offcanvas(document.getElementById('cadastroEnderecoOffcanvas'));
   cadastroOffcanvas.show();
-});
+}); 
     // Remove o offcanvas quando fechado
     document.getElementById('profileOffcanvas')?.addEventListener('hidden.bs.offcanvas', function() {
       this.remove();
     });
+    }
   }
 </script>
 

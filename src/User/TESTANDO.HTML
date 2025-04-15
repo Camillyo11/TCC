@@ -268,6 +268,143 @@
   </div>
 </div>
 
+
+
+
+
+
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Meus Dados</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <!-- Dados Pessoais -->
+        <div class="section-title">Dados pessoais</div>
+        <div class="data-field">
+            <span class="data-label">Nome:</span>
+            <div class="data-value" id="nomeValue">Gabriel Basilio Moreli</div>
+            <input type="text" class="form-control edit-form" id="nomeInput" value="Gabriel Basilio Moreli">
+        </div>
+        <div class="data-field">
+            <span class="data-label">Aniversário:</span>
+            <div class="data-value" id="aniversarioValue">19/01/2008</div>
+            <input type="date" class="form-control edit-form" id="aniversarioInput" value="2008-01-19">
+        </div>
+        <div class="data-field">
+            <span class="data-label">CPF:</span>
+            <div class="data-value" id="cpfValue">488.732.288-76</div>
+            <input type="text" class="form-control edit-form" id="cpfInput" value="488.732.288-76">
+        </div>
+
+        <!-- Dados de Contato -->
+        <div class="section-title">Dados de contatos</div>
+        <div class="data-field">
+            <span class="data-label">Telefone:</span>
+            <div class="data-value" id="telefoneValue">(11) 94965-0766</div>
+            <input type="tel" class="form-control edit-form" id="telefoneInput" value="(11) 94965-0766">
+        </div>
+        <div class="data-field">
+            <span class="data-label">Email:</span>
+            <div class="data-value" id="emailValue">gabrielbasilio2419@gmail.com</div>
+            <input type="email" class="form-control edit-form" id="emailInput" value="gabrielbasilio2419@gmail.com">
+        </div>
+
+        <!-- Editar Dados -->
+        <div class="edit-section">
+            <div class="section-title">Editar meus dados</div>
+            
+            <!-- Alterar Senha -->
+            <div class="edit-option" onclick="toggleEditForm('senhaForm')">
+                <span>Alterar Senha</span>
+                <span>&lt;</span>
+            </div>
+            <div class="edit-form" id="senhaForm">
+                <div class="mb-3">
+                    <label class="form-label">Senha antiga</label>
+                    <input type="password" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Nova senha</label>
+                    <input type="password" class="form-control">
+                </div>
+                <button class="save-btn">Salvar Senha</button>
+            </div>
+            
+            <!-- Alterar Email -->
+            <div class="edit-option" onclick="toggleEditForm('emailForm')">
+                <span>Alterar E-mail</span>
+                <span>&lt;</span>
+            </div>
+            <div class="edit-form" id="emailForm">
+                <div class="mb-3">
+                    <label class="form-label">E-mail atual</label>
+                    <input type="email" class="form-control" value="gabrielbasilio2419@gmail.com" disabled>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Novo E-mail</label>
+                    <input type="email" class="form-control">
+                </div>
+                <button class="save-btn">Salvar E-mail</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Função para mostrar/esconder formulários de edição
+    function toggleEditForm(formId) {
+        const form = document.getElementById(formId);
+        form.style.display = form.style.display === 'block' ? 'none' : 'block';
+        
+        // Atualiza a seta (>) para baixo ou para o lado
+        const arrow = event.currentTarget.querySelector('span:last-child');
+        arrow.textContent = form.style.display === 'block' ? '∨' : '<';
+    }
+
+    // Função para editar campos (pode ser expandida para salvar no servidor)
+    function editField(fieldId) {
+        const valueDiv = document.getElementById(fieldId + 'Value');
+        const input = document.getElementById(fieldId + 'Input');
+        
+        // Alterna entre mostrar o valor e o input
+        if (valueDiv.style.display !== 'none') {
+            valueDiv.style.display = 'none';
+            input.style.display = 'block';
+            input.focus();
+        } else {
+            valueDiv.style.display = 'block';
+            input.style.display = 'none';
+            // Aqui você pode adicionar lógica para salvar a alteração
+            valueDiv.textContent = input.value;
+        }
+    }
+
+    // Adiciona evento de clique para editar campos
+    document.querySelectorAll('.data-value').forEach(element => {
+        element.addEventListener('click', function() {
+            const fieldId = this.id.replace('Value', '');
+            editField(fieldId);
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Offcanvas de Pedidos Atuais -->
 <div class="offcanvas-perfil offcanvas offcanvas-end" tabindex="-1" id="meuspedidosOffcanvas" aria-labelledby="meuspedidosOffcanvasLabel">
   <div class="offcanvas-header">
@@ -651,11 +788,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const enderecosModal = new bootstrap.Modal(document.getElementById('exampleModalSegundo'));
       enderecosModal.show();
     });
-    
-    document.getElementById('minhasInfoBtn')?.addEventListener('click', function() {
-      // Adicione aqui a funcionalidade para "Minhas informações"
-      alert('Funcionalidade "Minhas informações" será implementada aqui');
-    });
+         
     
     // Configura o logout
     document.getElementById('profileLogout')?.addEventListener('click', function() {

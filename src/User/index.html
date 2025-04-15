@@ -169,6 +169,7 @@
 
 
 
+
 <!-- Offcanvas para cadastro de novo endereço -->
 <div class=" offcanva-edicao-endereco offcanvas offcanvas-bottom" tabindex="-1" id="cadastroEnderecoOffcanvas" aria-labelledby="cadastroEnderecoOffcanvasLabel">
   <div class="offcanvas-header">
@@ -207,26 +208,73 @@
       <div class="mb-4">
         <label class="form-label"><strong>Tem algum ponto de referência?</strong></label>
         <textarea class="form-control" rows="1" placeholder="Se sim, pode facilitar a entrega!"></textarea>
-      </div>
-      
+      </div>  
+
+
       <div class="buttons-opcao-endereco row">
-        <h8 class="text-light text-center"><strong>Como deseja favoritar esse endereço?</strong></h8>
-        <div class="form-check check-laranja col-sm ">
-          <img src="../img/casa (1).png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="casaNovo" checked>
-          <label class="form-check-label" for="casaNovo">Casa</label>
+        <h8 class="text-light text-center mb-3"><strong>Como deseja favoritar esse endereço?</strong></h8>
+        
+        <!-- Botão Casa -->
+        <div class="col-sm text-center check-laranja">
+          <button type="button" class="btn btn-address-type active" data-address-type="casa">
+            <img src="../img/casa (1).png" width="30" class="img-fluid mb-2">
+            <div>Casa</div>
+            <input type="radio" name="tipoEndereco" value="Casa" checked hidden>
+          </button>
         </div>
-        <div class="form-check check-laranja col-sm">
-          <img src="../img/apartamento.png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="empresaNovo">
-          <label class="form-check-label" for="empresaNovo">Empresa</label>
+        
+        <!-- Botão Empresa -->
+        <div class="col-sm text-center check-laranja">
+          <button type="button" class="btn btn-address-type" data-address-type="empresa">
+            <img src="../img/apartamento.png" width="30" class="img-fluid mb-2">
+            <div>Empresa</div>
+            <input type="radio" name="tipoEndereco" value="Empresa" hidden>
+          </button>
         </div>
-        <div class="form-check check-laranja col-sm">
-          <img src="../img/estrela.png" alt="Casa do meu namorado" width="30" class="img-fluid">
-          <input class="form-check-input" type="radio" name="tipoEndereco" id="outrosNovo">
-          <label class="form-check-label" for="outrosNovo">Outros</label>
+        
+        <!-- Botão Outros -->
+        <div class="col-sm text-center check-laranja">
+          <button type="button" class="btn btn-address-type" data-address-type="outros">
+            <img src="../img/estrela.png" width="30" class="img-fluid mb-2">
+            <div>Outros</div>
+            <input type="radio" name="tipoEndereco" value="Outros" hidden>
+          </button>
+        </div>
+        
+        <!-- Campo para nome personalizado (aparece apenas quando "Outros" está selecionado) -->
+        <div class="col-12 mt-3" id="custom-address-name-container" style="display: none;">
+          <label class="form-label"><strong>Digite o nome do endereço:</strong></label>
+          <input type="text" class="form-control" id="custom-address-name" placeholder="Ex: Casa da praia, Apartamento do trabalho">
         </div>
       </div>
+
+
+
+
+
+        
+        <!-- Campo de texto para "Outro" (inicialmente escondido) 
+        <div id="outroEnderecoContainer" class="mt-3 col-12" style="display: none;">
+          <div class="input-group">
+            <input type="text" class="form-control" id="nomeOutroEndereco" placeholder="Digite o nome do endereço">
+            <button class="btn btn-orange check-laranja " id="btnSalvarEndereco" type="button">
+              <i class="fas fa-save"></i> Salvar
+            </button>
+          </div>
+        </div>
+        -->
+        
+     <!--    Botão de confirmação (sempre visível)
+        <div class="col-12 mt-3 text-center">
+          <button class="btn btn-orange" id="btnConfirmarEndereco">
+            <i class="fas fa-check"></i> Confirmar Endereço
+          </button>
+        </div>
+      </div>
+ -->
+
+
+
       
       <div class="buttons-opcao-endereco">
         <button class="button-branco" type="button" data-bs-dismiss="offcanvas">Cancelar</button>
@@ -650,6 +698,62 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     }
   }
+
+/* BUTÃO DE ENDEREÇO */
+  document.addEventListener('DOMContentLoaded', function() {
+  // Seleciona todos os botões de tipo de endereço
+  const addressButtons = document.querySelectorAll('.btn-address-type');
+  const customNameContainer = document.getElementById('custom-address-name-container');
+  const customNameInput = document.getElementById('custom-address-name');
+  
+  // Adiciona evento de clique para cada botão
+  addressButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove a classe 'active' de todos os botões
+      addressButtons.forEach(btn => {
+        btn.classList.remove('active');
+        btn.querySelector('input[type="radio"]').removeAttribute('checked');
+      });
+      
+      // Adiciona 'active' apenas ao botão clicado
+      this.classList.add('active');
+      this.querySelector('input[type="radio"]').setAttribute('checked', 'checked');
+      
+      // Mostra ou esconde o campo de nome personalizado
+      if (this.dataset.addressType === 'outros') {
+        customNameContainer.style.display = 'block';
+        customNameInput.required = true;
+      } else {
+        customNameContainer.style.display = 'none';
+        customNameInput.required = false;
+      }
+    });
+  });
+  
+  // Garante que o campo personalizado seja limpo quando outro tipo for selecionado
+  customNameInput.addEventListener('change', function() {
+    if (this.value.trim() !== '') {
+      document.querySelector('[data-address-type="outros"] input[type="radio"]').value = this.value;
+    }
+
+    // Para pegar o tipo selecionado
+const selectedType = document.querySelector('input[name="tipoEndereco"]:checked').value;
+
+// Se for "Outros", pegue o valor do campo personalizado
+if (selectedType === "Outros") {
+  const customName = document.getElementById('custom-address-name').value;
+  // Use customName como o nome do endereço
+}
+  });
+});
+
+
+</script>
+
+
+
+
+
 </script>
 
 <!-- Bootstrap JS -->

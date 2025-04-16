@@ -289,7 +289,7 @@ button.login-button img, a.login-button img {
     filter: none;
   }
 
-  /*  */
+  /*  ENDEREÇO*/
   
   .offcanva-edicao-endereco{
     background-color: rgb(144, 33, 6) !important;
@@ -333,6 +333,71 @@ button.login-button img, a.login-button img {
     background-color:#f47a00;
     color: white;
 }
+
+/* MEUS DADOS */
+/* Estilos para o offcanvas Meus Dados */
+.dado-section {
+    margin-bottom: 1.5rem;
+}
+
+.dado-title {
+    color:#f47a00;
+    font-weight: 750;
+    font-size: larger;
+    margin-bottom: 1rem;
+}
+
+.dado-item {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #333;
+}
+
+.dado-label {
+    font-weight: bold;
+    margin-left: 15px;
+    color: #000000;
+}
+
+.dado-value {
+    color: #ffffff;
+}
+
+.btn-editar {
+    background-color:#F77F00;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    display: flex;
+    
+
+}
+
+.btn-editar img {
+    margin-right: 10px;
+}
+/* Estilos para o formulário de edição */
+#formEditarDados {
+    background-color:#F77F00;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+
+ 
+
+
+
+
+
+
+
   /* Estilo para o modal */
   .modal-vermelhor {
     background-color: rgb(144, 33, 6);

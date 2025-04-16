@@ -169,6 +169,7 @@
 
 
 
+
 <!-- Offcanvas para cadastro de novo endereço -->
 <div class=" offcanva-edicao-endereco offcanvas offcanvas-bottom" tabindex="-1" id="cadastroEnderecoOffcanvas" aria-labelledby="cadastroEnderecoOffcanvasLabel">
   <div class="offcanvas-header">
@@ -207,15 +208,14 @@
       <div class="mb-4">
         <label class="form-label"><strong>Tem algum ponto de referência?</strong></label>
         <textarea class="form-control" rows="1" placeholder="Se sim, pode facilitar a entrega!"></textarea>
-      </div>
-      
+      </div>  
 
-      
+
       <div class="buttons-opcao-endereco row">
-        <h8 class="text-light text-center "><strong>Como deseja favoritar esse endereço?</strong></h8>
+        <h8 class="text-light text-center mb-3"><strong>Como deseja favoritar esse endereço?</strong></h8>
         
         <!-- Botão Casa -->
-        <div class="form-check check-laranja col-sm ">
+        <div class="col-sm text-center check-laranja">
           <button type="button" class="btn btn-address-type active" data-address-type="casa">
             <img src="../img/casa (1).png" width="30" class="img-fluid mb-2">
             <div>Casa</div>
@@ -224,7 +224,7 @@
         </div>
         
         <!-- Botão Empresa -->
-        <div class="form-check check-laranja col-sm ">
+        <div class="col-sm text-center check-laranja">
           <button type="button" class="btn btn-address-type" data-address-type="empresa">
             <img src="../img/apartamento.png" width="30" class="img-fluid mb-2">
             <div>Empresa</div>
@@ -233,7 +233,7 @@
         </div>
         
         <!-- Botão Outros -->
-        <div class="form-check check-laranja col-sm ">
+        <div class="col-sm text-center check-laranja">
           <button type="button" class="btn btn-address-type" data-address-type="outros">
             <img src="../img/estrela.png" width="30" class="img-fluid mb-2">
             <div>Outros</div>
@@ -242,23 +242,39 @@
         </div>
         
         <!-- Campo para nome personalizado (aparece apenas quando "Outros" está selecionado) -->
-     
-<div class="col-12 mt-3" id="custom-address-name-container" >
-  <div class=" row">
-    <div class="col-md-9">
-      <label class="form-label"><strong>Digite o nome do endereço:</strong></label>
-      <input type="text" class="form-control" id="custom-address-name" 
-             placeholder="Ex: Casa da praia, Apartamento do trabalho">
-    </div>
-    <div class="col-md-3 d-flex align-items-end">
-      <button type="button" class="button-black w-100" id="confirm-custom-name">
-        <img src="../img/verifica.png" width="20" class="me-2">Confirmar
-      </button>
-    </div>
-  </div>
-</div>
-
+        <div class="col-12 mt-3" id="custom-address-name-container" style="display: none;">
+          <label class="form-label"><strong>Digite o nome do endereço:</strong></label>
+          <input type="text" class="form-control" id="custom-address-name" placeholder="Ex: Casa da praia, Apartamento do trabalho">
+        </div>
       </div>
+
+
+
+
+
+        
+        <!-- Campo de texto para "Outro" (inicialmente escondido) 
+        <div id="outroEnderecoContainer" class="mt-3 col-12" style="display: none;">
+          <div class="input-group">
+            <input type="text" class="form-control" id="nomeOutroEndereco" placeholder="Digite o nome do endereço">
+            <button class="btn btn-orange check-laranja " id="btnSalvarEndereco" type="button">
+              <i class="fas fa-save"></i> Salvar
+            </button>
+          </div>
+        </div>
+        -->
+        
+     <!--    Botão de confirmação (sempre visível)
+        <div class="col-12 mt-3 text-center">
+          <button class="btn btn-orange" id="btnConfirmarEndereco">
+            <i class="fas fa-check"></i> Confirmar Endereço
+          </button>
+        </div>
+      </div>
+ -->
+
+
+
       
       <div class="buttons-opcao-endereco">
         <button class="button-branco" type="button" data-bs-dismiss="offcanvas">Cancelar</button>
@@ -268,139 +284,95 @@
   </div>
 </div>
 
-
-
-
-
-
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title">Meus Dados</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<!-- Offcanvas de Meus Dados -->
+<div class="offcanvas-perfil offcanvas offcanvas-end" tabindex="-1" id="meusDadosOffcanvas" aria-labelledby="meusDadosOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="meusDadosOffcanvasLabel">meus dados</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="dado-section">
+      <h6 class="dado-title">Dados pessoais</h6>
+      <div class="dado-item">
+        <span class="dado-label">Nome:</span>
+        <span class="dado-value" id="dadoNome"></span>
+      </div>
+      <div class="dado-item">
+        <span class="dado-label">Aniversário:</span>
+        <span class="dado-value" id="dadoNascimento"></span>
+      </div>
+      <div class="dado-item">
+        <span class="dado-label">CPF:</span>
+        <span class="dado-value" id="dadoCpf"></span>
+      </div>
     </div>
-    <div class="offcanvas-body">
-        <!-- Dados Pessoais -->
-        <div class="section-title">Dados pessoais</div>
-        <div class="data-field">
-            <span class="data-label">Nome:</span>
-            <div class="data-value" id="nomeValue">Gabriel Basilio Moreli</div>
-            <input type="text" class="form-control edit-form" id="nomeInput" value="Gabriel Basilio Moreli">
-        </div>
-        <div class="data-field">
-            <span class="data-label">Aniversário:</span>
-            <div class="data-value" id="aniversarioValue">19/01/2008</div>
-            <input type="date" class="form-control edit-form" id="aniversarioInput" value="2008-01-19">
-        </div>
-        <div class="data-field">
-            <span class="data-label">CPF:</span>
-            <div class="data-value" id="cpfValue">488.732.288-76</div>
-            <input type="text" class="form-control edit-form" id="cpfInput" value="488.732.288-76">
-        </div>
-
-        <!-- Dados de Contato -->
-        <div class="section-title">Dados de contatos</div>
-        <div class="data-field">
-            <span class="data-label">Telefone:</span>
-            <div class="data-value" id="telefoneValue">(11) 94965-0766</div>
-            <input type="tel" class="form-control edit-form" id="telefoneInput" value="(11) 94965-0766">
-        </div>
-        <div class="data-field">
-            <span class="data-label">Email:</span>
-            <div class="data-value" id="emailValue">gabrielbasilio2419@gmail.com</div>
-            <input type="email" class="form-control edit-form" id="emailInput" value="gabrielbasilio2419@gmail.com">
-        </div>
-
-        <!-- Editar Dados -->
-        <div class="edit-section">
-            <div class="section-title">Editar meus dados</div>
-            
-            <!-- Alterar Senha -->
-            <div class="edit-option" onclick="toggleEditForm('senhaForm')">
-                <span>Alterar Senha</span>
-                <span>&lt;</span>
-            </div>
-            <div class="edit-form" id="senhaForm">
-                <div class="mb-3">
-                    <label class="form-label">Senha antiga</label>
-                    <input type="password" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Nova senha</label>
-                    <input type="password" class="form-control">
-                </div>
-                <button class="save-btn">Salvar Senha</button>
-            </div>
-            
-            <!-- Alterar Email -->
-            <div class="edit-option" onclick="toggleEditForm('emailForm')">
-                <span>Alterar E-mail</span>
-                <span>&lt;</span>
-            </div>
-            <div class="edit-form" id="emailForm">
-                <div class="mb-3">
-                    <label class="form-label">E-mail atual</label>
-                    <input type="email" class="form-control" value="gabrielbasilio2419@gmail.com" disabled>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Novo E-mail</label>
-                    <input type="email" class="form-control">
-                </div>
-                <button class="save-btn">Salvar E-mail</button>
-            </div>
-        </div>
+    
+    <div class="dado-section">
+      <h6 class="dado-title">Dados de contatos</h6>
+      <div class="dado-item">
+        <span class="dado-label">Telefone:</span>
+        <span class="dado-value" id="dadoTelefone"></span>
+      </div>
+      <div class="dado-item">
+        <span class="dado-label">Email:</span>
+        <span class="dado-value" id="dadoEmail"></span>
+      </div>
     </div>
+    
+   
+      
+    <!-- Mensagem para usuários não cadastrados -->
+    <div id="semCadastroMsg" class="text-center py-4" style="display: none;">
+      <img src="../img/aviso.png" width="60" class="mb-3">
+      <h6>Você ainda não possui cadastro</h6>
+      <p>Faça seu cadastro para acessar todas as funcionalidades</p>
+      <a href="../src/formscadastro.html" class="btn btn-danger mt-2">Cadastrar agora</a>
+    </div>
+    
+    <!-- Conteúdo para usuários cadastrados (inicialmente escondido) -->
+    <div id="dadosUsuarioContent" style="display: none;">
+      <div class="dado-section">
+        <h6 class="dado-title">Editar meus dados</h6>
+        
+        <!-- Botão para ativar a edição -->
+        <button id="btnEditarDados" class="btn-editar ">
+          <img src="../img/caneta-do-usuario.png" width="20"> Editar Informações
+        </button>
+        
+        <!-- Formulário de edição (inicialmente oculto) -->
+        <form id="formEditarDados" style="display: none;">
+          
+          <div class="mb-3">
+            <label class="dado-label">Nome Completo</label>
+            <input type="text" class="form-control" id="editarNome">
+          </div>
+         
+          
+          <div class="mb-3">
+            <label class="dado-label">Telefone</label>
+            <div class="row">
+              <div class="col-3">
+                <input type="text" class="form-control" id="editarDDD" placeholder="DDD">
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control" id="editarTelefone" placeholder="Número">
+              </div>
+            </div>
+          </div>
+          
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-outline-light" onclick="cancelarEdicao()">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+
+      </div>
+    </div>
+  </div>
 </div>
-
-
-<script>
-    // Função para mostrar/esconder formulários de edição
-    function toggleEditForm(formId) {
-        const form = document.getElementById(formId);
-        form.style.display = form.style.display === 'block' ? 'none' : 'block';
-        
-        // Atualiza a seta (>) para baixo ou para o lado
-        const arrow = event.currentTarget.querySelector('span:last-child');
-        arrow.textContent = form.style.display === 'block' ? '∨' : '<';
-    }
-
-    // Função para editar campos (pode ser expandida para salvar no servidor)
-    function editField(fieldId) {
-        const valueDiv = document.getElementById(fieldId + 'Value');
-        const input = document.getElementById(fieldId + 'Input');
-        
-        // Alterna entre mostrar o valor e o input
-        if (valueDiv.style.display !== 'none') {
-            valueDiv.style.display = 'none';
-            input.style.display = 'block';
-            input.focus();
-        } else {
-            valueDiv.style.display = 'block';
-            input.style.display = 'none';
-            // Aqui você pode adicionar lógica para salvar a alteração
-            valueDiv.textContent = input.value;
-        }
-    }
-
-    // Adiciona evento de clique para editar campos
-    document.querySelectorAll('.data-value').forEach(element => {
-        element.addEventListener('click', function() {
-            const fieldId = this.id.replace('Value', '');
-            editField(fieldId);
-        });
-    });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -788,7 +760,170 @@ document.addEventListener('DOMContentLoaded', function() {
       const enderecosModal = new bootstrap.Modal(document.getElementById('exampleModalSegundo'));
       enderecosModal.show();
     });
-         
+
+
+
+
+    
+   /* MINHAS INFORMAÇÕES  */
+  // Funções auxiliares para formatação (adicione no início do seu JavaScript)
+function formatarCPF(cpf) {
+    if (!cpf) return 'Não informado';
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+}
+
+function formatarTelefone(telefone) {
+    if (!telefone) return 'Não informado';
+    return telefone.replace(/(\d{5})(\d{4})/, '$1-$2');
+}
+
+// Variável global para armazenar o usuário
+let usuario;
+
+// Modifique a função configureProfileButton para incluir o correto tratamento do botão Minhas Informações
+function configureProfileButton() {
+    const accountBtn = document.getElementById('accountButton');
+    
+    accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="28" width="28">Meu Perfil';
+    accountBtn.onclick = function(e) {
+        e.preventDefault();
+        const offcanvasHTML = `
+        <div class="offcanvas-perfil offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
+            <!-- ... (mantenha o conteúdo existente do offcanvas de perfil) ... -->
+        </div>`;
+        
+        document.body.insertAdjacentHTML('beforeend', offcanvasHTML);
+        const profileOffcanvas = new bootstrap.Offcanvas(document.getElementById('profileOffcanvas'));
+        profileOffcanvas.show();
+        
+        // Configuração do botão Minhas Informações - CORREÇÃO PRINCIPAL
+        document.getElementById('minhasInfoBtn')?.addEventListener('click', function() {
+            // Carrega os dados do usuário
+            usuario = JSON.parse(localStorage.getItem('usuario')) || {};
+            
+            // Preenche os dados no offcanvas Meus Dados
+            if (usuario) {
+                document.getElementById('dadoNome').textContent = usuario.nome || 'Não informado';
+                document.getElementById('dadoNascimento').textContent = usuario.nascimento || 'Não informado';
+                document.getElementById('dadoCpf').textContent = formatarCPF(usuario.cpf);
+                document.getElementById('dadoTelefone').textContent = usuario.ddd && usuario.telefone ? 
+                    `(${usuario.ddd}) ${formatarTelefone(usuario.telefone)}` : 'Não informado';
+                document.getElementById('dadoEmail').textContent = usuario.email || 'Não informado';
+                document.getElementById('emailAtual').value = usuario.email || '';
+            }
+            
+            // Fecha o offcanvas do perfil e abre o de Meus Dados
+            profileOffcanvas.hide();
+            const meusDadosOffcanvas = new bootstrap.Offcanvas(document.getElementById('meusDadosOffcanvas'));
+            meusDadosOffcanvas.show();
+        });
+
+        // ... (mantenha o resto do seu código existente para os outros botões)
+    };
+}
+document.getElementById('minhasInfoBtn')?.addEventListener('click', function() {
+  // Carrega os dados do usuário
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  const semCadastroMsg = document.getElementById('semCadastroMsg');
+  const dadosUsuarioContent = document.getElementById('dadosUsuarioContent');
+  
+  // Verifica se existe cadastro
+  if (!usuario) {
+    // Mostra mensagem para não cadastrados
+    semCadastroMsg.style.display = 'block';
+    dadosUsuarioContent.style.display = 'none';
+    
+    // Opcional: fecha o offcanvas de perfil se estiver aberto
+    const profileOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('profileOffcanvas'));
+    if (profileOffcanvas) profileOffcanvas.hide();
+    
+    // Abre o offcanvas de Meus Dados
+    const meusDadosOffcanvas = new bootstrap.Offcanvas(document.getElementById('meusDadosOffcanvas'));
+    meusDadosOffcanvas.show();
+    return;
+  }
+  
+  // Se tiver cadastro, mostra os dados normalmente
+  semCadastroMsg.style.display = 'none';
+  dadosUsuarioContent.style.display = 'block';
+  
+  // Preenche os dados (mantenha seu código atual aqui)
+  document.getElementById('dadoNome').textContent = usuario.nome;
+  // ... (restante do seu código de preenchimento)
+  
+  // Fecha o offcanvas de perfil e abre o de Meus Dados
+  const profileOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('profileOffcanvas'));
+  if (profileOffcanvas) profileOffcanvas.hide();
+  
+  const meusDadosOffcanvas = new bootstrap.Offcanvas(document.getElementById('meusDadosOffcanvas'));
+  meusDadosOffcanvas.show();
+});
+// Variável global para o offcanvas
+let meusDadosOffcanvas;
+
+// Função para o botão "Editar Informações"
+document.getElementById('btnEditarDados')?.addEventListener('click', function() {
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  
+  // Preenche o formulário com os dados atuais
+  document.getElementById('editarNome').value = usuario.nome || '';;
+  document.getElementById('editarDDD').value = usuario.ddd || '';
+  document.getElementById('editarTelefone').value = usuario.telefone || '';
+  
+  // Mostra o formulário e esconde o botão
+  document.getElementById('formEditarDados').style.display = 'block';
+  this.style.display = 'none';
+});
+
+// Função para cancelar a edição
+window.cancelarEdicao = function() {
+  document.getElementById('formEditarDados').style.display = 'none';
+  document.getElementById('btnEditarDados').style.display = 'block';
+};
+
+// Função para salvar as alterações
+document.getElementById('formEditarDados')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const usuario = JSON.parse(localStorage.getItem('usuario')) || {};
+  
+  // Atualiza os dados
+  usuario.nome = document.getElementById('editarNome').value;
+  usuario.ddd = document.getElementById('editarDDD').value;
+  usuario.telefone = document.getElementById('editarTelefone').value;
+  
+  // Salva no localStorage
+  localStorage.setItem('usuario', JSON.stringify(usuario));
+  
+  // Atualiza a exibição dos dados
+  atualizarExibicaoDados();
+  
+  // Volta para o modo de visualização
+  cancelarEdicao();
+  
+  // Feedback para o usuário
+  alert('Dados atualizados com sucesso!');
+});
+
+// Função para atualizar a exibição dos dados
+function atualizarExibicaoDados() {
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
+  
+  if (usuario) {
+    document.getElementById('dadoNome').textContent = usuario.nome || 'Não informado';
+
+    document.getElementById('dadoTelefone').textContent = 
+      (usuario.ddd && usuario.telefone) ? `(${usuario.ddd}) ${formatarTelefone(usuario.telefone)}` : 'Não informado';
+  }
+}
+
+
+
+
+
+
+
+
     
     // Configura o logout
     document.getElementById('profileLogout')?.addEventListener('click', function() {
@@ -814,11 +949,9 @@ document.addEventListener('DOMContentLoaded', function() {
       this.remove();
     });
     }
-
   }
 
-  /* PARTE DE DAR NOME AO ENDEREÇO  */
-
+/* BUTÃO DE ENDEREÇO */
   document.addEventListener('DOMContentLoaded', function() {
   // Seleciona todos os botões de tipo de endereço
   const addressButtons = document.querySelectorAll('.btn-address-type');
@@ -854,33 +987,24 @@ document.addEventListener('DOMContentLoaded', function() {
     if (this.value.trim() !== '') {
       document.querySelector('[data-address-type="outros"] input[type="radio"]').value = this.value;
     }
+
+    // Para pegar o tipo selecionado
+const selectedType = document.querySelector('input[name="tipoEndereco"]:checked').value;
+
+// Se for "Outros", pegue o valor do campo personalizado
+if (selectedType === "Outros") {
+  const customName = document.getElementById('custom-address-name').value;
+  // Use customName como o nome do endereço
+}
   });
 });
 
-// Adicione isso ao seu event listener DOMContentLoaded
-const confirmCustomNameBtn = document.getElementById('confirm-custom-name');
 
-confirmCustomNameBtn.addEventListener('click', function() {
-  const customName = customNameInput.value.trim();
-  
-  if (customName === '') {
-    alert('Por favor, digite um nome para o endereço');
-    return;
-  }
-  
-  // Atualiza o valor do radio "Outros" com o nome personalizado
-  document.querySelector('[data-address-type="outros"] input[type="radio"]').value = customName;
-  
-  // Feedback visual para o usuário
-  const outrosBtn = document.querySelector('[data-address-type="outros"]');
-  outrosBtn.querySelector('div').textContent = customName;
-  
-  // Opcional: Mostrar ícone de confirmação
-  confirmCustomNameBtn.innerHTML = `<img src="../img/verificado.png" width="20"> Confirmado`;
-  setTimeout(() => {
-    confirmCustomNameBtn.innerHTML = `<img src="../img/verifica.png" width="20" class="me-2">Confirmar`;
-  }, 2000);
-});
+</script>
+
+
+
+
 
 </script>
 

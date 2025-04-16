@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Massa - Meus Dados</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #D62323; /* Vermelho da pizzaria */
+        }
+        
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .btn-primario {
+            background-color: var(--cor-primaria);
+            border-color: var(--cor-primaria);
+            color: white;
+        }
+        
+        .offcanvas-header {
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .dado-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .dado-title {
+            color: var(--cor-primaria);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .dado-item {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dado-label {
+            font-weight: bold;
+            color: #6c757d;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .dado-value {
+            color: #212529;
+        }
+        
+        .edit-section {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão para abrir o offcanvas (normalmente estaria no header) -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bella Massa</a>
+            <button class="btn btn-primario" type="button" data-bs-toggle="offcanvas" data-bs-target="#dadosUsuarioOffcanvas">
+                Meus Dados
+            </button>
+        </div>
+    </nav>
+
+    <!-- Página de Cadastro Existente (simplificada) -->
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Bella Massa</h1>
+        <h2 class="text-center mb-4">CADASTRO</h2>
+        
+        <form id="cadastroForm" class="row g-3 needs-validation" novalidate>
+            <div class="col-md-12">
+                <label for="email" class="form-label">EMAIL:</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            
+            <div class="col-md-12">
+                <label for="nome" class="form-label">NOME:</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="cpf" class="form-label">CPF:</label>
+                <input type="text" class="form-control" id="cpf" required>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="nascimento" class="form-label">DATA DE NASCIMENTO:</label>
+                <input type="text" class="form-control" id="nascimento" placeholder="DD/MM/AAAA" required>
+            </div>
+            
+            <div class="col-md-3">
+                <label for="ddd" class="form-label">DDD:</label>
+                <input type="text" class="form-control" id="ddd" required>
+            </div>
+            
+            <div class="col-md-9">
+                <label for="telefone" class="form-label">NÚMERO:</label>
+                <input type="tel" class="form-control" id="telefone" required>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="senha" class="form-label">SENHA:</label>
+                <input type="password" class="form-control" id="senha" required>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="confirmarSenha" class="form-label">CONFIRMAR A SENHA:</label>
+                <input type="password" class="form-control" id="confirmarSenha" required>
+            </div>
+            
+            <div class="col-12">
+                <button class="btn btn-primario w-100" type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Offcanvas de Dados do Usuário -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="dadosUsuarioOffcanvas" aria-labelledby="dadosUsuarioOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="dadosUsuarioOffcanvasLabel">meus dados</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="dadosUsuarioContent">
+                <!-- Conteúdo será preenchido pelo JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Nosso JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cadastroForm = document.getElementById('cadastroForm');
+            const dadosUsuarioContent = document.getElementById('dadosUsuarioContent');
+            
+            // Armazenar dados do usuário
+            let usuario = JSON.parse(localStorage.getItem('usuario')) || null;
+            
+            // Se já tiver dados, mostra o offcanvas automaticamente (para teste)
+            if (usuario) {
+                const offcanvas = new bootstrap.Offcanvas(document.getElementById('dadosUsuarioOffcanvas'));
+                offcanvas.show();
+            }
+            
+            // Atualiza os dados no offcanvas
+            function atualizarDadosOffcanvas() {
+                if (usuario) {
+                    let html = `
+                        <div class="dado-section">
+                            <h6 class="dado-title">Dados pessoais</h6>
+                            <div class="dado-item">
+                                <span class="dado-label">Nome:</span>
+                                <span class="dado-value">${usuario.nome}</span>
+                            </div>
+                            <div class="dado-item">
+                                <span class="dado-label">Aniversário:</span>
+                                <span class="dado-value">${usuario.nascimento}</span>
+                            </div>
+                            <div class="dado-item">
+                                <span class="dado-label">CPF:</span>
+                                <span class="dado-value">${formatarCPF(usuario.cpf)}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="dado-section">
+                            <h6 class="dado-title">Dados de contatos</h6>
+                            <div class="dado-item">
+                                <span class="dado-label">Telefone:</span>
+                                <span class="dado-value">(${usuario.ddd}) ${formatarTelefone(usuario.telefone)}</span>
+                            </div>
+                            <div class="dado-item">
+                                <span class="dado-label">Email:</span>
+                                <span class="dado-value">${usuario.email}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="edit-section mt-4">
+                            <h6 class="dado-title">Editar meus dados</h6>
+                            
+                            <div class="dado-item">
+                                <span class="dado-label">Alterar Senha</span>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="mostrarFormSenha()">Editar</button>
+                            </div>
+                            
+                            <div class="dado-item">
+                                <span class="dado-label">Alterar E-mail</span>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="mostrarFormEmail()">Editar</button>
+                            </div>
+                            
+                            <div id="formSenha" style="display: none;">
+                                <div class="mb-2">
+                                    <label class="dado-label">Senha antiga</label>
+                                    <input type="password" class="form-control form-control-sm" id="senhaAntiga">
+                                </div>
+                                <div class="mb-2">
+                                    <label class="dado-label">Nova senha</label>
+                                    <input type="password" class="form-control form-control-sm" id="novaSenha">
+                                </div>
+                                <button class="btn btn-sm btn-primario" onclick="alterarSenha()">Salvar</button>
+                            </div>
+                            
+                            <div id="formEmail" style="display: none;">
+                                <div class="mb-2">
+                                    <label class="dado-label">E-mail atual</label>
+                                    <input type="email" class="form-control form-control-sm" value="${usuario.email}" disabled>
+                                </div>
+                                <div class="mb-2">
+                                    <label class="dado-label">Novo E-mail</label>
+                                    <input type="email" class="form-control form-control-sm" id="novoEmail">
+                                </div>
+                                <button class="btn btn-sm btn-primario" onclick="alterarEmail()">Salvar</button>
+                            </div>
+                        </div>
+                    `;
+                    
+                    dadosUsuarioContent.innerHTML = html;
+                } else {
+                    dadosUsuarioContent.innerHTML = '<p>Nenhum dado de usuário encontrado. Faça seu cadastro primeiro.</p>';
+                }
+            }
+            
+            // Formatar CPF
+            function formatarCPF(cpf) {
+                return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+            }
+            
+            // Formatar telefone
+            function formatarTelefone(telefone) {
+                return telefone.replace(/(\d{5})(\d{4})/, '$1-$2');
+            }
+            
+            // Funções globais para os botões
+            window.mostrarFormSenha = function() {
+                document.getElementById('formSenha').style.display = 'block';
+                document.getElementById('formEmail').style.display = 'none';
+            };
+            
+            window.mostrarFormEmail = function() {
+                document.getElementById('formEmail').style.display = 'block';
+                document.getElementById('formSenha').style.display = 'none';
+            };
+            
+            window.alterarSenha = function() {
+                const senhaAntiga = document.getElementById('senhaAntiga').value;
+                const novaSenha = document.getElementById('novaSenha').value;
+                
+                if (senhaAntiga === usuario.senha) {
+                    usuario.senha = novaSenha;
+                    localStorage.setItem('usuario', JSON.stringify(usuario));
+                    alert('Senha alterada com sucesso!');
+                    document.getElementById('formSenha').style.display = 'none';
+                } else {
+                    alert('Senha antiga incorreta!');
+                }
+            };
+            
+            window.alterarEmail = function() {
+                const novoEmail = document.getElementById('novoEmail').value;
+                
+                if (novoEmail && novoEmail.includes('@')) {
+                    usuario.email = novoEmail;
+                    localStorage.setItem('usuario', JSON.stringify(usuario));
+                    alert('E-mail alterado com sucesso!');
+                    atualizarDadosOffcanvas();
+                    document.getElementById('formEmail').style.display = 'none';
+                } else {
+                    alert('Por favor, insira um e-mail válido!');
+                }
+            };
+            
+            // Cadastro de novo usuário
+            cadastroForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (this.checkValidity()) {
+                    // Verifica se as senhas coincidem
+                    const senha = document.getElementById('senha').value;
+                    const confirmarSenha = document.getElementById('confirmarSenha').value;
+                    
+                    if (senha !== confirmarSenha) {
+                        alert('As senhas não coincidem!');
+                        return;
+                    }
+                    
+                    // Cria o objeto usuário
+                    usuario = {
+                        nome: document.getElementById('nome').value,
+                        email: document.getElementById('email').value,
+                        cpf: document.getElementById('cpf').value.replace(/\D/g, ''),
+                        nascimento: document.getElementById('nascimento').value,
+                        ddd: document.getElementById('ddd').value,
+                        telefone: document.getElementById('telefone').value.replace(/\D/g, ''),
+                        senha: senha
+                    };
+                    
+                    // Salva no localStorage
+                    localStorage.setItem('usuario', JSON.stringify(usuario));
+                    
+                    // Atualiza o offcanvas e mostra
+                    atualizarDadosOffcanvas();
+                    const offcanvas = new bootstrap.Offcanvas(document.getElementById('dadosUsuarioOffcanvas'));
+                    offcanvas.show();
+                    
+                    alert('Cadastro realizado com sucesso!');
+                }
+                
+                this.classList.add('was-validated');
+            }, false);
+            
+            // Inicializa o offcanvas
+            atualizarDadosOffcanvas();
+        });
+    </script>
+</body>
+</html>

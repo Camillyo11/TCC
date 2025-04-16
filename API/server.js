@@ -10,6 +10,42 @@ const menuRoutes = require('./routes/menuRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const userRoutes = require('./routes/userRoutes');
 const authRoutes = require('./routes/authRoutes');
+const avaliacaoRoutes = require('./routes/avaliacaoRoutes');
+
+// Swagger setup
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
+
+const swaggerDefinition = {
+  openapi: '3.0.0',
+  info: {
+    title: 'API Pizzaria',
+    version: '1.0.0',
+    description: 'Documentação da API da Pizzaria',
+  },
+  servers: [
+    {
+      url: 'http://localhost:3000',
+      description: 'Servidor local',
+    },
+  ],
+  components: {
+    securitySchemes: {
+      bearerAuth: {
+        type: 'http',
+        scheme: 'bearer',
+        bearerFormat: 'JWT',
+      },
+    },
+  },
+  security: [{ bearerAuth: [] }],
+};
+
+const options = {
+  swaggerDefinition,
+  apis: ['./routes/*.js'],
+};
+const swaggerSpec = swaggerJsdoc(options);
 
 // Configuração do rate limiter
 const limiter = rateLimit({
@@ -31,6 +67,8 @@ app.use('/api/menu', menuRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/avaliacoes', avaliacaoRoutes);
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 // Middleware de tratamento de erros
 app.use((err, req, res, next) => {

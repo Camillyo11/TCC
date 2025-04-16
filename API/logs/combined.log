@@ -463,3 +463,43 @@
   level: 'warn',
   timestamp: '2025-04-10T00:55:02.102Z'
 }
+{
+  message: 'JWT_SECRET: undefined',
+  level: 'info',
+  timestamp: '2025-04-15T22:58:08.234Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-15T22:58:08.237Z'
+}
+{
+  message: 'JWT_SECRET: undefined',
+  level: 'info',
+  timestamp: '2025-04-15T23:00:11.588Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-15T23:00:11.591Z'
+}
+{
+  message: 'JWT_SECRET: seu_jwt_secret',
+  level: 'info',
+  timestamp: '2025-04-15T23:01:00.987Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 24h',
+  level: 'info',
+  timestamp: '2025-04-15T23:01:00.990Z'
+}
+{
+  message: 'JWT_SECRET: seu_jwt_secret',
+  level: 'info',
+  timestamp: '2025-04-15T23:01:45.309Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 24h',
+  level: 'info',
+  timestamp: '2025-04-15T23:01:45.312Z'
+}

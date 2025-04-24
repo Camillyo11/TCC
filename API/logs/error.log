@@ -38,3 +38,48 @@
   level: 'error',
   timestamp: '2025-04-10T00:37:55.630Z'
 }
+{
+  message: 'Erro ao cadastrar usuário: connect ECONNREFUSED 127.0.0.1:587',
+  level: 'error',
+  timestamp: '2025-04-24T00:14:22.759Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: connect ECONNREFUSED 127.0.0.1:587',
+  level: 'error',
+  timestamp: '2025-04-24T00:42:41.654Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T00:50:21.970Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Data command failed: 421 Domain sandbox445d38dccb3b4b61ab76d66e94b215d4.mailgun.org is not allowed to send: Free accounts are for test purposes only. Please upgrade or add the address to your authorized recipients.',
+  level: 'error',
+  timestamp: '2025-04-24T00:51:16.049Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:15.031Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:46.542Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:46.876Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:03:41.144Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:03:54.499Z'
+}

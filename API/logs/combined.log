@@ -503,3 +503,188 @@
   level: 'info',
   timestamp: '2025-04-15T23:01:45.312Z'
 }
+{
+  message: 'JWT_SECRET: undefined',
+  level: 'info',
+  timestamp: '2025-04-24T00:11:03.358Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:11:03.361Z'
+}
+{
+  message: 'JWT_SECRET: undefined',
+  level: 'info',
+  timestamp: '2025-04-24T00:12:16.924Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:12:16.928Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: connect ECONNREFUSED 127.0.0.1:587',
+  level: 'error',
+  timestamp: '2025-04-24T00:14:22.759Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:22:50.224Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:22:50.227Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:24:45.721Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:24:45.724Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:25:38.094Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:25:38.097Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:26:46.903Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:26:46.906Z'
+}
+{
+  message: 'JWT_SECRET: bella_massa',
+  level: 'info',
+  timestamp: '2025-04-24T00:42:25.533Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:42:25.536Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: connect ECONNREFUSED 127.0.0.1:587',
+  level: 'error',
+  timestamp: '2025-04-24T00:42:41.654Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:50:14.569Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:50:14.573Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T00:50:21.970Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Data command failed: 421 Domain sandbox445d38dccb3b4b61ab76d66e94b215d4.mailgun.org is not allowed to send: Free accounts are for test purposes only. Please upgrade or add the address to your authorized recipients.',
+  level: 'error',
+  timestamp: '2025-04-24T00:51:16.049Z'
+}
+{
+  message: 'Novo usuário registrado: lucasamerico029@gmail.com',
+  level: 'info',
+  timestamp: '2025-04-24T00:53:02.505Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T00:59:55.771Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T00:59:55.774Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:15.031Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:46.542Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:00:46.876Z'
+}
+{
+  message: 'Novo usuário registrado: lucasamerico695@gmail.com',
+  level: 'info',
+  timestamp: '2025-04-24T01:00:54.416Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T01:03:18.690Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T01:03:18.694Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:03:41.144Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T01:03:49.836Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T01:03:49.840Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-04-24T01:03:54.499Z'
+}
+{
+  message: 'Novo usuário registrado: lucasamerico695@gmail.com',
+  level: 'info',
+  timestamp: '2025-04-24T01:04:33.548Z'
+}
+{
+  message: 'JWT_SECRET: b0e09a7474a3c34a9aecb7d6b997b62ac920c78488f2c6288bc998be6f218e2f',
+  level: 'info',
+  timestamp: '2025-04-24T01:09:11.729Z'
+}
+{
+  message: 'JWT_EXPIRES_IN: 1h',
+  level: 'info',
+  timestamp: '2025-04-24T01:09:11.733Z'
+}
+{
+  message: 'Novo usuário registrado: lucasamerico65@gmail.com',
+  level: 'info',
+  timestamp: '2025-04-24T01:09:19.160Z'
+}

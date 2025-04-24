@@ -6,8 +6,8 @@ POST {{baseUrl}}/auth/register
 Content-Type: application/json
 
 {
-    "nome": "João Silva",
-    "email": "joao@email.com",
+    "nome": "Lucas Silva",
+    "email": "lucasamerico65@gmail.com",
     "senha": "123456",
     "telefone": "11999999999",
     "endereco": "Rua das Flores",

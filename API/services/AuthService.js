@@ -1,9 +1,7 @@
 const db = require('../config/db');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const axios = require('axios');
 const logger = require('../config/logger');
-const crypto = require('crypto');
 require('dotenv').config();
 
 const SECRET_KEY = process.env.JWT_SECRET;
@@ -17,28 +15,18 @@ const validarEmail = (email) => {
   return re.test(email);
 };
 
-
 const registerUser = async (nome, email, senha, telefone, endereco, numero_casa, complemento, cidade, estado, cep) => {
   try {
-    // Verifica se o email é válido
-    const response = await axios.get(`https://api.zerobounce.net/v2/validate?email=${email}&api_key=e33a5e0bcdc94b7da1305315ec7e96b4`);
-    if (response.data.status === 'invalid') {
-      throw new Error('Email inválido.');
-    }
-
     // Valida o formato do email
     if (!validarEmail(email)) {
       throw new Error('Email inválido.');
     }
 
-    
+    // Verifica se o email já está cadastrado
     const [cliente] = await db.query('SELECT * FROM cliente WHERE email = ?', [email]);
     if (cliente.length > 0) {
       throw new Error('Email já cadastrado.');
     }
-
-    
-    const hashedSenha = await bcrypt.hash(senha, 10);
 
     // Primeiro, inserir o endereço
     const [enderecoResult] = await db.query(
@@ -48,19 +36,16 @@ const registerUser = async (nome, email, senha, telefone, endereco, numero_casa,
     
     const id_endereco = enderecoResult.insertId;
     
-    // Gerar token de confirmação
-    const emailToken = crypto.randomBytes(32).toString('hex');
-
     // Agora, inserir o cliente
     const dataAtual = new Date().toISOString().split('T')[0]; // Formato YYYY-MM-DD
     const dataNascimento = '1990-01-01'; // Valor padrão, você pode ajustar conforme necessário
     
     await db.query(
-      'INSERT INTO cliente (nome, telefone, data_nascimento, email, data_registro, id_endereco, email_confirmado, email_token) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-      [nome, telefone, dataNascimento, email, dataAtual, id_endereco, false, emailToken]
+      'INSERT INTO cliente (nome, telefone, data_nascimento, email, data_registro, id_endereco, email_confirmado) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [nome, telefone, dataNascimento, email, dataAtual, id_endereco, true]
     );
 
-    return { message: 'Cliente cadastrado com sucesso. Confirme seu e-mail.', emailToken, email };
+    return { message: 'Cliente cadastrado com sucesso.' };
   } catch (error) {
     throw new Error(error.message);
   }
@@ -73,14 +58,6 @@ const loginUser = async (email, senha) => {
     if (cliente.length === 0) {
       throw new Error('Email ou senha incorretos.');
     }
-
-    // Bloqueia login se o e-mail não estiver confirmado
-    if (!cliente[0].email_confirmado) {
-      throw new Error('E-mail não confirmado. Verifique sua caixa de entrada.');
-    }
-
-    // Como não temos senha na tabela cliente, vamos assumir que a senha é válida
-    // Em um sistema real, você precisaria adicionar uma coluna de senha à tabela cliente
     
     // Gera um token JWT
     logger.info(`Gerando token para cliente: ${cliente[0].id_cliente}`);

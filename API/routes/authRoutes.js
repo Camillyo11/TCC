@@ -9,7 +9,7 @@ const { authMiddleware } = require('../middlewares/auth');
  * @swagger
  * tags:
  *   name: Autenticação
- *   description: Endpoints para autenticação e recuperação de senha
+ *   description: Endpoints para autenticação
  */
 
 router.post(
@@ -136,80 +136,5 @@ router.get('/verify', authMiddleware, authController.verifyToken);
  *       401:
  *         description: Token inválido
  */
-
-router.post(
-  '/forgot-password',
-  body('email').isEmail().withMessage('Email inválido'),
-  validate,
-  authController.forgotPassword
-);
-
-/**
- * @swagger
- * /api/auth/forgot-password:
- *   post:
- *     summary: Solicita recuperação de senha
- *     tags: [Autenticação]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - email
- *             properties:
- *               email:
- *                 type: string
- *     responses:
- *       200:
- *         description: Email de recuperação enviado
- *       400:
- *         description: Email inválido
- *       500:
- *         description: Erro interno
- */
-
-router.post(
-  '/reset-password',
-  body('token').notEmpty().withMessage('Token é obrigatório'),
-  body('senha')
-    .isLength({ min: 6 })
-    .withMessage('Senha deve ter no mínimo 6 caracteres'),
-  validate,
-  authController.resetPassword
-);
-
-/**
- * @swagger
- * /api/auth/reset-password:
- *   post:
- *     summary: Redefine a senha do usuário
- *     tags: [Autenticação]
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - token
- *               - senha
- *             properties:
- *               token:
- *                 type: string
- *               senha:
- *                 type: string
- *     responses:
- *       200:
- *         description: Senha redefinida com sucesso
- *       400:
- *         description: Token inválido ou senha fraca
- *       500:
- *         description: Erro interno
- */
-
-// Confirmação de e-mail
-router.get('/confirmar-email', authController.confirmarEmail);
 
 module.exports = router;

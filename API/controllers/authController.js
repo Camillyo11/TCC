@@ -1,13 +1,38 @@
 const AuthService = require('../services/AuthService');
 const logger = require('../config/logger');
-const jwt = require('jsonwebtoken');
 
 const register = async (req, res) => {
   try {
-    const { nome, email, senha, telefone, endereco, numero_casa, complemento, cidade, estado, cep } = req.body;
-    
-    const response = await AuthService.registerUser(nome, email, senha, telefone, endereco, numero_casa, complemento, cidade, estado, cep);
-    
+    const {
+      nome,
+      email,
+      senha,
+      telefone,
+      endereco,
+      numero_casa,
+      complemento,
+      cidade,
+      estado,
+      cep,
+      bairro, // ✅ incluído
+      data_nascimento // ✅ incluído
+    } = req.body;
+
+    const response = await AuthService.registerUser(
+      nome,
+      email,
+      senha,
+      telefone,
+      endereco,
+      numero_casa,
+      complemento,
+      cidade,
+      estado,
+      cep,
+      bairro,
+      data_nascimento
+    );
+
     logger.info(`Novo usuário registrado: ${email}`);
     res.status(201).json({ message: 'Cadastro realizado com sucesso! Você já pode fazer login.' });
   } catch (error) {
@@ -19,9 +44,9 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   try {
     const { email, senha } = req.body;
-    
+
     const response = await AuthService.loginUser(email, senha);
-    
+
     logger.info(`Login realizado com sucesso: ${email}`);
     res.json(response);
   } catch (error) {

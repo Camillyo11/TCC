@@ -83,3 +83,93 @@
   level: 'error',
   timestamp: '2025-04-24T01:03:54.499Z'
 }
+{
+  message: "Erro no cadastro: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:40:09.649Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:40:09.692Z'
+}
+{
+  message: "Erro no cadastro: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:40:10.252Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:40:10.253Z'
+}
+{
+  message: "Erro no cadastro: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:44:35.548Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:44:35.549Z'
+}
+{
+  message: "Erro no cadastro: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:45:41.272Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:45:41.276Z'
+}
+{
+  message: "Erro no cadastro: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:48:59.476Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Column 'bairro' cannot be null",
+  level: 'error',
+  timestamp: '2025-05-11T01:48:59.479Z'
+}
+{
+  message: 'Erro no cadastro: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-11T02:01:49.167Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-11T02:01:49.168Z'
+}
+{
+  message: 'Erro no cadastro: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-11T02:11:28.872Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-11T02:11:28.880Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-11T02:11:44.938Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-11T02:11:44.939Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-11T02:13:07.036Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-11T02:13:07.037Z'
+}

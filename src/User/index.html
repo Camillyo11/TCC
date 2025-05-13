@@ -522,238 +522,38 @@
 </footer>
 
 <script>
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-  
-  // Quando abrir o offcanvas
-document.querySelectorAll('[data-bs-toggle="offcanvas"]').forEach(element => {
-  element.addEventListener('click', function() {
-    // Fecha o modal primeiro
-    var modal = bootstrap.Modal.getInstance(document.getElementById('exampleModalSegundo'));
-    modal.hide();
-    
-    // Depois abre o offcanvas
-    var offcanvasEl = document.getElementById('edicaoEnderecoOffcanvas');
-    var offcanvas = new bootstrap.Offcanvas(offcanvasEl);
-    offcanvas.show();
-  });
-}); 
- // Verifica o status de login ao carregar a página
-document.addEventListener('DOMContentLoaded', function() {
-    updateAccountButton();
-});
-// Manipula o formulário de login
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Validação simples (substitua pela sua lógica real)
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    
-    if (email && senha) {
-        localStorage.setItem('isLoggedIn', 'true');
-        
-        // Fecha o modal
-        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-        modal.hide();
-        
-        // Atualiza o botão
-        updateAccountButton();
-        
-        // Redireciona para o perfil (opcional)
-        // window.location.href = "perfil.html";
+  const email = document.getElementById('email').value;
+  const senha = document.getElementById('senha').value;
+
+  fetch('http://localhost:3000/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, senha })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.token) {
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('isLoggedIn', 'true');
+      alert("Login realizado com sucesso!");
+
+      const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+      modal.hide();
+
+      updateAccountButton();
+      location.reload(); // recarrega para refletir o novo estado
     } else {
-        alert('Por favor, preencha todos os campos!');
+      alert("Erro: " + data.message);
     }
-});
-
-// 1. Verifica se está logado ao carregar
-document.addEventListener('DOMContentLoaded', function() {
-    if (localStorage.getItem('isLoggedIn') === 'true') {
-        configureProfileButton();
-    }
-});
-
-
-  // Atualiza o botão de conta baseado no status de login
-  function updateAccountButton() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    const accountBtn = document.getElementById('accountButton');
-    
-    if (!accountBtn) return;
-    
-    if (isLoggedIn) {
-      accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="25" width="25"> Meu Perfil';
-      accountBtn.removeAttribute('data-bs-toggle');
-      accountBtn.removeAttribute('data-bs-target');
-      accountBtn.href = "#";
-      accountBtn.onclick = function(e) {
-        e.preventDefault();
-        showProfileOffcanvas();
-      };
-    } else {
-      accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="25" width="25"> Conta';
-      accountBtn.setAttribute('data-bs-toggle', 'modal');
-      accountBtn.setAttribute('data-bs-target', '#exampleModal');
-      accountBtn.onclick = null;
-    }};
-  
-
-  // Mostra o offcanvas do perfil
-  function configureProfileButton() {
-    const accountBtn = document.getElementById('accountButton');
-    
-    // Modifica APENAS o botão de perfil
-    accountBtn.innerHTML = '<img src="../img/do-utilizador (3).png" height="28" width="28">Meu Perfil';
-    accountBtn.onclick = function(e) {
-        e.preventDefault();
-    const offcanvasHTML = `
-    <div class="offcanvas-perfil offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="profileOffcanvas">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title">MEU PERFIL</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="text-center">
-          <img src="../img/do-utilizador (3).png" width="100" class="rounded-circle mb-3">
-          <h6>Bem-vindo de volta!</h6>
-        </div>
-        <div class="buttons-perfil mt-4">
-          <button class="button-laranja-perfil mb-2" id="historicoPedidosBtn">
-            <img src="../img/rapido.png" width="25">Histórico de Pedidos
-          </button>
-          <button class="button-branco-perfil mb-2" id="enderecosBtn">
-            <img src="../img/fixar-mapa (1).png" width="25">Endereços Salvos
-          </button>
-          <button class="button-laranja-perfil mb-2" id="minhasInfoBtn">
-            <img src="../img/caneta-do-usuario.png" width="25">Minhas informações
-          </button>
-        </div>
-        
-        <h5 class="section-title">Programa de Fidelidade</h5>
-        <div class="card card-fidelidade mb-3">
-          <div class="card-body">
-            <h5 class="card-title"><i class="fas fa-award me-2"></i> Pontos acumulados: </h5>
-            <p class="card-text">Próxima recompensa:</p>
-            <div class="progress mb-3">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="200"></div>
-            </div>
-            <small class="text-muted">Você está a 50 pontos da próxima recompensa!</small>
-          </div>
-        </div>
-
-        <div class="position-button-sair">
-          <h6>Desconectar da conta</h6>
-          <button class="button-sair" id="profileLogout">
-            <img src="../img/deixar.png" width="25">Sair
-          </button>
-        </div>
-      </div>
-    </div>`;
-    
-    // Adiciona o offcanvas ao body
-    document.body.insertAdjacentHTML('beforeend', offcanvasHTML);
-    const profileOffcanvas = new bootstrap.Offcanvas(document.getElementById('profileOffcanvas'));
-    profileOffcanvas.show();
-    
-    // Configura os botões dentro do perfil
-    document.getElementById('historicoPedidosBtn')?.addEventListener('click', function() {
-      profileOffcanvas.hide();
-      const pedidosOffcanvas = new bootstrap.Offcanvas(document.getElementById('pedidosOffcanvas'));
-      pedidosOffcanvas.show();
-    });
-    
-    document.getElementById('enderecosBtn')?.addEventListener('click', function() {
-      profileOffcanvas.hide();
-      const enderecosModal = new bootstrap.Modal(document.getElementById('exampleModalSegundo'));
-      enderecosModal.show();
-    });
-    
-    document.getElementById('minhasInfoBtn')?.addEventListener('click', function() {
-      // Adicione aqui a funcionalidade para "Minhas informações"
-      alert('Funcionalidade "Minhas informações" será implementada aqui');
-    });
-    
-    // Configura o logout
-    document.getElementById('profileLogout')?.addEventListener('click', function() {
-      if(confirm('Tem certeza que deseja sair?')) {
-        localStorage.removeItem('isLoggedIn');
-        profileOffcanvas.hide();
-        updateAccountButton();
-      }
-    });
-    
-    // Adicione este código ao seu JavaScript existente
-    document.querySelector('#cadastroEnderecoOffcanvas button.button-black').addEventListener('click', function() {
-  // Fecha o modal de endereços
-  const enderecosModal = bootstrap.Modal.getInstance(document.getElementById('exampleModalSegundo'));
-  enderecosModal.hide();
-  
-  // Abre o offcanvas de cadastro
-  const cadastroOffcanvas = new bootstrap.Offcanvas(document.getElementById('cadastroEnderecoOffcanvas'));
-  cadastroOffcanvas.show();
-}); 
-    // Remove o offcanvas quando fechado
-    document.getElementById('profileOffcanvas')?.addEventListener('hidden.bs.offcanvas', function() {
-      this.remove();
-    });
-    }
-  }
-
-/* BUTÃO DE ENDEREÇO */
-  document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todos os botões de tipo de endereço
-  const addressButtons = document.querySelectorAll('.btn-address-type');
-  const customNameContainer = document.getElementById('custom-address-name-container');
-  const customNameInput = document.getElementById('custom-address-name');
-  
-  // Adiciona evento de clique para cada botão
-  addressButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      // Remove a classe 'active' de todos os botões
-      addressButtons.forEach(btn => {
-        btn.classList.remove('active');
-        btn.querySelector('input[type="radio"]').removeAttribute('checked');
-      });
-      
-      // Adiciona 'active' apenas ao botão clicado
-      this.classList.add('active');
-      this.querySelector('input[type="radio"]').setAttribute('checked', 'checked');
-      
-      // Mostra ou esconde o campo de nome personalizado
-      if (this.dataset.addressType === 'outros') {
-        customNameContainer.style.display = 'block';
-        customNameInput.required = true;
-      } else {
-        customNameContainer.style.display = 'none';
-        customNameInput.required = false;
-      }
-    });
-  });
-  
-  // Garante que o campo personalizado seja limpo quando outro tipo for selecionado
-  customNameInput.addEventListener('change', function() {
-    if (this.value.trim() !== '') {
-      document.querySelector('[data-address-type="outros"] input[type="radio"]').value = this.value;
-    }
-
-    // Para pegar o tipo selecionado
-const selectedType = document.querySelector('input[name="tipoEndereco"]:checked').value;
-
-// Se for "Outros", pegue o valor do campo personalizado
-if (selectedType === "Outros") {
-  const customName = document.getElementById('custom-address-name').value;
-  // Use customName como o nome do endereço
-}
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Erro ao conectar com o servidor.");
   });
 });
-
-
-</script>
-
-
-
-
-
 </script>
 
 <!-- Bootstrap JS -->

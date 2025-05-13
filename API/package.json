@@ -26,7 +26,7 @@
     "mysql2": "^3.13.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.3",
-    "winston": "^3.11.0"
+    "winston": "^3.17.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",

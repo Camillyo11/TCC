@@ -813,3 +813,118 @@
   level: 'info',
   timestamp: '2025-05-11T02:18:01.342Z'
 }
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:31:32.680Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:31:32.686Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:37:35.073Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:37:35.074Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:38:53.584Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:38:53.587Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:39:30.237Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:39:30.240Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:40:25.541Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:40:25.543Z'
+}
+{
+  message: 'Novo usuário registrado: lucas@email.com',
+  level: 'info',
+  timestamp: '2025-05-12T22:40:47.123Z'
+}
+{
+  message: 'Erro no cadastro: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-12T22:43:01.244Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-12T22:43:01.246Z'
+}
+{
+  message: 'Novo usuário registrado: lucaas@email.com',
+  level: 'info',
+  timestamp: '2025-05-12T22:43:20.702Z'
+}
+{
+  message: 'Novo usuário registrado: lucas1@email.com',
+  level: 'info',
+  timestamp: '2025-05-12T22:45:59.983Z'
+}
+{
+  message: 'Novo usuário registrado: lucas21@email.com',
+  level: 'info',
+  timestamp: '2025-05-12T22:48:34.446Z'
+}
+{
+  message: 'Novo usuário registrado: lucas133@email.com',
+  level: 'info',
+  timestamp: '2025-05-12T22:51:29.696Z'
+}
+{
+  message: 'Novo usuário registrado: lucas1333@email.com',
+  level: 'info',
+  timestamp: '2025-05-13T00:14:05.089Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T00:27:30.884Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T00:27:30.886Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas1333@email.com',
+  level: 'info',
+  timestamp: '2025-05-13T00:30:55.483Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas1333@email.com',
+  level: 'info',
+  timestamp: '2025-05-13T00:36:38.377Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas1333@email.com',
+  level: 'info',
+  timestamp: '2025-05-13T00:37:48.860Z'
+}

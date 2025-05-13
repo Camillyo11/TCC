@@ -173,3 +173,73 @@
   level: 'error',
   timestamp: '2025-05-11T02:13:07.037Z'
 }
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:31:32.680Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:31:32.686Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:37:35.073Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:37:35.074Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:38:53.584Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-12T22:38:53.587Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:39:30.237Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:39:30.240Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:40:25.541Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-12T22:40:25.543Z'
+}
+{
+  message: 'Erro no cadastro: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-12T22:43:01.244Z'
+}
+{
+  message: 'Erro ao cadastrar usuário: Email já cadastrado.',
+  level: 'error',
+  timestamp: '2025-05-12T22:43:01.246Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T00:27:30.884Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T00:27:30.886Z'
+}

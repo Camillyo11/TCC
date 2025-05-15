@@ -2458,3 +2458,63 @@
   level: 'error',
   timestamp: '2025-05-15T23:06:57.282Z'
 }
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:42.836Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDczNTA2NDIsImV4cCI6MTc0NzM1NDI0Mn0.c4s-DS9OQMthLHm5seFDx6GY1Mrn0y7zcD_pdxkJWKQ',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:44.518Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDczNTA2NDIsImV4cCI6MTc0NzM1NDI0Mn0.c4s-DS9OQMthLHm5seFDx6GY1Mrn0y7zcD_pdxkJWKQ',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:44.519Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:44.520Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","iat":1747350642,"exp":1747354242}',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:44.522Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-05-15T23:10:44.524Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:38.735Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDczNTA2OTgsImV4cCI6MTc0NzM1NDI5OH0.OXBlKEJSoowr39AxAOPFdMjfg5z-fqlYDToBpBzj0nw',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:41.422Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDczNTA2OTgsImV4cCI6MTc0NzM1NDI5OH0.OXBlKEJSoowr39AxAOPFdMjfg5z-fqlYDToBpBzj0nw',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:41.423Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:41.424Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","iat":1747350698,"exp":1747354298}',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:41.426Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-05-15T23:11:41.430Z'
+}

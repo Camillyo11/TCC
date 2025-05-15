@@ -74,7 +74,22 @@ const adminMiddleware = (req, res, next) => {
     });
   }
 };
+module.exports = async (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return res.status(401).json({ message: 'Token não fornecido.' });
 
+  const token = authHeader.split(' ')[1];
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // Busque o usuário pelo ID do token
+    const user = await User.findById(decoded.id); // ajuste conforme seu model
+    if (!user) return res.status(404).json({ message: 'Usuário não encontrado.' });
+    req.user = user;
+    next();
+  } catch (err) {
+    res.status(401).json({ message: 'Token inválido.' });
+  }
+};
 module.exports = {
   authMiddleware,
   adminMiddleware

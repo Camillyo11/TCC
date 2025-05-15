@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const UserController = require('../controllers/userController');
 const { authMiddleware } = require('../middlewares/auth');
+const userController = require('../controllers/userController');
 
 /**
  * @swagger
@@ -88,6 +89,10 @@ const { authMiddleware } = require('../middlewares/auth');
 
 // Rotas públicas
 router.post('/cadastro', UserController.register); 
+
+// Rota para retornar os dados do usuário autenticado
+router.get('/me', authMiddleware, userController.getProfile);
+router.put('/me', authMiddleware, userController.updateProfile);
 
 // Rotas protegidas por autenticação
 router.get('/cliente/:id', authMiddleware, UserController.getUser); 

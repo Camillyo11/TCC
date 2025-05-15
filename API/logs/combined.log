@@ -928,3 +928,1448 @@
   level: 'info',
   timestamp: '2025-05-13T00:37:48.860Z'
 }
+{
+  message: 'Novo usuário registrado: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-13T03:36:50.299Z'
+}
+{
+  message: 'Erro no login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-13T03:37:59.392Z'
+}
+{
+  message: 'Erro ao fazer login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-13T03:37:59.395Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T03:39:15.034Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T03:39:15.035Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-13T03:44:56.290Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-13T03:46:55.751Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-14T03:13:44.403Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcxOTI0MjQsImV4cCI6MTc0NzE5NjAyNH0.FW80tVNm9-43SlWzGdvWkv4Lm0MBrYMvhjFYQqjZduw',
+  level: 'info',
+  timestamp: '2025-05-14T03:16:01.935Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcxOTI0MjQsImV4cCI6MTc0NzE5NjAyNH0.FW80tVNm9-43SlWzGdvWkv4Lm0MBrYMvhjFYQqjZduw',
+  level: 'info',
+  timestamp: '2025-05-14T03:16:01.950Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T03:16:01.954Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747192424,"exp":1747196024}',
+  level: 'info',
+  timestamp: '2025-05-14T03:16:01.979Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T03:16:02.056Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcxOTI0MjQsImV4cCI6MTc0NzE5NjAyNH0.FW80tVNm9-43SlWzGdvWkv4Lm0MBrYMvhjFYQqjZduw',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:09.105Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcxOTI0MjQsImV4cCI6MTc0NzE5NjAyNH0.FW80tVNm9-43SlWzGdvWkv4Lm0MBrYMvhjFYQqjZduw',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:09.110Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:09.112Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-14T18:10:09.270Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:41.188Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:43.255Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:43.256Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:43.258Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:43.262Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:10:43.305Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:19:35.185Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:19:35.188Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:19:35.188Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:19:35.192Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:19:35.197Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:20:13.937Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:20:13.938Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:20:13.938Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:20:13.941Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:20:13.943Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:34.136Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:34.140Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:34.143Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:34.152Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:34.163Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:58.707Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:58.747Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:58.753Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:58.756Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:22:58.763Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:25:39.505Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:25:39.508Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:25:39.509Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:25:39.514Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:25:39.520Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:01.039Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:01.043Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:01.043Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:01.047Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:01.052Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:13.397Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:13.399Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:13.400Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:13.402Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:13.406Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:32.631Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:32.633Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:32.636Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:32.639Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:27:32.646Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:31.156Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:31.166Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:31.169Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:31.179Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:31.188Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:41.900Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:41.900Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:41.901Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:41.905Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:41.907Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:44.593Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:44.603Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:44.606Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:44.608Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:30:44.609Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:45.526Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:45.529Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:45.530Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:45.534Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:45.540Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:47.949Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:47.951Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:47.952Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:47.954Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:33:47.956Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:43.123Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:43.125Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:43.131Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:43.137Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:43.143Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:47.397Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:47.402Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:47.407Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:47.412Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:36:47.415Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:37:10.350Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:37:10.350Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:37:10.352Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:37:10.355Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:37:10.356Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:17.749Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:17.752Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:17.753Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:17.758Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:17.765Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:23.651Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:23.651Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:23.652Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:23.654Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:38:23.657Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:13.908Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:13.913Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:13.915Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:13.918Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:13.920Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:29.900Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:29.902Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:29.908Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:29.913Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:29.917Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:41.303Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:41.305Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:41.308Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:41.310Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:39:41.312Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:40:37.811Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:40:37.812Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:40:37.817Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:40:37.824Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:40:37.828Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:41.613Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:41.618Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:41.619Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:41.623Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:41.629Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:49.800Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:49.804Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:49.808Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:49.810Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:41:49.813Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:33.076Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:33.078Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:33.088Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:33.095Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:33.105Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:50.437Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:50.440Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:50.441Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:50.444Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:44:50.450Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:45:17.882Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:45:17.883Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:45:17.910Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:45:17.913Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:45:17.916Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:11.306Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:11.311Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:11.312Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:11.319Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:11.329Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:36.195Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:36.195Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:36.196Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:36.197Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:49:36.199Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:56:35.779Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-14T18:56:35.784Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-14T18:56:35.795Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747246241,"exp":1747249841}',
+  level: 'info',
+  timestamp: '2025-05-14T18:56:35.802Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-14T18:56:35.805Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-15T03:39:33.313Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyNDYyNDEsImV4cCI6MTc0NzI0OTg0MX0.imOw402q1FBTVEd7X4aik-Ev53FpKcBtVRMYVqHvfOQ',
+  level: 'info',
+  timestamp: '2025-05-15T03:39:33.350Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:39:33.353Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-15T03:39:33.429Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:02.981Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:05.528Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:05.529Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:05.532Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:05.535Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:40:05.538Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:43:15.759Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:43:15.761Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:43:15.767Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:43:15.774Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:43:15.779Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:48:45.341Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:48:45.351Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:48:45.353Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:48:45.365Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:48:45.382Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:50:19.059Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:50:19.062Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:50:19.064Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:50:19.072Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:50:19.086Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:52:37.415Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:52:37.421Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:52:37.422Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:52:37.426Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:52:37.432Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:54:52.812Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T03:54:52.818Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T03:54:52.820Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T03:54:52.825Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T03:54:52.832Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:19.591Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:19.596Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:19.598Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:19.605Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:19.614Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:34.621Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:34.622Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:34.623Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:34.625Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:06:34.628Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:13:03.819Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:13:03.827Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:13:03.828Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:13:03.839Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:13:03.852Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:16:49.032Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:16:49.034Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:16:49.036Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:16:49.043Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:16:49.050Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:03.495Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:03.498Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:03.501Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:03.503Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:03.505Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:32.859Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:32.863Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:32.868Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:32.873Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:32.881Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:41.814Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:41.815Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:41.817Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:41.820Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:17:41.822Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:22:30.899Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:22:30.902Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:22:30.903Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:22:30.906Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:22:30.911Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:27:08.996Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:27:08.999Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:27:09.000Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:27:09.003Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:27:09.008Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:39:04.884Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:39:04.886Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:39:04.888Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas123@gmail.com","iat":1747280402,"exp":1747284002}',
+  level: 'info',
+  timestamp: '2025-05-15T04:39:04.893Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:39:04.900Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:44:28.093Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyM0BnbWFpbC5jb20iLCJpYXQiOjE3NDcyODA0MDIsImV4cCI6MTc0NzI4NDAwMn0.1wceuDoJBYrqqYIFIYWg81EtfLRGx4xtQ1HFbbf7cXY',
+  level: 'info',
+  timestamp: '2025-05-15T04:44:28.098Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:44:28.099Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-15T04:44:28.104Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas1234@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:04.614Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg0MzA0LCJleHAiOjE3NDcyODc5MDR9.-IItnLDFj86AioMwRdokjFt4CWcLkqDiUC5TssC_W0U',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:09.385Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg0MzA0LCJleHAiOjE3NDcyODc5MDR9.-IItnLDFj86AioMwRdokjFt4CWcLkqDiUC5TssC_W0U',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:09.390Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:09.391Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas1234@gmail.com","iat":1747284304,"exp":1747287904}',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:09.394Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:45:09.396Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg0MzA0LCJleHAiOjE3NDcyODc5MDR9.-IItnLDFj86AioMwRdokjFt4CWcLkqDiUC5TssC_W0U',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:14.787Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg0MzA0LCJleHAiOjE3NDcyODc5MDR9.-IItnLDFj86AioMwRdokjFt4CWcLkqDiUC5TssC_W0U',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:14.789Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:14.797Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas1234@gmail.com","iat":1747284304,"exp":1747287904}',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:14.802Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:14.809Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas1234@gmail.com',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:28.211Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:32.503Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:32.504Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:32.506Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas1234@gmail.com","iat":1747285108,"exp":1747288708}',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:32.511Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T04:58:32.513Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T05:06:41.825Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T05:06:41.827Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T05:06:41.835Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas1234@gmail.com","iat":1747285108,"exp":1747288708}',
+  level: 'info',
+  timestamp: '2025-05-15T05:06:41.841Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T05:06:41.848Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T05:07:33.481Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJsdWNhczEyMzRAZ21haWwuY29tIiwiaWF0IjoxNzQ3Mjg1MTA4LCJleHAiOjE3NDcyODg3MDh9.zcJu78XHl7SiG19Igr1SgYnPSY-w6cThaAzCSQ-hqds',
+  level: 'info',
+  timestamp: '2025-05-15T05:07:33.481Z'
+}
+{
+  message: 'JWT_SECRET: minha_chave_secreta_super_segura',
+  level: 'info',
+  timestamp: '2025-05-15T05:07:33.483Z'
+}
+{
+  message: 'Decoded token: {"id":4,"email":"lucas1234@gmail.com","iat":1747285108,"exp":1747288708}',
+  level: 'info',
+  timestamp: '2025-05-15T05:07:33.486Z'
+}
+{
+  message: 'Cliente autenticado: 4',
+  level: 'info',
+  timestamp: '2025-05-15T05:07:33.487Z'
+}

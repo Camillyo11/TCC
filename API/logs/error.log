@@ -243,3 +243,38 @@
   level: 'error',
   timestamp: '2025-05-13T00:27:30.886Z'
 }
+{
+  message: 'Erro no login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-13T03:37:59.392Z'
+}
+{
+  message: 'Erro ao fazer login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-13T03:37:59.395Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T03:39:15.034Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-13T03:39:15.035Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-14T18:10:09.270Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-15T03:39:33.429Z'
+}
+{
+  message: 'Erro de autenticação: jwt expired',
+  level: 'error',
+  timestamp: '2025-05-15T04:44:28.104Z'
+}

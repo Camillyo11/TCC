@@ -110,7 +110,7 @@
                                 <p>Ainda não tem cadastro?</p>
                                 <div class="center-button">
                                     <button type="submit" class="button-black btn-submit"><a
-                                            href="../src/formscadastro.html">Quero me
+                                            href="formscadastro.html">Quero me
                                             cadastrar</a></button>
                                 </div>
                             </div>
@@ -347,8 +347,38 @@
   <div class="offcanvas-body">
       <div class="text-center">
           <img src="../img/do-utilizador (3).png" width="100" class="rounded-circle mb-3">
-          <h6>Bem-vindo de volta!</h6>
+          <h6 id="bemVindoMsg">Bem-vindo de volta!</h6>
       </div>
+      <div id="userInfo">
+        <p><strong>Nome:</strong> <span id="userNome"></span></p>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+        <p><strong>Telefone:</strong> <span id="userTelefone"></span></p>
+        <p><strong>Data de Nascimento:</strong> <span id="userNascimento"></span></p>
+        <p><strong>CEP:</strong> <span id="userCep"></span></p>
+        <p><strong>Rua:</strong> <span id="userRua"></span></p>
+        <p><strong>Bairro:</strong> <span id="userBairro"></span></p>
+        <p><strong>Cidade:</strong> <span id="userCidade"></span></p>
+        <p><strong>Estado:</strong> <span id="userEstado"></span></p>
+        <button id="editarBtn" class="btn btn-warning">Editar Nome, Email ou Telefone</button>
+      </div>
+
+      <form id="editForm" style="display:none; margin-top: 20px;">
+        <div class="mb-2">
+          <label>Nome:</label>
+          <input type="text" id="editNome" class="form-control">
+        </div>
+        <div class="mb-2">
+          <label>Email:</label>
+          <input type="email" id="editEmail" class="form-control">
+        </div>
+        <div class="mb-2">
+          <label>Telefone:</label>
+          <input type="text" id="editTelefone" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Salvar</button>
+        <button type="button" id="cancelEdit" class="btn btn-secondary">Cancelar</button>
+      </form>
+
       <div class="buttons-perfil mt-4">
           <button class="button-laranja-perfil mb-2" id="historicoPedidosBtn">
               <img src="../img/rapido.png" width="25">Histórico de Pedidos
@@ -521,43 +551,11 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const email = document.getElementById('email').value;
-  const senha = document.getElementById('senha').value;
-
-  fetch('http://localhost:3000/api/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, senha })
-  })
-  .then(res => res.json())
-  .then(data => {
-    if (data.token) {
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('isLoggedIn', 'true');
-      alert("Login realizado com sucesso!");
-
-      const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
-      modal.hide();
-
-      updateAccountButton();
-      location.reload(); // recarrega para refletir o novo estado
-    } else {
-      alert("Erro: " + data.message);
-    }
-  })
-  .catch(err => {
-    console.error(err);
-    alert("Erro ao conectar com o servidor.");
-  });
-});
-</script>
+<!-- Scripts JS -->
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="scripts/index.js"></script>
 </body>
 </html>

@@ -105,6 +105,18 @@
           required
         />
       </div>
+      
+      <div class="mb-3">
+        <label for="cep" class="form-label">CEP:</label>
+        <input
+          type="text"
+          id="cep"
+          name="cep"
+          placeholder="Digite seu CEP:"
+          class="form-control form-control-lg"
+          required
+        />
+      </div>
 
       <div class="mb-3">
         <label for="endereco" class="form-label">Endereço:</label>
@@ -190,17 +202,7 @@
         />
       </div>
 
-      <div class="mb-3">
-        <label for="cep" class="form-label">CEP:</label>
-        <input
-          type="text"
-          id="cep"
-          name="cep"
-          placeholder="Digite seu CEP:"
-          class="form-control form-control-lg"
-          required
-        />
-      </div>
+      
 
       <div class="mb-3">
         <label for="data_nascimento" class="form-label">Data de nascimento:</label>
@@ -249,6 +251,45 @@
       console.error(error);
     }
   });
+
+  document.getElementById('cpf').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    
+    if (value.length > 3) value = value.replace(/^(\d{3})/, '$1.');
+    if (value.length > 7) value = value.replace(/^(\d{3})\.(\d{3})/, '$1.$2.');
+    if (value.length > 11) value = value.replace(/^(\d{3})\.(\d{3})\.(\d{3})/, '$1.$2.$3-');
+    
+    e.target.value = value.substring(0, 14);
+  });
+
+  // Função simples de validação
+  function validarCPF(cpf) {
+    cpf = cpf.replace(/\D/g, '');
+    if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+    
+    let soma = 0;
+    for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
+    let resto = 11 - (soma % 11);
+    if (resto > 9) resto = 0;
+    if (resto !== parseInt(cpf.charAt(9))) return false;
+    
+    soma = 0;
+    for (let i = 0; i < 10; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+    resto = 11 - (soma % 11);
+    if (resto > 9) resto = 0;
+    if (resto !== parseInt(cpf.charAt(10))) return false;
+    
+    return true;
+  }
+
+  // Validação ao sair do campo
+  document.getElementById('cpf').addEventListener('blur', function() {
+    if (!validarCPF(this.value)) {
+      alert('CPF inválido! Por favor, verifique o número digitado.');
+      this.focus();
+    }
+  });
+
 </script>
 
   <!-- Bootstrap JS -->

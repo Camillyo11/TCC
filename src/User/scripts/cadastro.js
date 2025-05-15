@@ -3,6 +3,12 @@
   const senha = document.getElementById('senha').value;
   const repetirSenha = document.getElementById('repetir_senha').value;
 
+  const cpf = document.getElementById('cpf').value;
+    if (!validarCPF(cpf)) {
+      alert('Por favor, insira um CPF válido');
+      return false;
+    };
+
   if (senha !== repetirSenha) {
     alert("As senhas não coincidem.");
     return;

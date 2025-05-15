@@ -278,3 +278,83 @@
   level: 'error',
   timestamp: '2025-05-15T04:44:28.104Z'
 }
+{
+  message: "Erro no cadastro: Unknown column 'email' in 'where clause'",
+  level: 'error',
+  timestamp: '2025-05-15T22:55:51.705Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'email' in 'where clause'",
+  level: 'error',
+  timestamp: '2025-05-15T22:55:51.712Z'
+}
+{
+  message: "Erro no cadastro: Data too long for column 'cep' at row 1",
+  level: 'error',
+  timestamp: '2025-05-15T23:00:37.170Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Data too long for column 'cep' at row 1",
+  level: 'error',
+  timestamp: '2025-05-15T23:00:37.176Z'
+}
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-15T23:02:19.511Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-15T23:02:19.519Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-15T23:03:38.695Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-15T23:03:38.702Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-15T23:04:29.384Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-15T23:04:29.390Z'
+}
+{
+  message: 'Erro no login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:22.472Z'
+}
+{
+  message: 'Erro ao fazer login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:22.473Z'
+}
+{
+  message: 'Erro no login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:47.326Z'
+}
+{
+  message: 'Erro ao fazer login: Email ou senha incorretos.',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:47.329Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:57.281Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-15T23:06:57.282Z'
+}

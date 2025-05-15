@@ -220,6 +220,36 @@
   </div>
 
   <script src="scripts/cadastro.js"></script>
+  <script>
+  document.getElementById('cep').addEventListener('blur', async function () {
+    const cep = this.value.replace(/\D/g, '');
+
+    if (cep.length !== 8) {
+      alert('CEP inválido!');
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = await response.json();
+
+      if (data.erro) {
+        alert('CEP não encontrado!');
+        return;
+      }
+
+      // Preenche os campos com os dados da API
+      document.getElementById('endereco').value = data.logradouro || '';
+      document.getElementById('bairro').value = data.bairro || '';
+      document.getElementById('cidade').value = data.localidade || '';
+      document.getElementById('estado').value = data.uf || '';
+
+    } catch (error) {
+      alert('Erro ao buscar CEP');
+      console.error(error);
+    }
+  });
+</script>
 
   <!-- Bootstrap JS -->
   <script src="JAVASCRIPT/jquery.js"></script>

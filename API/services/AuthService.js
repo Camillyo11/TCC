@@ -14,17 +14,11 @@ const validarEmail = (email) => {
 
 const registerUser = async (
   nome,
+  cpf,
+  dataNascimento,
   email,
   senha,
-  telefone,
-  endereco,
-  numero_casa,
-  complemento,
-  cidade,
-  estado,
-  cep,
-  bairro,
-  dataNascimento
+  telefone
 ) => {
   try {
     if (!validarEmail(email)) {
@@ -36,32 +30,57 @@ const registerUser = async (
       throw new Error('Email já cadastrado.');
     }
 
-    // Inserir endereço (sem valores fixos)
-    const [enderecoResult] = await db.query(
-      `INSERT INTO endereco (rua, numero, bairro, complemento, cidade, estado, cep)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [endereco, numero_casa, bairro, complemento || null, cidade, estado, cep]
-    );
-
-    const id_endereco = enderecoResult.insertId;
-
     // Criptografar senha
     const senhaHash = await bcrypt.hash(senha, 10);
     const dataAtual = new Date().toISOString().split('T')[0];
 
-    // Inserir cliente
+    // Inserir cliente sem o id_endereco (vai ser atualizado depois)
     await db.query(
-      `INSERT INTO cliente (nome, telefone, data_nascimento, email, senha, data_registro, id_endereco)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`,
-      [nome, telefone, dataNascimento, email, senhaHash, dataAtual, id_endereco]
+      `INSERT INTO cliente (nome, cpf, telefone, data_nascimento, email, senha, data_registro, id_endereco)
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      [nome, cpf, telefone, dataNascimento, email, senhaHash, dataAtual, null] // 'null' para id_endereco por enquanto
     );
 
     return { message: 'Cliente cadastrado com sucesso.' };
   } catch (error) {
-    logger.error(`Erro no cadastro: ${error.message}`);
+    logger.error(`Erro no cadastro do cliente: ${error.message}`);
     throw new Error(error.message);
   }
 };
+
+
+const registerAddress = async (
+  usuarioId,
+  endereco,
+  numero_casa,
+  complemento,
+  cidade,
+  estado,
+  cep,
+  bairro
+) => {
+  try {
+    // Inserir o endereço
+    const [addressResult] = await db.query(
+      'INSERT INTO endereco (rua, numero, bairro, complemento, cidade, estado, cep) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [endereco, numero_casa, bairro, complemento || null, cidade, estado, cep]
+    );
+
+    const id_endereco = addressResult.insertId;
+
+    // Atualizar o usuário com o id_endereco
+    await db.query(
+      'UPDATE cliente SET id_endereco = ? WHERE id_cliente = ?',
+      [id_endereco, usuarioId]
+    );
+
+    return { message: 'Endereço cadastrado e associado ao cliente com sucesso!' };
+  } catch (error) {
+    logger.error(`Erro no cadastro do endereço: ${error.message}`);
+    throw new Error(error.message);
+  }
+};
+
 
 const loginUser = async (email, senha) => {
   try {

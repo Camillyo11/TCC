@@ -1,3 +1,4 @@
+-- Active: 1747781642273@@127.0.0.1@3306
 DROP DATABASE IF EXISTS pizzaria;
 CREATE DATABASE pizzaria;
 USE pizzaria;
@@ -96,8 +97,8 @@ CREATE TABLE avaliacao (
     comentario VARCHAR(200),
     resposta_loja VARCHAR(200),
     id_pedido INTEGER NOT NULL,
+    id_cliente INTEGER not null,
     PRIMARY KEY (id_avaliacao),
-    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido)
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
 );
-

@@ -358,3 +358,43 @@
   level: 'error',
   timestamp: '2025-05-15T23:06:57.282Z'
 }
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-20T23:17:53.542Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-20T23:17:53.546Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:02.484Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:02.491Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:58.713Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:58.720Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-20T23:21:56.164Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-20T23:21:56.164Z'
+}

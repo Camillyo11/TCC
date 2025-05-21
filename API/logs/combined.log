@@ -2518,3 +2518,103 @@
   level: 'info',
   timestamp: '2025-05-15T23:11:41.430Z'
 }
+{
+  message: "Erro no cadastro: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-20T23:17:53.542Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Field 'tipo_endereco' doesn't have a default value",
+  level: 'error',
+  timestamp: '2025-05-20T23:17:53.546Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:02.484Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:02.491Z'
+}
+{
+  message: "Erro no cadastro: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:58.713Z'
+}
+{
+  message: "Erro ao cadastrar usuário: Unknown column 'senha' in 'field list'",
+  level: 'error',
+  timestamp: '2025-05-20T23:19:58.720Z'
+}
+{
+  message: 'Novo usuário registrado: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-05-20T23:20:57.115Z'
+}
+{
+  message: 'Erro no login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-20T23:21:56.164Z'
+}
+{
+  message: 'Erro ao fazer login: secretOrPrivateKey must have a value',
+  level: 'error',
+  timestamp: '2025-05-20T23:21:56.164Z'
+}
+{
+  message: 'Login realizado com sucesso: lucas123@email.com',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:01.282Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDc3ODMzODEsImV4cCI6MTc0Nzc4Njk4MX0.D-wFLV8GYYMZS2LMsuvGDzrhljLXVrTmqUOAqKPYByU',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:03.500Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDc3ODMzODEsImV4cCI6MTc0Nzc4Njk4MX0.D-wFLV8GYYMZS2LMsuvGDzrhljLXVrTmqUOAqKPYByU',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:03.500Z'
+}
+{
+  message: 'JWT_SECRET: chave_secreta',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:03.501Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","iat":1747783381,"exp":1747786981}',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:03.503Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:03.506Z'
+}
+{
+  message: 'Auth header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDc3ODMzODEsImV4cCI6MTc0Nzc4Njk4MX0.D-wFLV8GYYMZS2LMsuvGDzrhljLXVrTmqUOAqKPYByU',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:23.330Z'
+}
+{
+  message: 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJsdWNhczEyM0BlbWFpbC5jb20iLCJpYXQiOjE3NDc3ODMzODEsImV4cCI6MTc0Nzc4Njk4MX0.D-wFLV8GYYMZS2LMsuvGDzrhljLXVrTmqUOAqKPYByU',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:23.332Z'
+}
+{
+  message: 'JWT_SECRET: chave_secreta',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:23.333Z'
+}
+{
+  message: 'Decoded token: {"id":1,"email":"lucas123@email.com","iat":1747783381,"exp":1747786981}',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:23.337Z'
+}
+{
+  message: 'Cliente autenticado: 1',
+  level: 'info',
+  timestamp: '2025-05-20T23:23:23.341Z'
+}

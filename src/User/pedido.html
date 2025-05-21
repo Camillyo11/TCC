@@ -120,7 +120,19 @@
     </div>
 </header>
 
- 
+<main class="container my-5">
+  <h2 class="mb-4">Resumo do Pedido</h2>
+  <div id="pedido-pizzas" class="mb-4"></div>
+  <div id="pedido-bebidas" class="mb-4"></div>
+  <div class="mb-3">
+    <label for="observacao-pedido" class="form-label">Observações do pedido:</label>
+    <textarea id="observacao-pedido" class="form-control" rows="3" placeholder="Ex: sem cebola, entregar no portão..."></textarea>
+  </div>
+  <div class="mb-3 text-end">
+    <button id="btn-finalizar-pedido" class="btn btn-success">Finalizar Pedido</button>
+  </div>
+</main>
+
    <!--   FOOTER   -->
    <footer class="footer-conteiner">
     <div class="container text-center">
@@ -163,6 +175,126 @@
   <script src="JAVASCRIPT/jquery.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const pizzas = carrinho.filter(item => item.tabela !== 'bebida');
+    const bebidas = carrinho.filter(item => item.tabela === 'bebida');
+
+    // Renderizar pizzas
+    const pizzasDiv = document.getElementById('pedido-pizzas');
+    if (pizzas.length > 0) {
+      pizzasDiv.innerHTML = '<h4>Pizzas</h4>' + pizzas.map(pizza => `
+        <div class="card mb-2">
+          <div class="card-body d-flex align-items-center">
+            <img src="${pizza.imagem || ''}" alt="${pizza.sabor}" style="width:60px;height:60px;object-fit:cover;margin-right:15px;">
+            <div>
+              <strong>${pizza.sabor}</strong><br>
+              <span>${pizza.tamanho || ''}</span><br>
+              <span>Qtd: ${pizza.quantidade || 1}</span><br>
+              <span>R$ ${pizza.preco_sabor ? pizza.preco_sabor.toFixed(2) : ''}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      pizzasDiv.innerHTML = '<p>Nenhuma pizza no pedido.</p>';
+    }
+
+    // Renderizar bebidas
+    const bebidasDiv = document.getElementById('pedido-bebidas');
+    if (bebidas.length > 0) {
+      bebidasDiv.innerHTML = '<h4>Bebidas</h4>' + bebidas.map(bebida => `
+        <div class="card mb-2">
+          <div class="card-body d-flex align-items-center">
+            <div>
+              <strong>${bebida.nome || ''}</strong><br>
+              <span>${bebida.tamanho || ''}</span><br>
+              <span>Qtd: ${bebida.quantidade || 1}</span><br>
+              <span>R$ ${bebida.preco ? bebida.preco.toFixed(2) : ''}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    } else {
+      bebidasDiv.innerHTML = '';
+    }
+
+    // Finalizar pedido
+    document.getElementById('btn-finalizar-pedido').addEventListener('click', async function() {
+      const observacoes = document.getElementById('observacao-pedido').value;
+      // Pegue o id_cliente, id_endereco e token do localStorage ou sessão do usuário
+      const id_cliente = localStorage.getItem('id_cliente') || 1; // mock para teste
+      const id_endereco = localStorage.getItem('id_endereco') || 1; // mock para teste
+      const token = localStorage.getItem('token');
+      if (!token) {
+        alert('Você precisa estar logado para finalizar o pedido.');
+        return;
+      }
+      // Calcular total
+      let total = 0;
+      pizzas.forEach(p => { total += (p.preco_sabor || 0) * (p.quantidade || 1); });
+      bebidas.forEach(b => { total += (b.preco || 0) * (b.quantidade || 1); });
+      // Montar payload
+      const payload = {
+        id_cliente: Number(id_cliente),
+        total,
+        metodo_pagamento: 'pendente', // ou 'pix', 'cartao', etc
+        tipo_entrega: 'delivery', // ou 'retirada', etc
+        id_endereco: Number(id_endereco),
+        observacoes,
+        pizzas: pizzas.map(p => ({
+          sabor: p.sabor,
+          preco_sabor: p.preco_sabor,
+          tipo_borda: p.tipo_borda,
+          preco_borda: p.preco_borda,
+          tamanho: p.tamanho,
+          observacao: p.observacao,
+          quantidade: p.quantidade
+        })),
+        bebidas: bebidas.map(b => ({
+          nome: b.nome,
+          tamanho: b.tamanho,
+          preco: b.preco,
+          quantidade: b.quantidade
+        }))
+      };
+      try {
+        const res = await fetch('http://localhost:3000/api/orders/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error('Erro ao finalizar pedido');
+        const data = await res.json();
+        alert('Pedido realizado com sucesso! Aguarde o pagamento.');
+        // Limpar carrinho
+        localStorage.removeItem('carrinho');
+        // Aqui você pode redirecionar para uma tela de status do pedido
+      } catch (err) {
+        alert('Erro ao finalizar pedido.');
+      }
+    });
+
+    // Exemplo de função para atualizar status do pedido após pagamento
+    // Chame esta função quando o gateway de pagamento confirmar
+    window.atualizarStatusPedido = async function(id_pedido, novoStatus) {
+      const token = localStorage.getItem('token');
+      if (!token) return;
+      await fetch('http://localhost:3000/api/orders/status', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ id_pedido, status: novoStatus })
+      });
+    }
+  });
+  </script>
 </body>
 
 </html>

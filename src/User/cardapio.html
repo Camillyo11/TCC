@@ -148,109 +148,9 @@
                   <div class="tab-content" id="pizzaTabsContent">
                       <!-- Tab Pizzas Salgadas -->
                       <div class="tab-pane fade show active sabores-container" id="salgadas" role="tabpanel">
-                       
-                          <div class="row">
-                              <!-- Pizza 1 -->
-                              <div class="col-md-6 col-lg-4">
-                                  <div class="card pizza-card h-100">
-                                      <div class="card-body">
-                                        <img src="../img pizzas/pizzaFrangoComCatupiry.png" class="card-img-top" alt="...">
-                                          <h5 class="card-title pizza-nome">Frango com Catupiry</h5>
-                                          <p class="card-text">Molho, Mussarela, frango desfiado e catupiry</p>
-                                          <p class="pizza-preco">R$ 47,90</p>
-
-                                          <div class="quantidade">
-                                            <div class="quantidade-itens">
-                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                                                <span class="mx-2">0</span>
-                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-                                            </div>
-
-                                        </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- Pizza 2 -->
-                              <div class="col-md-6 col-lg-4">
-                                  <div class="card pizza-card h-100">
-                                      <div class="card-body">
-                                        <img src="../img pizzas/pizzaBaiana.png" class="card-img-top" alt="...">
-                                          <h5 class="card-title pizza-nome">Baiana</h5>
-                                          <p class="card-text">Ervilha, cebola, mussarela, calabresa ralada, molho e pimenta</p>
-                                          <p class="pizza-preco">R$ 43,90</p>
-
-                                          <div class="quantidade">
-                                            <div class="quantidade-itens">
-                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                                                <span class="mx-2">0</span>
-                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-                                            </div>
-                                      </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- Pizza 3 -->
-                              <div class="col-md-6 col-lg-4">
-                                  <div class="card pizza-card h-100">
-                                      <div class="card-body">
-                                        <img src="../img pizzas/pizzaCalabreza.png" class="card-img-top" alt="...">
-                                          <h5 class="card-title pizza-nome">Calabresa</h5>
-                                          <p class="card-text">Calabresa fatiada e cebola</p>
-                                          <p class="pizza-preco">R$ 43,90</p>
-                                          <div class="quantidade">
-                                            <div class="quantidade-itens">
-                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                                                <span class="mx-2">0</span>
-                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-                                            </div>
-                                      </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- Pizza 4 -->
-                              <div class="col-md-6 col-lg-4">
-                                  <div class="card pizza-card h-100">
-                                      <div class="card-body">
-                                        <img src="../img pizzas/pizzaQuatroQueijo.png" class="card-img-top" alt="...">
-                                          <h5 class="card-title pizza-nome">Quatro Queijo</h5>
-                                          <p class="card-text">Mussarela, orégano e tomate</p>
-                                          <p class="pizza-preco">R$ 43,90</p>
-                                          <div class="quantidade">
-                                            <div class="quantidade-itens">
-                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                                                <span class="mx-2">0</span>
-                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-                                            </div>
-                                      </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- Pizza 5 -->
-                              <div class="col-md-6 col-lg-4">
-                                  <div class="card pizza-card h-100">
-                                      <div class="card-body">
-                                        <img src="../img pizzas/pizzaPalmito.png" class="card-img-top" alt="...">
-                                          <h5 class="card-title pizza-nome">Palmito</h5>
-                                          <p class="card-text">Combinação especial de mussarela e catupiry</p>
-                                          <p class="pizza-preco">R$ 47,90</p>
-                                          <div class="quantidade">
-                                            <div class="quantidade-itens">
-                                                <button class="btn_retirar btn-outline-secondary btn-sm">-</button>
-                                                <span class="mx-2">0</span>
-                                                <button class="btn_adicionar btn-outline-secondary btn-sm">+</button>
-                                            </div>
-                                      </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              
-                              <!-- Adicione mais pizzas conforme necessário -->
-                          </div>
-                          
+                        <div id="pizzas-list" class="row"></div>
+                      </div>
+                      
                     
                           </div>
                          
@@ -365,7 +265,7 @@
       
       <!-- Bootstrap JS -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  
+      <script src="scripts/cardapio.js"></script>
 
 </body>
 

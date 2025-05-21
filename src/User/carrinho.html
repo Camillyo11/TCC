@@ -176,7 +176,7 @@
     </div>
     <p class="tempo-estimado small">tempo estimado para entrega de 40 a 60 minutos</p>
     <div class="button-black-centralizar">
-    <button class="button-black btn-warning mt-3">Ir para pagamento</button>
+    <button id="btn-finalizar-pedido" class="button-black btn-warning mt-3">Ir para pagamento</button>
   </div>
   <
 
@@ -219,6 +219,11 @@
     </div>
   </footer>
 
+<script>
+document.getElementById('btn-finalizar-pedido').addEventListener('click', function() {
+    window.location.href = 'pedido.html';
+});
+</script>
 
 </body>
 

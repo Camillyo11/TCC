@@ -12,18 +12,9 @@ const { authMiddleware } = require('../middlewares/auth');
  *   description: Endpoints para autenticação
  */
 
-// Atualiza a rota de registro para refletir os dados completos (usuário + endereço)
 router.post(
   '/register',
-  [
-    userValidationRules.register, // Validação dos dados do usuário
-    body('endereco').notEmpty().withMessage('Endereço é obrigatório'), // Validação do endereço
-    body('numero_casa').notEmpty().withMessage('Número da casa é obrigatório'), // Validação do número da casa
-    body('bairro').notEmpty().withMessage('Bairro é obrigatório'), // Validação do bairro
-    body('cidade').notEmpty().withMessage('Cidade é obrigatória'), // Validação da cidade
-    body('estado').notEmpty().withMessage('Estado é obrigatório'), // Validação do estado
-    body('cep').notEmpty().withMessage('CEP é obrigatório'), // Validação do CEP
-  ],
+  userValidationRules.register,
   validate,
   authController.register
 );
@@ -44,13 +35,6 @@ router.post(
  *               - nome
  *               - email
  *               - senha
- *               - telefone
- *               - endereco
- *               - numero_casa
- *               - bairro
- *               - cidade
- *               - estado
- *               - cep
  *             properties:
  *               nome:
  *                 type: string
@@ -71,8 +55,6 @@ router.post(
  *               estado:
  *                 type: string
  *               cep:
- *                 type: string
- *               bairro:
  *                 type: string
  *     responses:
  *       201:

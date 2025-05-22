@@ -5,7 +5,9 @@ const createOrder = async (req, res) => {
   const { id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas } = req.body;
 
   try {
-    const response = await OrderService.createOrder(id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas);
+    const response = await OrderService.createOrder(
+      id_cliente, total, metodo_pagamento, tipo_entrega, observacoes, id_endereco, pizzas, bebidas
+    );
     res.status(201).json(response);
   } catch (error) {
     console.error('Erro ao criar pedido:', error);
@@ -25,11 +27,9 @@ const getOrdersByClient = async (req, res) => {
   }
 };
 
-
 const updateOrderStatus = async (req, res) => {
   const { id_pedido, status } = req.body;
 
-  // Validar se o status é um dos valores permitidos
   const statusPermitidos = ['pendente', 'em_preparo', 'entregue', 'cancelado'];
   if (!statusPermitidos.includes(status)) {
     return res.status(400).json({ 
@@ -50,9 +50,11 @@ const getOrderDetails = async (req, res) => {
   const { id_pedido } = req.params;
   try {
     const orderDetails = await OrderService.getOrderDetails(id_pedido);
-    if (orderDetails.length === 0) {
-      return res.status(404).json({ message: 'Pedido não encontrado.' });
+
+    if (!orderDetails || (orderDetails.pizzas.length === 0 && orderDetails.bebidas.length === 0)) {
+      return res.status(404).json({ message: 'Pedido não encontrado ou sem itens.' });
     }
+
     res.json(orderDetails);
   } catch (error) {
     console.error('Erro ao obter detalhes do pedido:', error);
@@ -62,10 +64,12 @@ const getOrderDetails = async (req, res) => {
 
 const updatePizza = async (req, res) => {
   const { id_pizza, id_pedido } = req.params;
-  const { sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao } = req.body;
-  
+  const { tipo_borda, preco_borda, tamanho, observacao, sabores } = req.body;
+
   try {
-    const response = await OrderService.updatePizza(id_pizza, id_pedido, sabor, preco_sabor, tipo_borda, preco_borda, tamanho, observacao);
+    const response = await OrderService.updatePizza(
+      id_pizza, id_pedido, tipo_borda, preco_borda, tamanho, observacao, sabores
+    );
     res.json(response);
   } catch (error) {
     console.error('Erro ao atualizar pizza:', error);
@@ -73,7 +77,6 @@ const updatePizza = async (req, res) => {
   }
 };
 
-// Editar bebida no pedido
 const updateBebida = async (req, res) => {
   const { id_bebida, id_pedido } = req.params;
   const { nome, tamanho, preco } = req.body;
@@ -98,7 +101,6 @@ const removePizza = async (req, res) => {
   }
 };
 
-
 const removeBebida = async (req, res) => {
   const { id_bebida, id_pedido } = req.params;
   try {
@@ -110,4 +112,13 @@ const removeBebida = async (req, res) => {
   }
 };
 
-module.exports = { createOrder, getOrdersByClient, updateOrderStatus, getOrderDetails, updatePizza, updateBebida, removePizza, removeBebida };
+module.exports = {
+  createOrder,
+  getOrdersByClient,
+  updateOrderStatus,
+  getOrderDetails,
+  updatePizza,
+  updateBebida,
+  removePizza,
+  removeBebida
+};

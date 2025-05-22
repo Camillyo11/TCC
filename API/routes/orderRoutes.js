@@ -49,10 +49,30 @@ const { authMiddleware } = require('../middlewares/auth');
  *                 type: array
  *                 items:
  *                   type: object
+ *                   properties:
+ *                     tipo_borda:
+ *                       type: string
+ *                     preco_borda:
+ *                       type: number
+ *                     tamanho:
+ *                       type: string
+ *                     observacao:
+ *                       type: string
+ *                     sabores:
+ *                       type: array
+ *                       items:
+ *                         type: integer
  *               bebidas:
  *                 type: array
  *                 items:
  *                   type: object
+ *                   properties:
+ *                     nome:
+ *                       type: string
+ *                     tamanho:
+ *                       type: string
+ *                     preco:
+ *                       type: number
  *     responses:
  *       201:
  *         description: Pedido criado
@@ -163,11 +183,12 @@ const { authMiddleware } = require('../middlewares/auth');
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - tipo_borda
+ *               - preco_borda
+ *               - tamanho
+ *               - sabores
  *             properties:
- *               sabor:
- *                 type: string
- *               preco_sabor:
- *                 type: number
  *               tipo_borda:
  *                 type: string
  *               preco_borda:
@@ -176,6 +197,10 @@ const { authMiddleware } = require('../middlewares/auth');
  *                 type: string
  *               observacao:
  *                 type: string
+ *               sabores:
+ *                 type: array
+ *                 items:
+ *                   type: integer
  *     responses:
  *       200:
  *         description: Pizza atualizada
@@ -238,6 +263,10 @@ const { authMiddleware } = require('../middlewares/auth');
  *         application/json:
  *           schema:
  *             type: object
+ *             required:
+ *               - nome
+ *               - tamanho
+ *               - preco
  *             properties:
  *               nome:
  *                 type: string

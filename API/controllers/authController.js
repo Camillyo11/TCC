@@ -5,42 +5,32 @@ const register = async (req, res) => {
   try {
     const {
       nome,
-      cpf,
       email,
       senha,
       telefone,
-      data_nascimento,  // ✅ incluído
       endereco,
       numero_casa,
       complemento,
       cidade,
       estado,
       cep,
-      bairro
+      bairro, // ✅ incluído
+      data_nascimento // ✅ incluído
     } = req.body;
 
-    // Primeiro, registrar o usuário sem o endereço
-    const responseCadastroUsuario = await AuthService.registerUser(
+    const response = await AuthService.registerUser(
       nome,
-      cpf,
-      data_nascimento,
       email,
       senha,
-      telefone
-    );
-
-    // Depois, cadastrar o endereço e associar ao usuário
-    const { id_cliente } = responseCadastroUsuario;  // Supondo que o retorno da função registerUser tenha o id do usuário
-
-    await AuthService.registerAddress(
-      id_cliente,
+      telefone,
       endereco,
       numero_casa,
       complemento,
       cidade,
       estado,
       cep,
-      bairro
+      bairro,
+      data_nascimento
     );
 
     logger.info(`Novo usuário registrado: ${email}`);
